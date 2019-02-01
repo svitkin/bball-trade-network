@@ -43,19 +43,22 @@ extract_transactions <- function(url, .trade = TRUE) {
 load_or_cache_date_files <- function(start, end) {
   filename <- file.path("data-raw", paste0(start, "_", end, "_transactions.csv"))
   if (file.exists(filename)) {
+    message("Loading trade files")
     read.csv(filename, stringsAsFactors = FALSE)
   } else {
+    message("Pulling and caching trade files")
     transactions_df <- 
       create_base_url(start, end) %>% 
       create_all_page_urls() %>% 
-      map_df(extract_transactions)
+      map_df(function(url) { message(url); extract_transactions(url) })
     
     write.csv(transactions_df, filename)
     transactions_df
   }
 }
 
-clean_transactions <- function(transactions_df) {
+clean_transactions <- function(transactions_df, .keep_picks = FALSE) {
+  message("Cleaning transactions")
   clean_df <-
     transactions_df %>% 
     mutate(Acquired = str_split(Acquired, "•")) %>% 
@@ -67,12 +70,22 @@ clean_transactions <- function(transactions_df) {
     distinct()
   
   if (nrow(clean_df) > 0) {
-    clean_df %>% 
+    clean_distinct_df <-
+      clean_df %>% 
       mutate(Acquired = str_trim(Acquired),
              Relinquished = str_trim(Relinquished)) %>% 
       mutate(key = paste0(pmin(Acquired, Relinquished),
                           pmax(Acquired, Relinquished))) %>% 
       distinct(key, .keep_all = TRUE)
+    
+    if (!.keep_picks) {
+      clean_distinct_df %>% 
+        filter(!(str_detect(Acquired, "pick") & str_detect(Acquired, "\\?")),
+               !(str_detect(Relinquished, "pick") & str_detect(Relinquished, "\\?")))
+    } else {
+      clean_distinct_df
+    }
+    
   } else {
     clean_df
   }
@@ -82,15 +95,18 @@ write_out_edgelist_df <- function(start, end) {
   filename <- file.path("data", paste0(start, "_", end, "_edgelist-df.csv"))
   load_or_cache_date_files(start, end) %>% 
     clean_transactions() %>% 
+    mutate(edge_label = sprintf("On %s, %s makes %s for %s in exhchange for %s",
+                                Date, Team, Notes, Acquired, Relinquished)) %>% 
     select(date = Date,
            from = Acquired,
            to = Relinquished,
            action_team = Team,
-           notes = Notes) %>% 
+           notes = Notes,
+           edge_label) %>% 
     write.csv(filename, row.names = FALSE)
 }
 
-write_out_edgelist_df("2018-01-01", "2019-01-31")
+write_out_edgelist_df("2015-01-01", "2019-01-31")
   
  
 
