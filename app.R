@@ -5,7 +5,7 @@ library(visNetwork)
 library(DT)
 
 edgelist_df <- 
-  read.csv("data/2015-01-01_2019-01-31_edgelist-df.csv", stringsAsFactors = FALSE) %>% 
+  read.csv("data/2007-01-01_2019-02-01_edgelist-df.csv", stringsAsFactors = FALSE) %>% 
   mutate(key = paste0(pmin(from, to), pmax(from, to)))
 
 ui <- fluidPage(
@@ -14,12 +14,14 @@ ui <- fluidPage(
     sidebarPanel(
       selectInput(
         inputId = "players",
-        label = "Choose NBA players whose trade partners you want to see",
+        label = "Starting with NBA player(s)",
         choices = sort(unique(c(edgelist_df[["from"]], edgelist_df[["to"]]))),
         multiple = TRUE
       ),
-      numericInput("numSteps", "How deep do you want the connections", min = 1, max = 5, 
-                   value = 2)),
+      numericInput("numSteps", "Going how many transaction steps", min = 1, max = 5, 
+                   value = 2),
+      checkboxInput("includeCash", "Including cash as a part of the network"),
+      checkboxInput("includeException", "Including trade exceptions as a part of the network")),
       mainPanel(
         tabsetPanel(
           tabPanel("Network Visualization", visNetworkOutput("tradeNetwork")),
@@ -49,18 +51,38 @@ server <- function(input, output) {
     edges_df <- as_data_frame(g, "edges")
     edges_df %>% 
       mutate(key = paste0(pmin(from, to), pmax(from, to))) %>% 
-      left_join(edgelist_df %>% select(key, title = edge_label),
+      left_join(edgelist_df %>% select(key, title = edge_label, pick_involved),
                 by = "key") %>% 
+      mutate(color = ifelse(pick_involved, "green", "lightblue")) %>% 
       distinct() %>% 
-      select(-key) %>% 
+      select(-key, pick_involved) %>% 
       mutate(title = str_wrap(title, width = 40),
              title = str_replace_all(title, "\n", "<br>"))
   }
   
   output$tradeNetwork <- renderVisNetwork({
     req(input$players)
+    req(input$numSteps)
+    if (!input$includeCash) {
+      igraph_edgelist <- 
+        edgelist_df %>% 
+        select(from, to) %>% 
+        filter(from != "cash",
+               to != "cash")
+    } else {
+      igraph_edgelist <-
+        edgelist_df %>% 
+        select(from, to)
+    }
+    if (!input$includeException) {
+      igraph_edgelist <- 
+        igraph_edgelist %>% 
+        select(from, to) %>% 
+        filter(from != "trade exception",
+               to != "trade exception")
+    } 
     
-    full_igraph <- graph_from_data_frame(edgelist_df %>% select(from, to), directed = FALSE) 
+    full_igraph <- graph_from_data_frame(igraph_edgelist, directed = FALSE) 
     vis_subgraph <- make_subgraph(full_igraph, input$players, input$numSteps)
     
     
@@ -74,15 +96,36 @@ server <- function(input, output) {
   
   output$tradeData <- renderDataTable({
     req(input$players)
+    req(input$numSteps)
+    if (!input$includeCash) {
+      igraph_edgelist <- 
+        edgelist_df %>% 
+        select(from, to) %>% 
+        filter(from != "cash",
+               to != "cash")
+    } else {
+      igraph_edgelist <-
+        edgelist_df %>% 
+        select(from, to)
+    }
     
-    full_igraph <- graph_from_data_frame(edgelist_df %>% select(from, to), directed = FALSE) 
+    
+    if (!input$includeException) {
+      igraph_edgelist <- 
+        igraph_edgelist %>% 
+        select(from, to) %>% 
+        filter(from != "trade exception",
+               to != "trade exception")
+    } 
+    
+    full_igraph <- graph_from_data_frame(igraph_edgelist, directed = FALSE) 
     vis_subgraph <- make_subgraph(full_igraph, input$players, input$numSteps)
     
     make_visEdges(vis_subgraph) %>% 
-      rename(`Player 1` = from,
+      select(`Player 1` = from,
              `Player 2` = to,
              `Description`= title) %>% 
-      mutate(Description = str_replace_all(Description, "<br>", "")) %>% 
+      mutate(Description = str_replace_all(Description, "<br>", " ")) %>% 
       datatable(rownames = FALSE)
   })
 }
