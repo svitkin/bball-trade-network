@@ -5,7 +5,6 @@ library(visNetwork)
 library(DT)
 
 
-set.seed(123)
 start <- "2010-01-01"
 end <- "2019-02-01"
 
@@ -111,16 +110,19 @@ server <- function(input, output, session) {
   make_visEdges <- function(g) {
     edges_df <- as_data_frame(g, "edges")
     edges_df %>% 
-      mutate(key = paste0(pmin(from, to), pmax(from, to))) %>% 
-      left_join(graph_df %>% select(key, title = edge_label, pick_involved, rights_involved),
-                by = "key") %>% 
+      # mutate(key = paste0(pmin(from, to), pmax(from, to))) %>% 
+      left_join(graph_data() %>% select(from, to, 
+                                        title = edge_label, 
+                                        pick_involved, 
+                                        rights_involved),
+                by = c("from", "to")) %>% 
       mutate(color = case_when(pick_involved & rights_involved ~ "purple",
                                pick_involved ~ "green",
                                rights_involved ~ "darkblue",
                                TRUE ~ "lightblue")) %>% 
-      mutate(width = 4) %>% 
+      mutate(width = 6) %>% 
       distinct() %>% 
-      select(-key, -pick_involved, -rights_involved) %>% 
+      select(-pick_involved, -rights_involved) %>% 
       mutate(title = str_wrap(title, width = 40),
              title = str_replace_all(title, "\n", "<br>"))
   }
@@ -181,7 +183,7 @@ server <- function(input, output, session) {
         user_filter() %>% 
         select(from, to)
       
-      full_igraph <- graph_from_data_frame(igraph_edgelist, directed = FALSE)
+      full_igraph <- graph_from_data_frame(igraph_edgelist)
       if (!is.null(input$players)) {
         vis_subgraph <- make_subgraph(full_igraph, input$players, input$numSteps)
       } else {
@@ -194,13 +196,22 @@ server <- function(input, output, session) {
                    font.align = "top",
                    stringsAsFactors = FALSE)
       
-      visNetwork(make_visNodes(vis_subgraph),
+      viz <-
+        visNetwork(make_visNodes(vis_subgraph),
                  make_visEdges(vis_subgraph)) %>% 
-        visIgraphLayout() %>% 
+        visIgraphLayout(randomSeed = 123) %>% 
         visNodes(label = " ") %>% 
         visOptions(highlightNearest = list(enabled = TRUE, degree = 2, hover = TRUE),
-                   nodesIdSelection = TRUE) %>% 
-        visLegend(addEdges = ledges)
+                   nodesIdSelection = TRUE)
+        # TODO: Fix this code, its garbage
+      if ("free agency" %in% make_visNodes(vis_subgraph)[["id"]]) {
+        viz %>% 
+          visEdges(smooth = list(enabled = TRUE, type = 'dynamic')) %>% 
+          visPhysics(solver = "barnesHut", barnesHut = list(springConstant = 0.002)) %>% 
+          visLegend(addEdges = ledges)
+      } else {
+        viz %>% visLegend(addEdges = ledges)
+      }
       
     }
     

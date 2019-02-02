@@ -155,8 +155,12 @@ clean_transactions <- function(transactions_df,
   }
   make_transaction_key <- function(df) {
     df %>% 
-      mutate(key = paste0(pmin(Acquired, Relinquished),
-                          pmax(Acquired, Relinquished))) %>% 
+      mutate(key = ifelse(Acquired == "free agency" | Relinquished == "free agency",
+                          paste0(pmin(Acquired, Relinquished),
+                                 pmax(Acquired, Relinquished),
+                                 Notes),
+                          paste0(pmin(Acquired, Relinquished),
+                                 pmax(Acquired, Relinquished)))) %>% 
       distinct(key, .keep_all = TRUE)
   }
   make_edge_label <- function(df) {
@@ -233,7 +237,7 @@ write_out_edgelist_df <- function(start, end) {
     write.csv(filename, row.names = FALSE)
 }
 
-write_out_edgelist_df("2010-01-01", Sys.Date())
+write_out_edgelist_df("2010-01-01", "2019-02-01")
   
  
 
