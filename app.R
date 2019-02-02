@@ -146,8 +146,8 @@ server <- function(input, output, session) {
                     str_trim() %>%
                     sort(),
                   multiple = TRUE),
-      numericInput("numSteps", "If you chose player(s), how many transaction steps", 
-                   min = 1, max = 10, value = 2),
+      sliderInput("numSteps", "If you chose player(s), how many transaction steps", 
+                  min = 1, max = 10, value = 2),
       checkboxInput("includeFreeAgency", "Including free agency as part of the network"),
       checkboxInput("includeCash", "Including cash as a part of the network"),
       checkboxInput("includeException", "Including trade exceptions as a part of the network"),

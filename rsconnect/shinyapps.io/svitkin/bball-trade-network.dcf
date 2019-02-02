@@ -5,6 +5,6 @@ account: svitkin
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 684085
-bundleId: 1851510
+bundleId: 1851523
 url: https://svitkin.shinyapps.io/bball-trade-network/
-when: 1549076825.15636
+when: 1549077716.3281
