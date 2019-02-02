@@ -177,33 +177,36 @@ server <- function(input, output, session) {
   })
   
   output$tradeNetwork <- renderVisNetwork({
-    
-    
-    igraph_edgelist <-
-      graph_data() %>% 
-      user_filter() %>% 
-      select(from, to)
-    
-    full_igraph <- graph_from_data_frame(igraph_edgelist, directed = FALSE)
-    if (!is.null(input$players)) {
-      vis_subgraph <- make_subgraph(full_igraph, input$players, input$numSteps)
-    } else {
-      vis_subgraph <- full_igraph
+    if (!is.null(input$players) | !is.null(input$teamsRestriction)) {
+      
+      igraph_edgelist <-
+        graph_data() %>% 
+        user_filter() %>% 
+        select(from, to)
+      
+      full_igraph <- graph_from_data_frame(igraph_edgelist, directed = FALSE)
+      if (!is.null(input$players)) {
+        vis_subgraph <- make_subgraph(full_igraph, input$players, input$numSteps)
+      } else {
+        vis_subgraph <- full_igraph
+      }
+      ledges <- 
+        data.frame(color = c("lightblue", "darkblue", "green", "purple"),
+                   label = c('"Normal Trade"', "Rights Involved", "Pick Involved", "Rights & Pick Involved"),
+                   width = 6,
+                   font.align = "top",
+                   stringsAsFactors = FALSE)
+      
+      visNetwork(make_visNodes(vis_subgraph),
+                 make_visEdges(vis_subgraph)) %>% 
+        visIgraphLayout() %>% 
+        visNodes(label = " ") %>% 
+        visOptions(highlightNearest = list(enabled = TRUE, degree = 2, hover = TRUE),
+                   nodesIdSelection = TRUE) %>% 
+        visLegend(addEdges = ledges)
+      
     }
-    ledges <- 
-      data.frame(color = c("lightblue", "darkblue", "green", "purple"),
-                 label = c('"Normal Trade"', "Rights Involved", "Pick Involved", "Rights & Pick Involved"),
-                 width = 6,
-                 font.align = "top",
-                 stringsAsFactors = FALSE)
     
-    visNetwork(make_visNodes(vis_subgraph),
-               make_visEdges(vis_subgraph)) %>% 
-      visIgraphLayout() %>% 
-      visNodes(label = " ") %>% 
-      visOptions(highlightNearest = list(enabled = TRUE, degree = 2, hover = TRUE),
-                 nodesIdSelection = TRUE) %>% 
-      visLegend(addEdges = ledges)
   })
   
   create_trade_table <- function() {
