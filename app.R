@@ -3,6 +3,7 @@ library(igraph)
 library(stringr)
 library(visNetwork)
 library(DT)
+library(shinycssloaders)
 
 
 start <- "2010-01-01"
@@ -13,16 +14,15 @@ graph_df <- NULL
 ui <- fluidPage(
   titlePanel("NBA Player Trade Network"),
   helpText(paste0("Data going from ", start, " to ", end)),
-  a("Code", target="_blank", href="https://github.com/svitkin/bball-trade-network"), 
-  br(),
-  a("Pro Sports Transactions", target="_blank", href="http://prosportstransactions.com/"),
-  br(),
   sidebarLayout(
     uiOutput("sideBar"),
     mainPanel(
       tabsetPanel(
-        tabPanel("Network Visualization", visNetworkOutput("tradeNetwork")),
-        tabPanel("Tabular Data", dataTableOutput("tradeData")))
+        tabPanel("Network Visualization", 
+                 shinycssloaders::withSpinner(visNetworkOutput("tradeNetwork"))),
+        tabPanel("Tabular Data", 
+                 shinycssloaders::withSpinner(dataTableOutput("tradeData"))),
+        tabPanel("About", htmlOutput("about")))
     ))
 )
 
@@ -110,37 +110,63 @@ server <- function(input, output, session) {
   make_visEdges <- function(g) {
     edges_df <- as_data_frame(g, "edges")
     edges_df %>% 
-      # mutate(key = paste0(pmin(from, to), pmax(from, to))) %>% 
+      
+      # Hacky fix to get edge labels
       left_join(graph_data() %>% select(from, to, 
                                         title = edge_label, 
                                         pick_involved, 
                                         rights_involved),
                 by = c("from", "to")) %>% 
+      left_join(graph_data() %>% select(to = from, from = to, 
+                                        title2 = edge_label, 
+                                        pick_involved2 = pick_involved, 
+                                        rights_involved2 = rights_involved),
+                by = c("from", "to")) %>% 
+      mutate(title = ifelse(is.na(title), title2, title),
+             pick_involved = ifelse(is.na(pick_involved), pick_involved2, pick_involved),
+             rights_involved = ifelse(is.na(rights_involved), rights_involved2, rights_involved)) %>% 
+      select(-title2, -pick_involved2, -rights_involved2) %>% 
+      
+      # Options on edges
       mutate(color = case_when(pick_involved & rights_involved ~ "purple",
                                pick_involved ~ "green",
                                rights_involved ~ "darkblue",
                                TRUE ~ "lightblue")) %>% 
-      mutate(width = 6) %>% 
+      mutate(width = 8) %>% 
       distinct() %>% 
       select(-pick_involved, -rights_involved) %>% 
       mutate(title = str_wrap(title, width = 40),
              title = str_replace_all(title, "\n", "<br>"))
   }
-  
+  check_for_multiple_edges <- function(edges_df) {
+    multiedges <-
+      edges_df %>% 
+      mutate(edgekey = paste0(pmin(from, to),
+                                pmax(from, to))) %>% 
+      count(edgekey) %>% 
+      filter(n > 1) %>% 
+      nrow()
+    
+    multiedges > 0
+  }
   
   
   output$sideBar <- renderUI({
     sidebarPanel(
       selectizeInput(
         inputId = "players",
-        label = "Restricting NBA player(s) to",
+        label = "Choosing the NBA player(s)",
         choices = sort(unique(c(graph_data()[["from"]], 
                                 graph_data()[["to"]]))),
         multiple = TRUE,
         options = list(maxOptions = length(unique(c(graph_data()[["from"]], graph_data()[["to"]]))))
       ),
+      conditionalPanel(
+        condition = "input.players != null & !input.includeFreeAgency",
+        sliderInput("numSteps", "Going how many transaction steps", 
+                    min = 1, max = 10, value = 2)),
       selectInput("teamsRestriction", 
-                  "Restricting to trades involving",
+                  "Choosing NBA team(s)",
                   pull(graph_data(), teams_involved) %>% 
                     str_split(", ") %>% 
                     unlist() %>% 
@@ -148,9 +174,10 @@ server <- function(input, output, session) {
                     str_trim() %>%
                     sort(),
                   multiple = TRUE),
-      sliderInput("numSteps", "If you chose player(s), how many transaction steps", 
-                  min = 1, max = 10, value = 2),
-      checkboxInput("includeFreeAgency", "Including free agency as part of the network"),
+      conditionalPanel(
+        condition = "input.teamsRestriction == null",
+        checkboxInput("includeFreeAgency", "Including free agency as part of the network")
+      ),
       checkboxInput("includeCash", "Including cash as a part of the network"),
       checkboxInput("includeException", "Including trade exceptions as a part of the network"),
       shiny::tags$br(),
@@ -175,20 +202,38 @@ server <- function(input, output, session) {
     
   })
   
+  prepare_rendered_graph <- function() {
+    igraph_edgelist <-
+      graph_data() %>% 
+      user_filter() %>% 
+      select(from, to)
+    
+    if (length(input$teamsRestriction) > 0) {
+      igraph_edgelist <-
+        igraph_edgelist %>% 
+        filter(from != "free agency", to != "free agency")
+    }
+    
+    full_igraph <- graph_from_data_frame(igraph_edgelist, directed = TRUE) 
+    
+    if (!input$includeFreeAgency)  {
+      numSteps <- input$numSteps
+    } else {
+      numSteps <- 1
+    }
+    
+    if (!is.null(input$players)) {
+      make_subgraph(full_igraph, input$players, numSteps)
+    } else {
+      full_igraph
+    }
+  }
+  
   output$tradeNetwork <- renderVisNetwork({
     if (!is.null(input$players) | !is.null(input$teamsRestriction)) {
       
-      igraph_edgelist <-
-        graph_data() %>% 
-        user_filter() %>% 
-        select(from, to)
+      vis_subgraph <- prepare_rendered_graph()
       
-      full_igraph <- graph_from_data_frame(igraph_edgelist)
-      if (!is.null(input$players)) {
-        vis_subgraph <- make_subgraph(full_igraph, input$players, input$numSteps)
-      } else {
-        vis_subgraph <- full_igraph
-      }
       ledges <- 
         data.frame(color = c("lightblue", "darkblue", "green", "purple"),
                    label = c('"Normal Trade"', "Rights Involved", "Pick Involved", "Rights & Pick Involved"),
@@ -196,17 +241,18 @@ server <- function(input, output, session) {
                    font.align = "top",
                    stringsAsFactors = FALSE)
       
+      nodes_df <- make_visNodes(vis_subgraph)
+      edges_df <- make_visEdges(vis_subgraph)
       viz <-
-        visNetwork(make_visNodes(vis_subgraph),
-                 make_visEdges(vis_subgraph)) %>% 
+        visNetwork(nodes_df, edges_df) %>% 
         visIgraphLayout(randomSeed = 123) %>% 
         visNodes(label = " ") %>% 
         visOptions(highlightNearest = list(enabled = TRUE, degree = 2, hover = TRUE),
                    nodesIdSelection = TRUE)
-        # TODO: Fix this code, its garbage
-      if ("free agency" %in% make_visNodes(vis_subgraph)[["id"]]) {
+      
+      if (check_for_multiple_edges(edges_df)) {
         viz %>% 
-          visEdges(smooth = list(enabled = TRUE, type = 'dynamic')) %>% 
+          visEdges(smooth = list(enabled = TRUE)) %>% 
           visPhysics(solver = "barnesHut", barnesHut = list(springConstant = 0.002)) %>% 
           visLegend(addEdges = ledges)
       } else {
@@ -218,17 +264,8 @@ server <- function(input, output, session) {
   })
   
   create_trade_table <- function() {
-    igraph_edgelist <-
-      graph_data() %>% 
-      user_filter() %>% 
-      select(from, to)
     
-    full_igraph <- graph_from_data_frame(igraph_edgelist, directed = FALSE) 
-    if (!is.null(input$players)) {
-      vis_subgraph <- make_subgraph(full_igraph, input$players, input$numSteps)
-    } else {
-      vis_subgraph <- full_igraph
-    }
+    vis_subgraph <- prepare_rendered_graph()
     
     make_visEdges(vis_subgraph) %>% 
       select(`Player 1` = from,
@@ -248,6 +285,13 @@ server <- function(input, output, session) {
     create_trade_table() %>% 
       datatable(rownames = FALSE, filter = "top")
   })
+  
+  output$about <-
+    shiny::renderText(paste0('Code: <a href="https://github.com/svitkin/bball-trade-network" target=_blank>https://github.com/svitkin/bball-trade-network</a>',
+                             "<br>",
+                             'Data comes from <a href="http://prosportstransactions.com/" target=_blank>Pro Sports Transactions</a>',
+                             "<br><br>",
+                             '<p>NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href="https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees" target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they are involved in together. Additionally, players can be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, it is only available as an option under certain conditions.</p>'))
 }
 
 # Return a Shiny app object

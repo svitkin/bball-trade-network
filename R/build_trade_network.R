@@ -169,7 +169,9 @@ clean_transactions <- function(transactions_df,
                                                                          str_replace(Notes, "with", "with the"), 
                                                                          Date, Team, Acquired, Relinquished),
                                     str_detect(Notes, "^signed.*free agent") ~ sprintf("On %s, %s is %s by %s",
-                                                                                     Date, Acquired, Notes, Team),
+                                                                                     Date, Acquired, 
+                                                                                     str_replace(Notes, "signed", "signed as"), 
+                                                                                     Team),
                                     str_detect(Notes, "waived") | str_detect(Notes, "player became a free agent") ~ sprintf("On %s, %s becomes a free agent from %s",
                                                                           Date, Relinquished, Team)))
   }
