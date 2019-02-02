@@ -14,8 +14,10 @@ graph_df <- NULL
 ui <- fluidPage(
   titlePanel("NBA Player Trade Network"),
   helpText(paste0("Data going from ", start, " to ", end)),
-  uiOutput("code"),
-  shiny::tags$br(),
+  a("Code", target="_blank", href="https://github.com/svitkin/bball-trade-network"), 
+  br(),
+  a("Pro Sports Transactions", target="_blank", href="http://prosportstransactions.com/"),
+  br(),
   sidebarLayout(
     uiOutput("sideBar"),
     mainPanel(
@@ -27,11 +29,6 @@ ui <- fluidPage(
 
 # Define the server code
 server <- function(input, output, session) {
-  
-  url <- a("Code", href="https://github.com/svitkin/bball-trade-network")
-  output$code <- renderUI({
-    tagList( url)
-  })
   
   # Underlying data manipulation functions
   graph_data <- function() {
