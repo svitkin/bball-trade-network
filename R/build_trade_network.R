@@ -161,8 +161,9 @@ clean_transactions <- function(transactions_df,
   }
   make_edge_label <- function(df) {
     df %>% 
-      mutate(edge_label = case_when(str_detect(Notes, "trade") ~ sprintf("On %s, %s make %s for %s, and in exhchange give %s to them.",
-                                                                         Date, Team, Notes, Acquired, Relinquished),
+      mutate(edge_label = case_when(str_detect(Notes, "trade") ~ sprintf("In a %s, on %s, the %s receive %s in exchange for %s",
+                                                                         str_replace(Notes, "with", "with the"), 
+                                                                         Date, Team, Acquired, Relinquished),
                                     str_detect(Notes, "^signed.*free agent") ~ sprintf("On %s, %s is %s by %s",
                                                                                      Date, Acquired, Notes, Team),
                                     str_detect(Notes, "waived") | str_detect(Notes, "player became a free agent") ~ sprintf("On %s, %s becomes a free agent from %s",
