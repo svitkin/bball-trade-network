@@ -6,40 +6,88 @@ library(DT)
 
 
 set.seed(123)
-start <- "2016-01-01"
+start <- "2010-01-01"
 end <- "2019-02-01"
 
-edgelist_df <- 
-  read.csv(file.path("data", 
-                     paste0(start, "_", end, "_edgelist-df.csv")), 
-           stringsAsFactors = FALSE)
+graph_df <- NULL
 
 ui <- fluidPage(
   titlePanel("NBA Player Trade Network"),
   helpText(paste0("Data going from ", start, " to ", end)),
   sidebarLayout(
-    sidebarPanel(
-      selectInput(
-        inputId = "players",
-        label = "Starting with NBA player(s)",
-        choices = sort(unique(c(edgelist_df[["from"]], edgelist_df[["to"]]))),
-        multiple = TRUE
-      ),
-      uiOutput("teams"),
-      numericInput("numSteps", "Going how many transaction steps", min = 1, max = 5, 
-                   value = 2),
-      checkboxInput("includeFreeAgency", "Including free agency as part of the network"),
-      checkboxInput("includeCash", "Including cash as a part of the network"),
-      checkboxInput("includeException", "Including trade exceptions as a part of the network")),
-      mainPanel(
-        tabsetPanel(
-          tabPanel("Network Visualization", visNetworkOutput("tradeNetwork")),
-          tabPanel("Tabular Data", dataTableOutput("tradeData")))
+    uiOutput("sideBar"),
+    mainPanel(
+      tabsetPanel(
+        tabPanel("Network Visualization", visNetworkOutput("tradeNetwork")),
+        tabPanel("Tabular Data", dataTableOutput("tradeData")))
     ))
 )
 
 # Define the server code
-server <- function(input, output) {
+server <- function(input, output, session) {
+  
+  # Underlying data manipulation functions
+  graph_data <- function() {
+    if (is.null(graph_df)) {
+      graph_df <<-
+        read.csv(file.path("data", 
+                           paste0(start, "_", end, "_edgelist-df.csv")), 
+                 stringsAsFactors = FALSE)
+    }
+    
+    graph_df
+  }
+  conditional_cash_filter <- function(df) {
+    if (!input$includeCash) {
+      df <- 
+        df %>% 
+        filter(from != "cash", 
+               to != "cash")
+    } else {
+      df
+    }
+  }
+  conditional_exception_filter <- function(df) {
+    if (!input$includeException) {
+      df <-
+        df %>% 
+        filter(from != "trade exception", 
+               to != "trade exception")
+    } else {
+      df
+    }
+  }
+  conditional_free_agency_filter <- function(df) {
+    if (!input$includeFreeAgency) {
+      df <- 
+        df %>% 
+        filter(from != "free agency", 
+               to != "free agency")
+    } else {
+      df
+    }
+    
+  }
+  teams_filter <- function(df) {
+    if (!is.null(input$teamsRestriction)) {
+      df <- 
+        df %>% 
+        filter(str_detect(teams_involved, 
+                          paste(paste0("(", input$teamsRestriction, ")"), 
+                                collapse = "|")))
+    } else {
+      df
+    }
+  }
+  user_filter <- function(df) {
+    df %>% 
+      conditional_cash_filter() %>% 
+      conditional_exception_filter() %>% 
+      conditional_free_agency_filter() %>% 
+      teams_filter()
+  }
+  
+  # Graph-related creation functions
   make_subgraph <- function(g, players, order) {
     subgraph_ids <-
       ego(g, order = order, nodes = players) %>% 
@@ -60,7 +108,7 @@ server <- function(input, output) {
     edges_df <- as_data_frame(g, "edges")
     edges_df %>% 
       mutate(key = paste0(pmin(from, to), pmax(from, to))) %>% 
-      left_join(edgelist_df %>% select(key, title = edge_label, pick_involved, rights_involved),
+      left_join(graph_df %>% select(key, title = edge_label, pick_involved, rights_involved),
                 by = "key") %>% 
       mutate(color = case_when(pick_involved & rights_involved ~ "purple",
                                pick_involved ~ "green",
@@ -73,52 +121,61 @@ server <- function(input, output) {
              title = str_replace_all(title, "\n", "<br>"))
   }
   
-  output$teams <- renderUI({
-    selectInput("teamsRestriction", 
-                "Restricting to trades involving",
-                pull(edgelist_df, teams_involved) %>% 
-                  str_split(", ") %>% 
-                  unlist() %>% 
-                  unique() %>% 
-                  sort(),
-                multiple = TRUE)
+  
+  
+  output$sideBar <- renderUI({
+    sidebarPanel(
+      selectizeInput(
+        inputId = "players",
+        label = "Restricting NBA player(s) to",
+        choices = sort(unique(c(graph_data()[["from"]], 
+                                graph_data()[["to"]]))),
+        multiple = TRUE,
+        options = list(maxOptions = length(unique(c(graph_data()[["from"]], graph_data()[["to"]]))))
+      ),
+      selectInput("teamsRestriction", 
+                  "Restricting to trades involving",
+                  pull(graph_data(), teams_involved) %>% 
+                    str_split(", ") %>% 
+                    unlist() %>% 
+                    unique() %>% 
+                    str_trim() %>%
+                    sort(),
+                  multiple = TRUE),
+      numericInput("numSteps", "Going how many transaction steps (relevant only for players)", 
+                   min = 1, max = 10, value = 2),
+      checkboxInput("includeFreeAgency", "Including free agency as part of the network"),
+      checkboxInput("includeCash", "Including cash as a part of the network"),
+      checkboxInput("includeException", "Including trade exceptions as a part of the network"),
+      shiny::tags$br(),
+      downloadButton("downloadTradeData", "Download Trade Data"))
+    
+  })
+  
+  observe({
+    if (!is.null(input$includeFreeAgency) & 
+        !is.null(input$includeCash) & 
+        !is.null(input$includeException)) {
+      
+      relevant_choices <-
+        sort(unique(c(user_filter(graph_data())[["from"]], 
+                      user_filter(graph_data())[["to"]])))
+      
+      updateSelectizeInput(session, 
+                           inputId = "players", 
+                           choices = relevant_choices,
+                           selected = intersect(input$players, relevant_choices))
+    }
+    
   })
   
   output$tradeNetwork <- renderVisNetwork({
-    if (!input$includeCash) {
-      igraph_edgelist <- 
-        edgelist_df %>% 
-        filter(from != "cash",
-               to != "cash")
-    } 
-    if (!input$includeException) {
-      igraph_edgelist <- 
-        igraph_edgelist %>% 
-        filter(from != "trade exception",
-               to != "trade exception")
-    } 
-    if (!input$includeFreeAgency) {
-      igraph_edgelist <-
-        igraph_edgelist %>% 
-        filter(from != "free agency",
-               to != "free agency")
-    }
-    
-    
-    if (!is.null(input$teamsRestriction)) {
-      filter_string <-paste0("str_detect(teams_involved, ", 
-                             paste0("'", input$teamsRestriction, "'"), ")")
-      if (length(input$teamsRestriction) > 1) filter_string <- paste(filter_string, collapse = "|")
-      message(filter_string)
-      igraph_edgelist <-
-        igraph_edgelist %>% 
-        filter_(filter_string)  
-    }
     igraph_edgelist <-
-      igraph_edgelist %>% 
+      graph_data() %>% 
+      user_filter() %>% 
       select(from, to)
     
-    full_igraph <- graph_from_data_frame(igraph_edgelist, directed = FALSE) 
+    full_igraph <- graph_from_data_frame(igraph_edgelist, directed = FALSE)
     if (!is.null(input$players)) {
       vis_subgraph <- make_subgraph(full_igraph, input$players, input$numSteps)
     } else {
@@ -135,43 +192,15 @@ server <- function(input, output) {
                make_visEdges(vis_subgraph)) %>% 
       visIgraphLayout() %>% 
       visNodes(label = " ") %>% 
-      visOptions(highlightNearest = list(enabled = T, degree = 2, hover = TRUE),
+      visOptions(highlightNearest = list(enabled = TRUE, degree = 2, hover = TRUE),
                  nodesIdSelection = TRUE) %>% 
       visLegend(addEdges = ledges)
   })
   
-  output$tradeData <- renderDataTable({
-    if (!input$includeCash) {
-      igraph_edgelist <- 
-        edgelist_df %>% 
-        filter(from != "cash",
-               to != "cash")
-    } 
-    if (!input$includeException) {
-      igraph_edgelist <- 
-        igraph_edgelist %>% 
-        filter(from != "trade exception",
-               to != "trade exception")
-    } 
-    if (!input$includeFreeAgency) {
-      igraph_edgelist <-
-        igraph_edgelist %>% 
-        filter(from != "free agency",
-               to != "free agency")
-    }
-    
-    
-    if (!is.null(input$teamsRestriction)) {
-      filter_string <-paste0("str_detect(teams_involved, ", 
-                             paste0("'", input$teamsRestriction, "'"), ")")
-      if (length(input$teamsRestriction) > 1) filter_string <- paste(filter_string, collapse = "|")
-      message(filter_string)
-      igraph_edgelist <-
-        igraph_edgelist %>% 
-        filter_(filter_string)  
-    }
+  create_trade_table <- function() {
     igraph_edgelist <-
-      igraph_edgelist %>% 
+      graph_data() %>% 
+      user_filter() %>% 
       select(from, to)
     
     full_igraph <- graph_from_data_frame(igraph_edgelist, directed = FALSE) 
@@ -185,8 +214,19 @@ server <- function(input, output) {
       select(`Player 1` = from,
              `Player 2` = to,
              `Description`= title) %>% 
-      mutate(Description = str_replace_all(Description, "<br>", " ")) %>% 
-      datatable(rownames = FALSE)
+      mutate(Description = str_replace_all(Description, "<br>", " ")) 
+  }
+  output$downloadTradeData <- downloadHandler(
+    filename = function() {
+      paste0(start, "_", end, "_trade-data.csv")
+    },
+    content = function(file) {
+      write.csv(create_trade_table(), file, row.names = FALSE)
+    })
+  
+  output$tradeData <- renderDataTable({
+    create_trade_table() %>% 
+      datatable(rownames = FALSE, filter = "top")
   })
 }
 

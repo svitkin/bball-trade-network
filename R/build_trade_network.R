@@ -29,13 +29,15 @@ extract_transactions <- function(url) {
   transactions_df <-
     read_html(url) %>% 
     html_table(header = TRUE) %>% 
-    `[[`(1) %>% 
+    `[[`(1) %>%
     filter(str_detect(Notes, "trade") | 
              str_detect(Notes, "^signed.*free agent") |
              str_detect(Notes, "player became a free agent") |
              str_detect(Notes, "waived"),
            !str_detect(Notes, "error"),
-           !str_detect(Notes, "voided"))
+           !str_detect(Notes, "voided"),
+           !str_detect(Notes, "rescinded")) %>% 
+    mutate(page_url = url)
 }
 
 
@@ -47,46 +49,35 @@ load_or_cache_date_files <- function(start, end) {
   } else {
     message("Pulling and caching trade files")
     transaction_dfs <- list()
-    problem_urls <- c()
-    
+    done <- c()
     urls <- 
       create_base_url(start, end) %>% 
       create_all_page_urls()
     
     for (url in urls) {
-      message(url)
-      transaction_dfs[[length(transaction_dfs)+1]] <- 
-        tryCatch(extract_transactions(url),
-                 error = function(cond) {
-                   message("\n\n###PROBLEM###\n", url, "is a problem")
-                   problem_urls <<- c(problem_urls, url)
-                   return(data.frame())
-                 })
-    }
-    
-    while (length(problem_urls) != 0) {
-      for (url in problem_urls) {
-        message("\n\n###WAS A PROBLEM###\n", url)
-        transaction_dfs[[length(transaction_dfs)+1]] <- 
+      while (!url %in% done) {
           tryCatch({
-            extracted_table <- extract_transactions(url)
-            problem_urls <<- setdiff(problem_urls, url)
-            extracted_table
-          }, error = function(cond) {
+            transaction_dfs[[length(transaction_dfs)+1]] <-
+              extract_transactions(url)
+            done <- c(done, url)
+          },
+          error = function(cond) {
+            message("\n\n###PROBLEM###\n", url)
             message(cond)
-            problem_urls <<- c(problem_urls, url)
-            data.frame()
-          })
+          })  
       }
     }
     
     transaction_df <- bind_rows(transaction_dfs)
-    write.csv(transaction_df, filename)
+    write.csv(transaction_df, filename, row.names = FALSE)
     transaction_df
   }
 }
 
-clean_transactions <- function(transactions_df, .remove_future_picks = TRUE, .remove_not_exercised_picks = TRUE) {
+clean_transactions <- function(transactions_df, 
+                               .remove_future_picks = TRUE, 
+                               .remove_not_exercised_picks = TRUE) {
+  
   split_trade_rows <- function(df) {
     df %>% 
       mutate(Acquired = str_split(Acquired, "•")) %>% 
@@ -114,39 +105,31 @@ clean_transactions <- function(transactions_df, .remove_future_picks = TRUE, .re
   }
   clean_pick_text <- function(df) {
     df %>% 
-      mutate(Acquired = ifelse(str_detect(Acquired, "pick") & 
-                                 str_detect(Acquired, "\\(.+#.+\\)$"),
-                               str_c(str_extract(Acquired, "\\d{4}"), 
-                                     str_extract(str_replace(Acquired,
-                                                             "\\(\\d{4} ", "("), 
-                                                 "\\(#.+\\)$"),
-                                     sep = " pick "),
+      mutate(pick_involved = str_detect(Acquired, "pick") | str_detect(Relinquished, "pick"),
+             Acquired = ifelse(str_detect(Acquired, "pick") & 
+                                 str_detect(Acquired, "\\(.*#.*\\)$"),
+                               str_replace_all(Acquired, ".*\\(.*#.*\\-(.*)\\)$", "\\1"),
                                Acquired),
              Relinquished = ifelse(str_detect(Relinquished, "pick") & 
-                                     str_detect(Relinquished, "\\(.+#.+\\)$"),
-                                   str_c(str_extract(Relinquished, "\\d{4}"), 
-                                         str_extract(str_replace(Relinquished,
-                                                                 "\\(\\d{4} ", "("), 
-                                                     "\\(#.+\\)$"),
-                                         sep = " pick "),
-                                   Relinquished),
-             
-             pick_involved = str_detect(Acquired, "pick") | str_detect(Relinquished, "pick"),
-             
-             Acquired = str_replace_all(Acquired, "\\d{4}.* pick \\(#\\d+\\-", ""),
-             Acquired = str_replace_all(Acquired, "\\)", ""),
-             Relinquished = str_replace_all(Relinquished, "\\d{4}.* pick \\(#\\d+\\-", ""),
-             Relinquished = str_replace_all(Relinquished, "\\)", ""))
+                                 str_detect(Relinquished, "\\(.*#.*\\)$"),
+                               str_replace_all(Relinquished, ".*\\(.*#.*\\-(.*)\\)$", "\\1"),
+                               Relinquished))
   }
   clean_cash_text <- function(df) {
     df %>% 
       mutate(Acquired = ifelse(str_detect(Acquired, "cash"), "cash", Acquired),
-             Acquired = ifelse((str_detect(Acquired, "$") & str_detect(Acquired, "\\d+") & !str_detect(Acquired, "[A-Za-z]")) | str_detect(Acquired, "\\d+K$"),
+             Acquired = ifelse((str_detect(Acquired, "$") & str_detect(Acquired, "\\d+")) &
+                                 (!str_detect(Acquired, "[A-Za-z]") | 
+                                    str_detect(Acquired, "\\d+K$") |
+                                    str_detect(Acquired, "\\d+M")),
                                "cash",
                                Acquired),
              
              Relinquished = ifelse(str_detect(Relinquished, "cash"), "cash", Relinquished),
-             Relinquished = ifelse((str_detect(Relinquished, "$") & str_detect(Relinquished, "\\d+") & !str_detect(Relinquished, "[A-Za-z]") | str_detect(Relinquished, "\\d+K$")),
+             Relinquished = ifelse((str_detect(Relinquished, "$") & str_detect(Relinquished, "\\d+")) & 
+                                     (!str_detect(Relinquished, "[A-Za-z]") | 
+                                        str_detect(Relinquished, "\\d+K$") | 
+                                        str_detect(Relinquished, "\\d+M")),
                                    "cash",
                                    Relinquished))
   }
@@ -187,11 +170,28 @@ clean_transactions <- function(transactions_df, .remove_future_picks = TRUE, .re
   }
   find_teams_involved <- function(df) {
     df %>% 
-      mutate(teams_involved = case_when(Acquired != "free agency" & 
-                                          Relinquished != "free agency" ~ str_replace_all(edge_label,
-                                                                                          ".*make.*trade with (.+) for.*",
-                                                                                          str_c(Team, "\\1", sep = ", ")),
-                                        Acquired == "free agency" | Relinquished == "free agency" ~ Team))
+      mutate(
+        # Fix typos
+        Notes = str_replace(Notes, "wtih", "with"),
+        Notes = str_replace(Notes, "Timberwoves", "Timberwolves"),
+        Team = str_replace(Team, "Timberwoves", "Timberwolves"),
+        # Extract names
+        teams_involved = 
+          case_when(Acquired != "free agency" & 
+                      Relinquished != "free agency" ~ str_replace_all(Notes,
+                                                                      ".*with (.+)",
+                                                                      str_c(Team, "\\1", sep = ", ")),
+                    Acquired == "free agency" | Relinquished == "free agency" ~ Team))
+  }
+  misc_cleanup <- function(df) {
+    # Random one offs that need to be cleaned
+    df %>% 
+      mutate(Acquired = ifelse(str_detect(Acquired, "Cabarrot") | str_detect(Acquired, "2016 #24"),
+                               "Timothe Luwawu / Timothe Luwawu-Cabarrot",
+                               Acquired),
+             Relinquished = ifelse(str_detect(Relinquished, "Cabarrot") | str_detect(Relinquished, "2016 #24"),
+                               "Timothe Luwawu / Timothe Luwawu-Cabarrot",
+                               Relinquished))
   }
   
   message("Cleaning transactions")
@@ -211,6 +211,7 @@ clean_transactions <- function(transactions_df, .remove_future_picks = TRUE, .re
     clean_exception_text() %>% 
     clean_rights_to_text() %>% 
     find_teams_involved() %>% 
+    misc_cleanup() %>% 
     make_transaction_key()
 }
 
@@ -231,7 +232,7 @@ write_out_edgelist_df <- function(start, end) {
     write.csv(filename, row.names = FALSE)
 }
 
-write_out_edgelist_df("2007-01-01", Sys.Date())
+write_out_edgelist_df("2010-01-01", Sys.Date())
   
  
 
