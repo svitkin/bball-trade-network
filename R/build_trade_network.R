@@ -29,14 +29,7 @@ extract_transactions <- function(url) {
   transactions_df <-
     read_html(url) %>% 
     html_table(header = TRUE) %>% 
-    `[[`(1) %>%
-    filter(str_detect(Notes, "trade") | 
-             str_detect(Notes, "^signed.*free agent") |
-             str_detect(Notes, "player became a free agent") |
-             str_detect(Notes, "waived"),
-           !str_detect(Notes, "error"),
-           !str_detect(Notes, "voided"),
-           !str_detect(Notes, "rescinded")) %>% 
+    `[[`(1) %>% 
     mutate(page_url = url)
 }
 
@@ -78,16 +71,39 @@ clean_transactions <- function(transactions_df,
                                .remove_future_picks = TRUE, 
                                .remove_not_exercised_picks = TRUE) {
   
+  filter_for_relevant_rows <- function(df) {
+    df %>% 
+      filter(str_detect(Notes, "trade") | 
+               str_detect(Notes, "^signed.*free agent") |
+               str_detect(Notes, "player became a free agent") |
+               str_detect(Notes, "waived") |
+               str_detect(Notes, "claimed off waivers") |
+               str_detect(Notes, "contract expired") |
+               str_detect(Notes, "\\d{4} NBA draft.*round pick.*") |
+               str_detect(Notes, "^first round pick") |
+               str_detect(Notes, "^second round pick"),
+             !str_detect(Notes, "error"),
+             !str_detect(Notes, "voided"),
+             !str_detect(Notes, "rescinded"))
+  }
   split_trade_rows <- function(df) {
     df %>% 
       mutate(Acquired = str_split(Acquired, "•")) %>% 
       unnest() %>% 
       mutate(Relinquished = str_split(Relinquished, "•")) %>% 
       unnest() %>% 
-      mutate(Relinquished = ifelse(str_detect(Notes, "^signed.*free agent"),
+      mutate(Relinquished = ifelse(str_detect(Notes, "^signed.*free agent") | 
+                                     str_detect(Notes, "claimed off waivers"),
                                    "free agency",
                                    Relinquished),
-             Acquired = ifelse(str_detect(Notes, "waived") | str_detect(Notes, "player became a free agent"),
+             Relinquished = ifelse(str_detect(Notes, "\\d{4} NBA draft.*round pick.*") |
+                                     str_detect(Notes, "^first round pick") |
+                                     str_detect(Notes, "^second round pick"),
+                                   "draft",
+                                   Relinquished),
+             Acquired = ifelse(str_detect(Notes, "waived") | 
+                                 str_detect(Notes, "contract expired") | 
+                                 str_detect(Notes, "player became a free agent"),
                                "free agency",
                                Acquired))
   }
@@ -168,11 +184,17 @@ clean_transactions <- function(transactions_df,
       mutate(edge_label = case_when(str_detect(Notes, "trade") ~ sprintf("In a %s, on %s, the %s receive %s in exchange for %s",
                                                                          str_replace(Notes, "with", "with the"), 
                                                                          Date, Team, Acquired, Relinquished),
-                                    str_detect(Notes, "^signed.*free agent") ~ sprintf("On %s, %s is %s by %s",
-                                                                                     Date, Acquired, 
-                                                                                     str_replace(Notes, "signed", "signed as"), 
-                                                                                     Team),
-                                    str_detect(Notes, "waived") | str_detect(Notes, "player became a free agent") ~ sprintf("On %s, %s becomes a free agent from %s",
+                                    str_detect(Notes, "^signed.*free agent") |
+                                      str_detect(Notes, "claimed off waivers") ~ sprintf("On %s, %s is %s by %s",
+                                                                                         Date, Acquired, 
+                                                                                         str_replace(Notes, "signed", "signed as"), 
+                                                                                         Team),
+                                    str_detect(Notes, "\\d{4} NBA draft.*round pick.*") |
+                                      str_detect(Notes, "^first round pick") |
+                                      str_detect(Notes, "^second round pick") ~ sprintf("On %s, %s picks %s with the %s", Date, Team, Acquired, Notes),
+                                    str_detect(Notes, "waived") | 
+                                      str_detect(Notes, "player became a free agent") |
+                                      str_detect(Notes, "contract expired") ~ sprintf("On %s, %s becomes a free agent from %s",
                                                                           Date, Relinquished, Team)))
   }
   find_teams_involved <- function(df) {
@@ -185,10 +207,11 @@ clean_transactions <- function(transactions_df,
         # Extract names
         teams_involved = 
           case_when(Acquired != "free agency" & 
-                      Relinquished != "free agency" ~ str_replace_all(Notes,
+                      Relinquished != "free agency" & 
+                      Relinquished != "draft" ~ str_replace_all(Notes,
                                                                       ".*with (.+)",
                                                                       str_c(Team, "\\1", sep = ", ")),
-                    Acquired == "free agency" | Relinquished == "free agency" ~ Team))
+                    Acquired == "free agency" | Relinquished == "free agency" | Relinquished == "draft" ~ Team))
   }
   misc_cleanup <- function(df) {
     # Random one offs that need to be cleaned
@@ -203,6 +226,7 @@ clean_transactions <- function(transactions_df,
   
   message("Cleaning transactions")
   transactions_df %>% 
+    filter_for_relevant_rows() %>% 
     split_trade_rows() %>% 
     filter(Acquired != "" & Relinquished != "") %>% 
     when(.remove_future_picks ~ remove_future_picks(.),
@@ -239,7 +263,7 @@ write_out_edgelist_df <- function(start, end) {
     write.csv(filename, row.names = FALSE)
 }
 
-write_out_edgelist_df("2010-01-01", "2019-02-01")
+write_out_edgelist_df("2010-01-01", Sys.Date())
   
  
 
