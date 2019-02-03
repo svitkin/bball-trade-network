@@ -128,10 +128,10 @@ server <- function(input, output, session) {
       select(-title2, -pick_involved2, -rights_involved2) %>% 
       
       # Options on edges
-      mutate(color = case_when(pick_involved & rights_involved ~ "purple",
-                               pick_involved ~ "green",
-                               rights_involved ~ "darkblue",
-                               TRUE ~ "lightblue")) %>% 
+      mutate(color = case_when(pick_involved & rights_involved ~ "#CC7E0E",
+                               pick_involved ~ "#0ECC47",
+                               rights_involved ~ "#997E57",
+                               TRUE ~ "#6BFFC1")) %>% 
       mutate(width = 8) %>% 
       distinct() %>% 
       select(-pick_involved, -rights_involved) %>% 
@@ -162,7 +162,7 @@ server <- function(input, output, session) {
         options = list(maxOptions = length(unique(c(graph_data()[["from"]], graph_data()[["to"]]))))
       ),
       conditionalPanel(
-        condition = "input.players != null & !input.includeFreeAgency",
+        condition = "input.players != null & !input.includeFreeAgency & input.teamsRestriction == null",
         sliderInput("numSteps", "Going how many transaction steps", 
                     min = 1, max = 10, value = 2)),
       selectInput("teamsRestriction", 
@@ -235,7 +235,7 @@ server <- function(input, output, session) {
       vis_subgraph <- prepare_rendered_graph()
       
       ledges <- 
-        data.frame(color = c("lightblue", "darkblue", "green", "purple"),
+        data.frame(color = c("#6BFFC1", "#997E57", "#0ECC47", "#CC7E0E"),
                    label = c('"Normal Trade"', "Rights Involved", "Pick Involved", "Rights & Pick Involved"),
                    width = 6,
                    font.align = "top",
@@ -246,7 +246,7 @@ server <- function(input, output, session) {
       viz <-
         visNetwork(nodes_df, edges_df) %>% 
         visIgraphLayout(randomSeed = 123) %>% 
-        visNodes(label = " ") %>% 
+        visNodes(label = " ", color = "#FF6B2B", shape = "circle") %>% 
         visOptions(highlightNearest = list(enabled = TRUE, degree = 2, hover = TRUE),
                    nodesIdSelection = TRUE)
       
@@ -291,7 +291,7 @@ server <- function(input, output, session) {
                              "<br>",
                              'Data comes from <a href="http://prosportstransactions.com/" target=_blank>Pro Sports Transactions</a>',
                              "<br><br>",
-                             '<p>NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href="https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees" target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they are involved in together. Additionally, players can be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, it is only available as an option under certain conditions.</p>'))
+                             '<p>NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href="https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees" target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. Additionally, players can be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, it is only available as an option under certain conditions.</p>'))
 }
 
 # Return a Shiny app object
