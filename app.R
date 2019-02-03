@@ -7,7 +7,7 @@ library(shinycssloaders)
 
 
 start <- "2010-01-01"
-end <- "2019-02-01"
+end <- "2019-02-02"
 
 graph_df <- NULL
 
@@ -71,6 +71,11 @@ server <- function(input, output, session) {
     }
     
   }
+  draft_filter <- function(df) {
+    df %>% 
+      filter(from != "draft",
+             to != "draft")
+  }
   teams_filter <- function(df) {
     if (!is.null(input$teamsRestriction)) {
       df <- 
@@ -87,6 +92,7 @@ server <- function(input, output, session) {
       conditional_cash_filter() %>% 
       conditional_exception_filter() %>% 
       conditional_free_agency_filter() %>% 
+      draft_filter() %>% 
       teams_filter()
   }
   
@@ -100,6 +106,11 @@ server <- function(input, output, session) {
   }
   make_visNodes <- function(g) {
     nodes_df <- as_data_frame(g, "vertices")
+    if (input$includeDraft) {
+      nodes_df <- 
+        bind_rows(nodes_df,
+                  data.frame(name = "draft", stringsAsFactors = FALSE))
+    }
     nodes_df %>% 
       rename(id = name) %>% 
       mutate(title = id,
@@ -109,6 +120,17 @@ server <- function(input, output, session) {
   }
   make_visEdges <- function(g) {
     edges_df <- as_data_frame(g, "edges")
+    if (input$includeDraft) {
+      draft_df <-
+        graph_data() %>% 
+        filter(from == "draft",
+               to %in% as_data_frame(g, "vertices")[["name"]]) %>% 
+        select(from, to)
+      
+      edges_df <- bind_rows(edges_df, draft_df)
+    }
+    
+      
     edges_df %>% 
       
       # Hacky fix to get edge labels
@@ -137,6 +159,7 @@ server <- function(input, output, session) {
       select(-pick_involved, -rights_involved) %>% 
       mutate(title = str_wrap(title, width = 40),
              title = str_replace_all(title, "\n", "<br>"))
+    
   }
   check_for_multiple_edges <- function(edges_df) {
     multiedges <-
@@ -155,7 +178,7 @@ server <- function(input, output, session) {
     sidebarPanel(
       selectizeInput(
         inputId = "players",
-        label = "Choosing the NBA player(s)",
+        label = "Choose the NBA player(s)",
         choices = sort(unique(c(graph_data()[["from"]], 
                                 graph_data()[["to"]]))),
         multiple = TRUE,
@@ -166,7 +189,7 @@ server <- function(input, output, session) {
         sliderInput("numSteps", "Going how many transaction steps", 
                     min = 1, max = 10, value = 2)),
       selectInput("teamsRestriction", 
-                  "Choosing NBA team(s)",
+                  "Choose the NBA team(s)",
                   pull(graph_data(), teams_involved) %>% 
                     str_split(", ") %>% 
                     unlist() %>% 
@@ -178,6 +201,7 @@ server <- function(input, output, session) {
         condition = "input.teamsRestriction == null",
         checkboxInput("includeFreeAgency", "Including free agency as part of the network")
       ),
+      checkboxInput("includeDraft", "Including the draft as part of the network"),
       checkboxInput("includeCash", "Including cash as a part of the network"),
       checkboxInput("includeException", "Including trade exceptions as a part of the network"),
       shiny::tags$br(),
@@ -291,7 +315,7 @@ server <- function(input, output, session) {
                              "<br>",
                              'Data comes from <a href="http://prosportstransactions.com/" target=_blank>Pro Sports Transactions</a>',
                              "<br><br>",
-                             '<p>NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href="https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees" target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. Additionally, players can be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, it is only available as an option under certain conditions.</p>'))
+                             '<p>NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href="https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees" target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. Additionally, players can be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. To simplify things slightly, <em>free agency</em> is a bit of a catch-all, including claims off of waivers as well. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, it is only available as an option under certain conditions (player searches going a single transaction step).</p>'))
 }
 
 # Return a Shiny app object

@@ -75,7 +75,7 @@ clean_transactions <- function(transactions_df,
     df %>% 
       filter(str_detect(Notes, "trade") | 
                str_detect(Notes, "^signed.*free agent") |
-               str_detect(Notes, "player became a free agent") |
+               str_detect(Notes, "player became.*free agent") |
                str_detect(Notes, "waived") |
                str_detect(Notes, "claimed off waivers") |
                str_detect(Notes, "contract expired") |
@@ -103,7 +103,7 @@ clean_transactions <- function(transactions_df,
                                    Relinquished),
              Acquired = ifelse(str_detect(Notes, "waived") | 
                                  str_detect(Notes, "contract expired") | 
-                                 str_detect(Notes, "player became a free agent"),
+                                 str_detect(Notes, "player became.*free agent"),
                                "free agency",
                                Acquired))
   }
@@ -174,14 +174,15 @@ clean_transactions <- function(transactions_df,
       mutate(key = ifelse(Acquired == "free agency" | Relinquished == "free agency",
                           paste0(pmin(Acquired, Relinquished),
                                  pmax(Acquired, Relinquished),
-                                 Notes),
+                                 Notes, 
+                                 Date),
                           paste0(pmin(Acquired, Relinquished),
                                  pmax(Acquired, Relinquished)))) %>% 
       distinct(key, .keep_all = TRUE)
   }
   make_edge_label <- function(df) {
     df %>% 
-      mutate(edge_label = case_when(str_detect(Notes, "trade") ~ sprintf("In a %s, on %s, the %s receive %s in exchange for %s",
+      mutate(edge_label = case_when(str_detect(Notes, "trade") ~ sprintf("In a %s, on %s, the %s acquire %s, and relinquish %s",
                                                                          str_replace(Notes, "with", "with the"), 
                                                                          Date, Team, Acquired, Relinquished),
                                     str_detect(Notes, "^signed.*free agent") |
@@ -192,10 +193,12 @@ clean_transactions <- function(transactions_df,
                                     str_detect(Notes, "\\d{4} NBA draft.*round pick.*") |
                                       str_detect(Notes, "^first round pick") |
                                       str_detect(Notes, "^second round pick") ~ sprintf("On %s, %s picks %s with the %s", Date, Team, Acquired, Notes),
-                                    str_detect(Notes, "waived") | 
-                                      str_detect(Notes, "player became a free agent") |
-                                      str_detect(Notes, "contract expired") ~ sprintf("On %s, %s becomes a free agent from %s",
-                                                                          Date, Relinquished, Team)))
+                                    str_detect(Notes, "waived") ~ sprintf("On %s, %s is waived by %s",
+                                                                          Date, Relinquished, Team),
+                                    str_detect(Notes, "player became.*free agent") ~ sprintf("On %s, %s becomes a free agent from %s",
+                                                                          Date, Relinquished, Team),
+                                    str_detect(Notes, "contract expired") ~ sprintf("On %s, %s's contract with %s expired.",
+                                                                                    Date, Relinquished, Team)))
   }
   find_teams_involved <- function(df) {
     df %>% 
