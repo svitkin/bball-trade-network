@@ -121,7 +121,12 @@ clean_transactions <- function(transactions_df,
   }
   clean_pick_text <- function(df) {
     df %>% 
-      mutate(pick_involved = str_detect(Acquired, "pick") | str_detect(Relinquished, "pick"),
+      mutate(pick_involved = 
+               str_detect(Acquired, "pick") | 
+               str_detect(Relinquished, "pick") |
+               str_detect(Notes, "\\d{4} NBA draft.*round pick.*") |
+               str_detect(Notes, "^first round pick") |
+               str_detect(Notes, "^second round pick"),
              Acquired = ifelse(str_detect(Acquired, "pick") & 
                                  str_detect(Acquired, "\\(.*#.*\\)$"),
                                str_replace_all(Acquired, ".*\\(.*#.*\\-(.*)\\)$", "\\1"),
@@ -192,7 +197,7 @@ clean_transactions <- function(transactions_df,
                                                                                          Team),
                                     str_detect(Notes, "\\d{4} NBA draft.*round pick.*") |
                                       str_detect(Notes, "^first round pick") |
-                                      str_detect(Notes, "^second round pick") ~ sprintf("On %s, %s picks %s with the %s", Date, Team, Acquired, Notes),
+                                      str_detect(Notes, "^second round pick") ~ sprintf("On %s, %s pick %s with the %s", Date, Team, Acquired, Notes),
                                     str_detect(Notes, "waived") ~ sprintf("On %s, %s is waived by %s",
                                                                           Date, Relinquished, Team),
                                     str_detect(Notes, "player became.*free agent") ~ sprintf("On %s, %s becomes a free agent from %s",
@@ -266,7 +271,7 @@ write_out_edgelist_df <- function(start, end) {
     write.csv(filename, row.names = FALSE)
 }
 
-write_out_edgelist_df("2010-01-01", Sys.Date())
+write_out_edgelist_df("2010-01-01", "2019-02-02")
   
  
 
