@@ -1,5 +1,6 @@
 # TODOs...
 
-- Deal with weird picks, future picks, and not exercised picks
-- Continue cleaning picks and rights to text
-- Refactor app code to allow better player and team searching
+- Deal with early historical data text artifacts
+- Deal with trade exception and cash mismatches
+- Find the relinquished team for 
+- Rearrange UI to make more informative experience.

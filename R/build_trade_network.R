@@ -5,6 +5,7 @@ library(dplyr)
 library(tidyr)
 library(stringr)
 library(purrr)
+library(assertr)
 
 
 create_base_url <- function(start, end) {
@@ -185,11 +186,45 @@ clean_transactions <- function(transactions_df,
                                  pmax(Acquired, Relinquished)))) %>% 
       distinct(key, .keep_all = TRUE)
   }
+  adjust_label_for_relinquished_team <- function(df) {
+    df %>% 
+      left_join(df %>% 
+                  filter(str_detect(Notes, "\\d.*team trade") & !str_detect(Relinquished, "cash")) %>% 
+                  select(Date, 
+                         relinq_team = Team,
+                         Relinquished = Acquired), 
+                by = c("Date", "Relinquished")) %>% 
+      distinct() %>% 
+      mutate(relinq_team = ifelse(str_detect(Notes, "trade") & !str_detect(Notes, "\\d.*team trade"),
+                                  str_replace_all(Notes, "trade with ", ""),
+                                  relinq_team)) %>% 
+      # TODO: Fix this; right now there are some observations with unknown relinquished teams (~24)
+      mutate(relinq_team = ifelse(str_detect(Notes, "trade") & is.na(relinq_team),
+                                  "Unknown Team",
+                                  relinq_team)) %>% 
+       
+      mutate(edge_label = ifelse(!is.na(relinq_team), 
+                                 str_replace(edge_label, "\nacquire", paste0("\n", relinq_team, " acquire")),
+                                 edge_label)) %>% 
+      
+      mutate(edge_label = ifelse(str_detect(Notes, "\\d.*team trade with"),
+                                 str_replace_all(
+                                   paste0(edge_label, 
+                                          "\nOther Team(s) Involved in Trade: ",
+                                          str_replace_all(
+                                            str_replace_all(
+                                              str_replace_all(Notes, "\\d.*team trade with ", ""), 
+                                              Team, ""),
+                                            relinq_team, "")),
+                                   ", $", ""),
+                                 edge_label))
+  }
   make_edge_label <- function(df) {
     df %>% 
-      mutate(edge_label = case_when(str_detect(Notes, "trade") ~ sprintf("In a %s, on %s, the %s acquire %s, and relinquish %s",
-                                                                         str_replace(Notes, "with", "with the"), 
-                                                                         Date, Team, Acquired, Relinquished),
+      mutate(edge_label = case_when(str_detect(Notes, "trade") ~ sprintf("On %s: \nacquire %s \n%s acquire %s",
+                                                                         Date, 
+                                                                         Relinquished,
+                                                                         Team, Acquired),
                                     str_detect(Notes, "^signed.*free agent") |
                                       str_detect(Notes, "claimed off waivers") ~ sprintf("On %s, %s is %s by %s",
                                                                                          Date, Acquired, 
@@ -205,6 +240,7 @@ clean_transactions <- function(transactions_df,
                                     str_detect(Notes, "contract expired") ~ sprintf("On %s, %s's contract with %s expired.",
                                                                                     Date, Relinquished, Team)))
   }
+  
   find_teams_involved <- function(df) {
     df %>% 
       mutate(
@@ -246,9 +282,10 @@ clean_transactions <- function(transactions_df,
            Relinquished = str_trim(Relinquished)) %>% 
     make_edge_label() %>% 
     clean_pick_text() %>% 
-    clean_cash_text() %>% 
     clean_exception_text() %>% 
+    clean_cash_text() %>% 
     clean_rights_to_text() %>% 
+    adjust_label_for_relinquished_team() %>% 
     find_teams_involved() %>% 
     misc_cleanup() %>% 
     make_transaction_key()
@@ -272,7 +309,9 @@ write_out_edgelist_df <- function(start, end) {
 }
 
 write_out_edgelist_df("2010-01-01", "2019-02-02")
-  
+
+# All data since NBA ABA merger
+# write_out_edgelist_df("1976-11-16", Sys.Date())
  
 
 
