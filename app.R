@@ -5,6 +5,7 @@ library(purrr)
 library(visNetwork)
 library(DT)
 library(shinycssloaders)
+library(shinyjs)
 
 
 start <- "2010-01-01"
@@ -18,13 +19,17 @@ ui <- fluidPage(
   tabsetPanel(id = "tabs",
     tabPanel("Network Visualization", 
              shinycssloaders::withSpinner(visNetworkOutput("tradeNetwork"))),
+    tabPanel("How does it connect?",
+             sidebarLayout(uiOutput("edgeMovieOptions"),
+                           shinycssloaders::withSpinner(visNetworkOutput("edgeMovie")))),
     tabPanel("Tabular Data", 
              shinycssloaders::withSpinner(dataTableOutput("tradeData"))),
     tabPanel("About", column(8, offset = 2, htmlOutput("about")))
   ),
-  fluidRow(uiOutput("player_ui"),
-           uiOutput("team_ui"),
-           uiOutput("options_ui"))
+  tags$hr(style="border-color: black;"),
+  fluidRow(uiOutput("playerUI"), 
+           uiOutput("teamUI"),
+           uiOutput("optionsUI"))
 )
 
 # Define the server code
@@ -103,7 +108,7 @@ server <- function(input, output, session) {
     conditionalPanel("input.tabs != 'About'", ui_el)
   }
   
-  output$player_ui <- renderUI({
+  output$playerUI <- renderUI({
     
     sidebarPanel(
            selectizeInput(
@@ -121,7 +126,7 @@ server <- function(input, output, session) {
     ) %>% 
       check_not_about_tab()
   })
-  output$team_ui <- renderUI({
+  output$teamUI <- renderUI({
       sidebarPanel(
              selectInput("teamsRestriction", 
                          "Trades associated with which NBA team(s)",
@@ -135,7 +140,7 @@ server <- function(input, output, session) {
       ) %>% 
         check_not_about_tab()
     })
-  output$options_ui <- renderUI({
+  output$optionsUI <- renderUI({
     sidebarPanel(
            conditionalPanel(
              condition = "input.teamsRestriction == null",
@@ -150,6 +155,7 @@ server <- function(input, output, session) {
       check_not_about_tab()
   })
   
+  # Network Visualization Tab ------------------------------------------------------------------
   # Filter player options based on user choices
   observe({
     if (!is.null(input$includeFreeAgency) & 
@@ -167,6 +173,7 @@ server <- function(input, output, session) {
     }
     
   })
+  
   
   
   # Graph-related creation functions
@@ -329,6 +336,74 @@ server <- function(input, output, session) {
     }
   })
   
+  # Edge Movie Tab -------------------------------------------------------------------------
+  output$edgeMovieOptions <- renderUI({
+    sidebarPanel(
+      selectizeInput("startPlayerPath",
+                     "How does a trade with",
+                     input$players),
+      selectizeInput("endPlayerPath",
+                     "Relate to ",
+                     sort(setdiff(V(prepare_rendered_graph())$name,
+                                  input$players))),
+      conditionalPanel("input.startPlayerPath != null & input.endPlayerPath != null",
+                       sliderInput("edgeMovieSlide", "",
+                                   value = 1,
+                                   step = 1,
+                                   min = 1,
+                                   max = length(edge_movie())))
+    )
+  })
+  
+  create_edge_movie_networks <- function() {
+    make_visTitle <- function(edges_df) {
+      edges_df %>% 
+        add_edge_labels() %>% 
+        format_edge_labels() %>% 
+        rename(label = title) %>% 
+        pull(label) %>% 
+        paste(collapse = "<br><br>")
+    }
+    
+    if (!is.null(input$startPlayerPath) & !is.null(input$endPlayerPath)) {
+      
+      viz_path <- 
+        shortest_paths(prepare_rendered_graph(), 
+                       input$startPlayerPath, 
+                       input$endPlayerPath,
+                       mode = "all")$vpath[[1]]$name
+      
+      set.seed(123)
+      lapply(1:(length(viz_path)-1), function(i) {
+        
+        edge_subgraph <- induced_subgraph(prepare_rendered_graph(), 
+                                          viz_path[c(1:(i+1))])
+        
+        nodes_df <- 
+          as_data_frame(edge_subgraph, "vertices") %>% 
+              rename(id = name) %>% 
+              mutate(label = id,
+                     label = str_wrap(label, width = 40),
+                     label = str_replace_all(label, "\n", "<br>"))
+        
+        edges_df <- as_data_frame(edge_subgraph, "edges")
+        
+        visNetwork(nodes_df, edges_df, main = make_visTitle(edges_df))
+      })
+      
+    }
+  }
+  
+  edge_movie <- reactive({
+    create_edge_movie_networks()
+  })
+  
+  output$edgeMovie <- renderVisNetwork({
+    edge_movie()[[input$edgeMovieSlide]]
+  })
+  
+  
+  # Tabular Data Tab -------------------------------------------------------------
   create_trade_table <- function() {
     
     vis_subgraph <- prepare_rendered_graph()
