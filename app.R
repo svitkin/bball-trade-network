@@ -1,3 +1,37 @@
+# New app.R
+
+# UI -------------------------------
+# How are trades with player ______ (selectize input of all players in data)
+# Related to ________ (selectize input of "Anyone" option all players in data {n steps} away from 1st player choice)
+# n_steps slider spread
+# Other options 
+
+# Observers -----------------------------
+# For changes in "related to" (2nd) player based on 1st player choice
+# For changes in any UI options, the underlying graph generated
+  # Create functions that parameterize reactive elements
+  # Run those functions with reactive elements as parameters in explicit observers, reactive elements, etc.
+
+# Visualization -------------------
+# Network:
+# If Anyone is chosen:
+  # Create ego based network from player, going {n_steps}
+  # Display it with visNetwork
+# Else:
+  # Find the path(s) between 1st player and 2nd player chosen
+  # Organize each connection by time
+  # Add slider that has the time steps
+  # Starting with the first time step edge as a visNetwork visualization
+  # As the slider increases go to that step, keeping the edges from the last time step
+    # Make sure visualization is centered in this case
+
+# Table:
+  # Datatable output based on graph generated from visualization
+
+# TODO:
+# Deal with the slider single length edge movies 
+# Make draft part of the network when it is chosen, not part of the edges dataframe after processing
+
 library(dplyr)
 library(igraph)
 library(stringr)
@@ -5,6 +39,8 @@ library(purrr)
 library(visNetwork)
 library(DT)
 library(shinycssloaders)
+library(shinyjs)
+library(shinyWidgets)
 
 
 start <- "2010-01-01"
@@ -15,16 +51,19 @@ graph_df <- NULL
 ui <- fluidPage(
   titlePanel("How does a trade ripple through the NBA?"),
   helpText(paste0("Data going from ", start, " to ", end)),
+  tags$hr(style="border-color: black;"),
   tabsetPanel(id = "tabs",
-    tabPanel("Network Visualization", 
-             shinycssloaders::withSpinner(visNetworkOutput("tradeNetwork"))),
-    tabPanel("Tabular Data", 
-             shinycssloaders::withSpinner(dataTableOutput("tradeData"))),
-    tabPanel("About", column(8, offset = 2, htmlOutput("about")))
-  ),
-  fluidRow(uiOutput("player_ui"),
-           uiOutput("team_ui"),
-           uiOutput("options_ui"))
+              tabPanel("Setup",
+                       shiny::tags$br(),
+                       fluidRow(uiOutput("playerUI")), 
+                       fluidRow(column(width = 11, uiOutput("optionsUI"))),
+                       fluidRow(column(width = 10, htmlOutput("about")))),
+              tabPanel("Network Visualization", 
+                       shiny::tags$br(),
+                       fluidRow(column(6, offset = 1, uiOutput("networkUI"))),
+                       shinycssloaders::withSpinner(visNetworkOutput("tradeNetwork"))),
+              tabPanel("Raw Data",
+                       shinycssloaders::withSpinner(DTOutput("tradeData")))) 
 )
 
 # Define the server code
@@ -41,8 +80,8 @@ server <- function(input, output, session) {
     
     graph_df
   }
-  conditional_cash_filter <- function(df) {
-    if (!input$includeCash) {
+  conditional_cash_filter <- function(df, cashConditional) {
+    if (!cashConditional) {
       df <- 
         df %>% 
         filter(from != "cash", 
@@ -51,8 +90,8 @@ server <- function(input, output, session) {
       df
     }
   }
-  conditional_exception_filter <- function(df) {
-    if (!input$includeException) {
+  conditional_exception_filter <- function(df, exceptionConditional) {
+    if (!exceptionConditional) {
       df <-
         df %>% 
         filter(from != "trade exception", 
@@ -61,8 +100,8 @@ server <- function(input, output, session) {
       df
     }
   }
-  conditional_free_agency_filter <- function(df) {
-    if (!input$includeFreeAgency) {
+  conditional_free_agency_filter <- function(df, freeagencyConditional) {
+    if (!freeagencyConditional) {
       df <- 
         df %>% 
         filter(from != "free agency", 
@@ -77,139 +116,190 @@ server <- function(input, output, session) {
       filter(from != "draft",
              to != "draft")
   }
-  teams_filter <- function(df) {
-    if (!is.null(input$teamsRestriction)) {
-      df <- 
-        df %>% 
-        filter(str_detect(teams_involved, 
-                          paste(paste0("(", input$teamsRestriction, ")"), 
-                                collapse = "|")))
-    } else {
-      df
-    }
-  }
+
   user_filter <- function(df) {
     df %>% 
-      conditional_cash_filter() %>% 
-      conditional_exception_filter() %>% 
-      conditional_free_agency_filter() %>% 
-      draft_filter() %>% 
-      teams_filter()
+      conditional_cash_filter(isolate(input$includeCash)) %>% 
+      conditional_exception_filter(isolate(input$includeException)) %>% 
+      conditional_free_agency_filter(isolate(input$includeFreeAgency)) %>% 
+      draft_filter()
   }
-  
   
   # UI related functions
-  check_not_about_tab <- function(ui_el) {
-    conditionalPanel("input.tabs != 'About'", ui_el)
+  output$playerUI <- renderUI({
+    
+    if (!is.null(input$includeFreeAgency) &
+        !is.null(input$includeDraft) &
+        !is.null(input$includeCash) &
+        !is.null(input$includeException)) {
+      
+      filtered_df <- 
+        graph_data() %>% 
+        user_filter()
+      
+      all_players <-
+        unique(c(filtered_df[["from"]], 
+                 filtered_df[["to"]]))
+      
+      column(width = 6,
+             div(style="display:inline-block",
+                 selectizeInput(
+                   inputId = "player1choice",
+                   label = "How are trades associated with",
+                   choices = sort(all_players),
+                   options = list(maxOptions = length(all_players))
+                 )),
+             div(style="display:inline-block",
+                 selectizeInput(
+                   inputId = "player2choice",
+                   label = "Related to",
+                   choices = c("Anyone"),
+                   multiple = TRUE,
+                   options = list(maxOptions = length(all_players))))
+      )
+        
+    }
+    
+  })
+  
+  output$optionsUI <- renderUI({
+    sidebarPanel(
+      conditionalPanel(
+        condition = "!input.includeFreeAgency",
+        sliderInput("numSteps", "Include other players how many exchanges away", 
+                    min = 1, max = 10, value = 2)),
+      checkboxInput("includeFreeAgency", "Include free agency as part of the network"),
+      checkboxInput("includeDraft", "Include the draft as part of the network"),
+      checkboxInput("includeCash", "Include cash as a part of the network"),
+      checkboxInput("includeException", "Include trade exceptions as a part of the network"),
+      shiny::tags$br(),
+      downloadButton("downloadTradeData", "Download Trade Data"))
+  })
+  
+  output$networkUI <- renderUI({
+    conditionalPanel("input.player2choice != null",
+                     sliderTextInput("edgeMovieSlide", 
+                                     label = "Stepping through time",
+                                     choices = "None",
+                                     animate = animationOptions(interval = 3000,
+                                                                loop = FALSE, 
+                                                                playButton = "Play All",
+                                                                pauseButton = "Pause")))
+  })
+  
+  # Graph related functions
+  chooseNumSteps <- reactive({
+    if (!input$includeFreeAgency)  {
+      input$numSteps
+    } else {
+      1
+    }
+  })
+  make_full_network <- function(df) {
+    df %>% 
+      select(from, to, date, edge_label, pick_involved, rights_involved) %>% 
+      graph_from_data_frame(directed = TRUE)
+  }
+  make_player_network <- function(full_network, playerChoice, numSteps) {
+    ego(full_network,
+        nodes = playerChoice,
+        order = numSteps,
+        mode = "all") %>% 
+      unlist() %>% 
+      induced_subgraph(full_network, .)
+  }
+  get_connected_players <- function(player_network) {
+    V(player_network)$name
   }
   
-  output$player_ui <- renderUI({
-    
-    sidebarPanel(
-           selectizeInput(
-             inputId = "players",
-             label = "Trades associated with which NBA player(s)",
-             choices = sort(unique(c(graph_data()[["from"]], 
-                                     graph_data()[["to"]]))),
-             multiple = TRUE,
-             options = list(maxOptions = length(unique(c(graph_data()[["from"]], graph_data()[["to"]]))))
-           ),
-           conditionalPanel(
-             condition = "input.players != null & !input.includeFreeAgency & input.teamsRestriction == null",
-             sliderInput("numSteps", "Including other players how many exchanges away", 
-                         min = 1, max = 10, value = 2))
-    ) %>% 
-      check_not_about_tab()
-  })
-  output$team_ui <- renderUI({
-      sidebarPanel(
-             selectInput("teamsRestriction", 
-                         "Trades associated with which NBA team(s)",
-                         pull(graph_data(), teams_involved) %>% 
-                           str_split(", ") %>% 
-                           unlist() %>% 
-                           unique() %>% 
-                           str_trim() %>%
-                           sort(),
-                         multiple = TRUE)
-      ) %>% 
-        check_not_about_tab()
-    })
-  output$options_ui <- renderUI({
-    sidebarPanel(
-           conditionalPanel(
-             condition = "input.teamsRestriction == null",
-             checkboxInput("includeFreeAgency", "Include free agency as part of the network")
-           ),
-           checkboxInput("includeDraft", "Include the draft as part of the network"),
-           checkboxInput("includeCash", "Include cash as a part of the network"),
-           checkboxInput("includeException", "Include trade exceptions as a part of the network"),
-           shiny::tags$br(),
-           downloadButton("downloadTradeData", "Download Trade Data")
-    ) %>% 
-      check_not_about_tab()
+  # Observer to change player1 based on changing options
+  observe({
+    if (!is.null(input$includeFreeAgency) &
+        !is.null(input$includeCash) &
+        !is.null(input$includeException) & 
+        !is.null(input$numSteps) &
+        !is.null(input$includeDraft)) {
+
+      user_filtered_data <-
+        graph_data() %>% 
+        user_filter()
+        
+      player1options <-
+        sort(unique(c(user_filtered_data[["from"]],
+                      user_filtered_data[["to"]])))
+      
+      player1choice <- isolate(input$player1choice)
+      
+      if (!is.null(player1choice)) {
+        if (player1choice %in% player1options) {
+          updateSelectizeInput(session, 
+                               inputId = "player1choice",
+                               choices = player1options,
+                               selected = player1choice)    
+        } else {
+          updateSelectizeInput(session, 
+                               inputId = "player1choice",
+                               choices = player1options)
+        }
+      } else {
+        updateSelectizeInput(session, 
+                             inputId = "player1choice",
+                             choices = player1options)
+      }
+      
+    }
   })
   
-  # Filter player options based on user choices
+  #Observer to change player2 based on player1 choice
   observe({
     if (!is.null(input$includeFreeAgency) & 
         !is.null(input$includeCash) & 
-        !is.null(input$includeException)) {
+        !is.null(input$includeException) & 
+        !is.null(input$numSteps) &
+        !is.null(input$includeDraft) &
+        !is.null(input$player1choice)) {
       
-      relevant_choices <-
-        sort(unique(c(user_filter(graph_data())[["from"]], 
-                      user_filter(graph_data())[["to"]])))
+      message("Player 2 observer triggered")
+      full_network <- 
+        graph_data() %>% 
+        user_filter() %>% 
+        make_full_network()
       
-      updateSelectizeInput(session, 
-                           inputId = "players", 
-                           choices = relevant_choices,
-                           selected = intersect(input$players, relevant_choices))
+      if (input$player1choice %in% V(full_network)$name) {
+        player2options <-
+          full_network %>% 
+          make_player_network(input$player1choice, 
+                              chooseNumSteps()) %>% 
+          get_connected_players() %>% 
+          setdiff(input$player1choice) %>% 
+          sort() %>% 
+          c("Anyone", .)
+        
+        player2choice <- isolate(input$player2choice)
+        if (!is.null(player2choice)) {
+          if (player2choice %in% player2options) {
+            updateSelectizeInput(session, 
+                                 inputId = "player2choice",
+                                 choices = player2options,
+                                 selected = player2choice)
+          } else {
+            updateSelectizeInput(session, 
+                                 inputId = "player2choice",
+                                 choices = player2options)  
+          }
+        } else {
+          updateSelectizeInput(session, 
+                               inputId = "player2choice",
+                               choices = player2options)  
+        }
+        
+      }
+        
     }
-    
+      
   })
   
   
-  # Graph-related creation functions
-  make_subgraph <- function(g, players, order) {
-    subgraph_ids <-
-      ego(g, order = order, nodes = players) %>% 
-      unlist()
-    
-    induced_subgraph(g, subgraph_ids)
-  }
-  
-  conditional_add_draft_to_edges_df <- function(edges_df, g) {
-    if (input$includeDraft) {
-      draft_df <-
-        graph_data() %>% 
-        filter(from == "draft",
-               to %in% as_data_frame(g, "vertices")[["name"]]) %>% 
-        select(from, to)
-      
-      edges_df <- bind_rows(edges_df, draft_df)
-    } else {
-      edges_df
-    }
-  }
-  add_edge_labels <- function(edges_df) {
-    edges_df %>% 
-      # TODO: Currently hacky fix to get edge labels, make better
-      left_join(graph_data() %>% select(from, to, 
-                                        title = edge_label, 
-                                        pick_involved, 
-                                        rights_involved),
-                by = c("from", "to")) %>% 
-      left_join(graph_data() %>% select(to = from, from = to, 
-                                        title2 = edge_label, 
-                                        pick_involved2 = pick_involved, 
-                                        rights_involved2 = rights_involved),
-                by = c("from", "to")) %>% 
-      # Consolidate redundant columns
-      mutate(title = ifelse(is.na(title), title2, title),
-             pick_involved = ifelse(is.na(pick_involved), pick_involved2, pick_involved),
-             rights_involved = ifelse(is.na(rights_involved), rights_involved2, rights_involved)) %>% 
-      select(-title2, -pick_involved2, -rights_involved2)
-  }
   add_edge_options <- function(edges_df) {
     edges_df %>% 
       # Options on edges
@@ -228,30 +318,19 @@ server <- function(input, output, session) {
              title = map(title, function(s) paste(s, collapse = "\n")),
              title = str_replace_all(title, "\n", "<br>"))
   }
-  
-  make_visNodes <- function(g) {
-    nodes_df <- as_data_frame(g, "vertices")
-    if (input$includeDraft) {
-      nodes_df <- 
-        bind_rows(nodes_df,
-                  data.frame(name = "draft", stringsAsFactors = FALSE))
+  conditional_add_draft_to_edges_df <- function(edges_df, g, draftCondition) {
+    if (draftCondition) {
+      draft_df <-
+        graph_data() %>% 
+        filter(from == "draft",
+               to %in% as_data_frame(g, "vertices")[["name"]]) %>% 
+        select(from, to, edge_label, pick_involved, rights_involved)
+      
+      edges_df <- bind_rows(edges_df, draft_df)
+    } else {
+      edges_df
     }
-    nodes_df %>% 
-      rename(id = name) %>% 
-      mutate(title = id,
-             title = str_wrap(title, width = 40),
-             title = str_replace_all(title, "\n", "<br>"),
-             label = "")
   }
-  make_visEdges <- function(g) {
-    as_data_frame(g, "edges") %>% 
-      conditional_add_draft_to_edges_df(g) %>% 
-      add_edge_labels() %>% 
-      add_edge_options() %>% 
-      format_edge_labels()
-    
-  }
-  
   check_for_multiple_edges <- function(edges_df) {
     multiedges <-
       edges_df %>% 
@@ -263,46 +342,13 @@ server <- function(input, output, session) {
     
     multiedges > 0
   }
-  prepare_rendered_graph <- function() {
-    igraph_edgelist <-
-      graph_data() %>% 
-      user_filter() %>% 
-      select(from, to)
-    
-    if (length(input$teamsRestriction) > 0) {
-      igraph_edgelist <-
-        igraph_edgelist %>% 
-        filter(from != "free agency", to != "free agency")
-    }
-    
-    full_igraph <- graph_from_data_frame(igraph_edgelist, directed = TRUE) 
-    
-    if (!input$includeFreeAgency)  {
-      numSteps <- input$numSteps
-    } else {
-      numSteps <- 1
-    }
-    
-    if (!is.null(input$players)) {
-      make_subgraph(full_igraph, input$players, numSteps)
-    } else {
-      full_igraph
-    }
-  }
-  create_edge_legend_df <- function() {
-    data.frame(color = c("#6BFFC1", "#997E57", "#0ECC47", "#CC7E0E"),
-               label = c('"Normal Trade"', "Rights Involved", "Pick Involved", "Rights & Pick Involved"),
-               width = 6,
-               font.align = "top",
-               stringsAsFactors = FALSE)
-  }
-  format_network_viz <- function(visNetworkObj, edge_legend_df) {
-    visNetworkObj %>% 
-      visIgraphLayout(randomSeed = 123) %>% 
-      visNodes(label = " ", color = "#FF6B2B", shape = "circle") %>% 
-      visOptions(highlightNearest = list(enabled = TRUE, degree = 2, hover = TRUE),
-                 nodesIdSelection = TRUE) %>% 
-      visLegend(addEdges = edge_legend_df)
+  
+  make_visEdges <- function(g, draftCondition) {
+    as_data_frame(g, "edges") %>% 
+      conditional_add_draft_to_edges_df(g, draftCondition) %>% 
+      rename(title = edge_label) %>% 
+      add_edge_options() %>% 
+      format_edge_labels()
   }
   adjust_viz_if_multiple_edges <- function(visNetworkObj, edges_df) {
     if (check_for_multiple_edges(edges_df)) {
@@ -314,53 +360,189 @@ server <- function(input, output, session) {
     }
   }
   
-  output$tradeNetwork <- renderVisNetwork({
-    if (!is.null(input$players) | !is.null(input$teamsRestriction)) {
+  # Create Edge Movie Network
+  layout_viz <- function(nodes_df, edges_df, title) {
+    if (nrow(nodes_df) == 2) {
+      viz <- 
+        visNetwork(nodes_df, edges_df, main = title)
+    } else {
+      viz <- 
+        visNetwork(nodes_df, edges_df, main = title) %>% 
+        visIgraphLayout(layout = "layout_in_circle", randomSeed = 123)
+    }
+    viz %>% 
+      adjust_viz_if_multiple_edges(edges_df)
+  }
+  make_edge_movie_networks <- function(player_network, 
+                                       player1choice, player2choices, 
+                                       draftCondition, 
+                                       anyoneCondition) {
+    
+    if (!anyoneCondition) {
+      path_players <-
+        unlist(shortest_paths(player_network, 
+                              player1choice, 
+                              player2choices,
+                              mode = "all")$vpath)
       
-      vis_subgraph <- prepare_rendered_graph()
+      subgraph_paths <- induced_subgraph(player_network, path_players)  
+    } else {
+      subgraph_paths <- player_network
+    }
+    
+    all_dates <- sort(unique(E(subgraph_paths)$date))
+    
+    date_networks <-
+      lapply(1:length(all_dates), function(dt_index) {
+        edge_subgraph <-
+          subgraph_paths %>% 
+          delete_edges(which(!E(subgraph_paths)$date %in% all_dates[1:dt_index])) %>% 
+          delete_vertices(degree(.) == 0)
+        
+        edges_df <- make_visEdges(edge_subgraph, draftCondition)
+        nodes_df <-
+          data.frame(id = unique(c(edges_df[["from"]], edges_df[["to"]])),
+                     stringsAsFactors = FALSE) %>% 
+          mutate(label = id,
+                 label = str_wrap(label, width = 40),
+                 label = str_replace_all(label, "\n", "<br>"))
+        
+        layout_viz(nodes_df, edges_df, paste0("Trades up to: ", all_dates[dt_index],
+                                              "<br>For the network between ", player1choice, " and ",
+                                              str_replace_all(str_wrap(paste(player2choices, 
+                                                                             collapse = ", "),
+                                                                       width = 40),
+                                                              "\n",
+                                                              "<br>")))
+      })
+    
+    names(date_networks) <- all_dates
+    date_networks
+  }
+  
+  edge_movie <- reactive({
+    if (!is.null(input$player1choice) & !is.null(input$player2choice)) {
       
-      ledges <- create_edge_legend_df()
-      nodes_df <- make_visNodes(vis_subgraph)
-      edges_df <- make_visEdges(vis_subgraph)
-      
-      visNetwork(nodes_df, edges_df) %>% 
-        format_network_viz(ledges) %>% 
-        adjust_viz_if_multiple_edges(edges_df)
+      full_network <-
+        graph_data() %>%
+        user_filter() %>%
+        make_full_network()
+        
+      anyoneCondition <- "Anyone" %in% input$player2choice    
+      if ((input$player1choice %in% V(full_network)$name &
+          anyoneCondition) |
+          (input$player1choice %in% V(full_network)$name &
+          input$player2choice %in% V(full_network)$name)) {
+        
+        player_network <-
+          make_player_network(full_network,
+                              input$player1choice,
+                              chooseNumSteps()) 
+        
+        make_edge_movie_networks(player_network,
+                                 input$player1choice,
+                                 input$player2choice,
+                                 input$includeDraft,
+                                 anyoneCondition)
+        
+      }
     }
   })
   
-  create_trade_table <- function() {
-    
-    vis_subgraph <- prepare_rendered_graph()
-    
-    make_visEdges(vis_subgraph) %>% 
-      select(`Player 1` = from,
-             `Player 2` = to,
-             `Description`= title) %>% 
-      # TODO: Fix so description shows up better
-      mutate(Description = str_replace_all(Description, "<br>", " ")) 
-  }
-  output$downloadTradeData <- downloadHandler(
-    filename = function() {
-      paste0(start, "_", end, "_trade-data.csv")
-    },
-    content = function(file) {
-      write.csv(create_trade_table(), file, row.names = FALSE)
-    })
-  
-  output$tradeData <- renderDataTable({
-    create_trade_table() %>% 
-      datatable(rownames = FALSE, filter = "top")
+  # Update edge movie slider length
+  observe({
+    if (!is.null(input$player1choice) & !is.null(input$player2choice) &
+        input$tabs == "Network Visualization") {
+      full_network <-
+        graph_data() %>%
+        user_filter() %>%
+        make_full_network()
+      
+      anyoneCondition <- "Anyone" %in% input$player2choice    
+      if ((input$player1choice %in% V(full_network)$name &
+           anyoneCondition) |
+          (input$player1choice %in% V(full_network)$name &
+           input$player2choice %in% V(full_network)$name)) {
+        
+        player_network <-
+          make_player_network(full_network,
+                              input$player1choice,
+                              chooseNumSteps()) 
+        
+        updateSliderTextInput(session,
+                              "edgeMovieSlide",
+                              choices = names(edge_movie()))
+      }
+    }
   })
   
+  output$tradeNetwork <- renderVisNetwork({
+    if (!is.null(input$player1choice) & !is.null(input$player2choice)) {
+      if (length(edge_movie()) == 1) {
+        edge_movie()[[1]] 
+      } else {
+        if (!is.null(input$edgeMovieSlide)) {
+          edge_movie()[[input$edgeMovieSlide]]
+        }
+      }
+    }
+  })
+  
+  # Table section ---------------------------------------------------------------------------
+  create_trade_table <- function(player1, numSteps, draftCondition) {
+    full_network <-
+      graph_data() %>%
+      user_filter() %>%
+      make_full_network()
+     
+    if (player1 %in% V(full_network)$name) {
+      player_network <-
+        make_player_network(full_network,
+                            player1,
+                            numSteps) 
+      
+      as_data_frame(player_network, "edges") %>% 
+        conditional_add_draft_to_edges_df(player_network, draftCondition) %>% 
+        mutate(Description = str_replace(edge_label, "On.*\n", ""),
+               Description = str_replace_all(Description, "[ ]*\n", "; ")) %>% 
+        select(Date = date,
+               `Player 1` = from,
+               `Player 2` = to,
+               Description)
+    }
+  }
+  output$tradeData <- renderDT({
+    create_trade_table(input$player1choice,
+                       chooseNumSteps(),
+                       input$includeDraft) %>% 
+      datatable(rownames = FALSE, filter = "top", caption = paste0("All Trade Data for ",
+                                                                   input$player1choice))
+  })
+  output$downloadTradeData <- downloadHandler(
+    filename = function() {
+      paste0(input$player1choice, "_trade-data.csv")
+    },
+    content = function(file) {
+      write.csv(create_trade_table(input$player1choice,
+                                   chooseNumSteps(),
+                                   input$includeDraft), 
+                file, 
+                row.names = FALSE)
+    })
+  
+  
+  # About Section ---------------------------------------------------------------------------
   output$about <-
     shiny::renderText(paste0('<br>
+                              <h4>About</h4>
                              Code: <a href="https://github.com/svitkin/bball-trade-network" target=_blank>https://github.com/svitkin/bball-trade-network</a>',
                              "<br>",
                              'Data comes from <a href="http://prosportstransactions.com/" target=_blank>Pro Sports Transactions</a>',
                              "<br><br>",
                              '<p>NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href="https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees" target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. Additionally, players can be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. To simplify things slightly, <em>free agency</em> is a bit of a catch-all, including claims off of waivers as well. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, it is only available as an option under certain conditions (player searches going a single transaction step).</p>'))
+
 }
+
 
 # Return a Shiny app object
 shinyApp(ui = ui, server = server)
