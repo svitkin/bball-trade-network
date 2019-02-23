@@ -127,7 +127,7 @@ Other Team(s) Involved in Trade: Clippers",TRUE,FALSE,"Cavaliers, Clippers, Wiza
 "Drew GoodenSebastian Telfair","2010-02-17","Drew Gooden","Sebastian Telfair","Clippers","3-team trade with Cavaliers, Wizards","On 2010-02-17: 
 Cavaliers acquire Sebastian Telfair 
 Clippers acquire Drew Gooden
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Clippers, Cavaliers, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Clippers, Cavaliers, Wizards"
 "Al ThorntonDrew Gooden","2010-02-17","Drew Gooden","Al Thornton","Clippers","3-team trade with Cavaliers, Wizards","On 2010-02-17: 
 Wizards acquire Al Thornton 
 Clippers acquire Drew Gooden
@@ -140,7 +140,7 @@ Other Team(s) Involved in Trade: Cavaliers",FALSE,FALSE,"Wizards, Cavaliers, Cli
 "Al ThorntonAntawn Jamison","2010-02-17","Al Thornton","Antawn Jamison","Wizards","3-team trade with Cavaliers, Clippers","On 2010-02-17: 
 Cavaliers acquire Antawn Jamison 
 Wizards acquire Al Thornton
-Other Team(s) Involved in Trade: , Clippers",FALSE,FALSE,"Wizards, Cavaliers, Clippers"
+Other Team(s) Involved in Trade:Clippers",FALSE,FALSE,"Wizards, Cavaliers, Clippers"
 "Drew GoodenEmir Preldzic","2010-02-17","Emir Preldzic","Drew Gooden","Wizards","3-team trade with Cavaliers, Clippers","On 2010-02-17: 
 Clippers acquire Drew Gooden 
 Wizards acquire rights to Emir Preldzic
@@ -253,7 +253,7 @@ Other Team(s) Involved in Trade: Knicks",FALSE,FALSE,"Kings, Knicks, Rockets"
 "Carl LandrySergio Rodriguez","2010-02-18","Carl Landry","Sergio Rodriguez","Kings","3-team trade with Knicks, Rockets","On 2010-02-18: 
 Knicks acquire Sergio Rodriguez 
 Kings acquire Carl Landry
-Other Team(s) Involved in Trade: , Rockets",FALSE,FALSE,"Kings, Knicks, Rockets"
+Other Team(s) Involved in Trade:Rockets",FALSE,FALSE,"Kings, Knicks, Rockets"
 "Joey DorseyKevin Martin","2010-02-18","Joey Dorsey","Kevin Martin","Kings","3-team trade with Knicks, Rockets","On 2010-02-18: 
 Rockets acquire Kevin Martin 
 Kings acquire Joey Dorsey
@@ -265,7 +265,7 @@ Other Team(s) Involved in Trade: Knicks",FALSE,FALSE,"Kings, Knicks, Rockets"
 "Joey DorseySergio Rodriguez","2010-02-18","Joey Dorsey","Sergio Rodriguez","Kings","3-team trade with Knicks, Rockets","On 2010-02-18: 
 Knicks acquire Sergio Rodriguez 
 Kings acquire Joey Dorsey
-Other Team(s) Involved in Trade: , Rockets",FALSE,FALSE,"Kings, Knicks, Rockets"
+Other Team(s) Involved in Trade:Rockets",FALSE,FALSE,"Kings, Knicks, Rockets"
 "Kevin MartinLarry Hughes","2010-02-18","Larry Hughes","Kevin Martin","Kings","3-team trade with Knicks, Rockets","On 2010-02-18: 
 Rockets acquire Kevin Martin 
 Kings acquire Larry Hughes
@@ -277,7 +277,7 @@ Other Team(s) Involved in Trade: Knicks",FALSE,FALSE,"Kings, Knicks, Rockets"
 "Larry HughesSergio Rodriguez","2010-02-18","Larry Hughes","Sergio Rodriguez","Kings","3-team trade with Knicks, Rockets","On 2010-02-18: 
 Knicks acquire Sergio Rodriguez 
 Kings acquire Larry Hughes
-Other Team(s) Involved in Trade: , Rockets",FALSE,FALSE,"Kings, Knicks, Rockets"
+Other Team(s) Involved in Trade:Rockets",FALSE,FALSE,"Kings, Knicks, Rockets"
 "cashKevin Martin","2010-02-18","cash","Kevin Martin","Kings","3-team trade with Knicks, Rockets","On 2010-02-18: 
 Rockets acquire Kevin Martin 
 Kings acquire cash
@@ -289,7 +289,7 @@ Other Team(s) Involved in Trade: Knicks",FALSE,FALSE,"Kings, Knicks, Rockets"
 "cashSergio Rodriguez","2010-02-18","cash","Sergio Rodriguez","Kings","3-team trade with Knicks, Rockets","On 2010-02-18: 
 Knicks acquire Sergio Rodriguez 
 Kings acquire cash
-Other Team(s) Involved in Trade: , Rockets",FALSE,FALSE,"Kings, Knicks, Rockets"
+Other Team(s) Involved in Trade:Rockets",FALSE,FALSE,"Kings, Knicks, Rockets"
 "Kevin MartinTracy McGrady","2010-02-18","Tracy McGrady","Kevin Martin","Knicks","3-team trade with Kings, Rockets","On 2010-02-18: 
 Rockets acquire Kevin Martin 
 Knicks acquire Tracy McGrady
@@ -334,39 +334,39 @@ Other Team(s) Involved in Trade: Kings",TRUE,FALSE,"Knicks, Kings, Rockets"
 "Carl LandryJordan Hill","2010-02-18","Jordan Hill","Carl Landry","Rockets","3-team trade with Kings, Knicks","On 2010-02-18: 
 Kings acquire Carl Landry 
 Rockets acquire Jordan Hill
-Other Team(s) Involved in Trade: , Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
+Other Team(s) Involved in Trade:Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
 "Joey DorseyJordan Hill","2010-02-18","Jordan Hill","Joey Dorsey","Rockets","3-team trade with Kings, Knicks","On 2010-02-18: 
 Kings acquire Joey Dorsey 
 Rockets acquire Jordan Hill
-Other Team(s) Involved in Trade: , Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
+Other Team(s) Involved in Trade:Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
 "cashJordan Hill","2010-02-18","Jordan Hill","cash","Rockets","3-team trade with Kings, Knicks","On 2010-02-18: 
 Kings acquire cash 
 Rockets acquire Jordan Hill
-Other Team(s) Involved in Trade: , Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
+Other Team(s) Involved in Trade:Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
 "Carl LandryJared Jeffries","2010-02-18","Jared Jeffries","Carl Landry","Rockets","3-team trade with Kings, Knicks","On 2010-02-18: 
 Kings acquire Carl Landry 
 Rockets acquire Jared Jeffries
-Other Team(s) Involved in Trade: , Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
+Other Team(s) Involved in Trade:Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
 "Jared JeffriesJoey Dorsey","2010-02-18","Jared Jeffries","Joey Dorsey","Rockets","3-team trade with Kings, Knicks","On 2010-02-18: 
 Kings acquire Joey Dorsey 
 Rockets acquire Jared Jeffries
-Other Team(s) Involved in Trade: , Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
+Other Team(s) Involved in Trade:Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
 "cashJared Jeffries","2010-02-18","Jared Jeffries","cash","Rockets","3-team trade with Kings, Knicks","On 2010-02-18: 
 Kings acquire cash 
 Rockets acquire Jared Jeffries
-Other Team(s) Involved in Trade: , Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
+Other Team(s) Involved in Trade:Knicks",FALSE,FALSE,"Rockets, Kings, Knicks"
 "Carl LandryRoyce White","2010-02-18","Royce White","Carl Landry","Rockets","3-team trade with Kings, Knicks","On 2010-02-18: 
 Kings acquire Carl Landry 
 Rockets acquire first round pick (from Knicks, protected top 5 in 2012-15, else 2015 and 2016 second round picks) (2012 #16-Royce White)
-Other Team(s) Involved in Trade: , Knicks",TRUE,FALSE,"Rockets, Kings, Knicks"
+Other Team(s) Involved in Trade:Knicks",TRUE,FALSE,"Rockets, Kings, Knicks"
 "Joey DorseyRoyce White","2010-02-18","Royce White","Joey Dorsey","Rockets","3-team trade with Kings, Knicks","On 2010-02-18: 
 Kings acquire Joey Dorsey 
 Rockets acquire first round pick (from Knicks, protected top 5 in 2012-15, else 2015 and 2016 second round picks) (2012 #16-Royce White)
-Other Team(s) Involved in Trade: , Knicks",TRUE,FALSE,"Rockets, Kings, Knicks"
+Other Team(s) Involved in Trade:Knicks",TRUE,FALSE,"Rockets, Kings, Knicks"
 "cashRoyce White","2010-02-18","Royce White","cash","Rockets","3-team trade with Kings, Knicks","On 2010-02-18: 
 Kings acquire cash 
 Rockets acquire first round pick (from Knicks, protected top 5 in 2012-15, else 2015 and 2016 second round picks) (2012 #16-Royce White)
-Other Team(s) Involved in Trade: , Knicks",TRUE,FALSE,"Rockets, Kings, Knicks"
+Other Team(s) Involved in Trade:Knicks",TRUE,FALSE,"Rockets, Kings, Knicks"
 "Brian Cardinalfree agencywaived2010-02-18","2010-02-18","free agency","Brian Cardinal","Knicks","waived","On 2010-02-18, Brian Cardinal is waived by Knicks",FALSE,FALSE,"Knicks"
 "Brian Cookfree agencywaived2010-02-20","2010-02-20","free agency","Brian Cook","Rockets","waived","On 2010-02-20, Brian Cook is waived by Rockets",FALSE,FALSE,"Rockets"
 "free agencyMatt Harpringwaived2010-02-22","2010-02-22","free agency","Matt Harpring","Thunder","waived","On 2010-02-22, Matt Harpring is waived by Thunder",FALSE,FALSE,"Thunder"
@@ -545,11 +545,11 @@ Grizzlies acquire $3M cash",FALSE,TRUE,"Grizzlies, Mavericks"
 "Damion JamesJordan Crawford","2010-06-24","Jordan Crawford","Damion James","Hawks","3-team trade with Nets, Thunder","On 2010-06-24: 
 Nets acquire rights to Damion James 
 Hawks acquire rights to Jordan Crawford
-Other Team(s) Involved in Trade: , Thunder",FALSE,TRUE,"Hawks, Nets, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,TRUE,"Hawks, Nets, Thunder"
 "cashDamion James","2010-06-24","cash","Damion James","Hawks","3-team trade with Nets, Thunder","On 2010-06-24: 
 Nets acquire rights to Damion James 
 Hawks acquire cash considerations
-Other Team(s) Involved in Trade: , Thunder",FALSE,TRUE,"Hawks, Nets, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,TRUE,"Hawks, Nets, Thunder"
 "Latavious WilliamsMilan Macvan","2010-06-24","Milan Macvan","Latavious Williams","Heat","trade with Thunder","On 2010-06-24: 
 Thunder acquire rights to Latavious Williams 
 Heat acquire second round pick (protected top 40 in 2011, top 40 in 2012, unprotected in 2013) (2011 #54-Milan Macvan)",TRUE,TRUE,"Heat, Thunder"
@@ -566,7 +566,7 @@ Other Team(s) Involved in Trade: Hawks, Thunder",FALSE,TRUE,"Nets, Hawks, Thunde
 "cashTibur Pleiss","2010-06-24","Tibur Pleiss","cash","Thunder","3-team trade with Hawks, Nets","On 2010-06-24: 
 Hawks acquire cash considerations 
 Thunder acquire rights to Tibur Pleiss
-Other Team(s) Involved in Trade: , Nets",FALSE,TRUE,"Thunder, Hawks, Nets"
+Other Team(s) Involved in Trade:Nets",FALSE,TRUE,"Thunder, Hawks, Nets"
 "Lazar HaywardTrevor Booker","2010-06-24","Lazar Hayward","Trevor Booker","Timberwolves","trade with Wizards","On 2010-06-24: 
 Wizards acquire rights to Trevor Booker 
 Timberwolves acquire rights to Lazar Hayward",FALSE,TRUE,"Timberwolves, Wizards"
@@ -932,11 +932,11 @@ Hornets acquire Marco Belinelli",FALSE,FALSE,"Hornets, Raptors"
 "Darren CollisonTrevor Ariza","2010-08-11","Trevor Ariza","Darren Collison","Hornets","4-team trade with Nets, Pacers, Rockets","On 2010-08-11: 
 Pacers acquire Darren Collison 
 Hornets acquire Trevor Ariza
-Other Team(s) Involved in Trade: Nets, , Rockets",FALSE,FALSE,"Hornets, Nets, Pacers, Rockets"
+Other Team(s) Involved in Trade: Nets,Rockets",FALSE,FALSE,"Hornets, Nets, Pacers, Rockets"
 "James PoseyTrevor Ariza","2010-08-11","Trevor Ariza","James Posey","Hornets","4-team trade with Nets, Pacers, Rockets","On 2010-08-11: 
 Pacers acquire James Posey 
 Hornets acquire Trevor Ariza
-Other Team(s) Involved in Trade: Nets, , Rockets",FALSE,FALSE,"Hornets, Nets, Pacers, Rockets"
+Other Team(s) Involved in Trade: Nets,Rockets",FALSE,FALSE,"Hornets, Nets, Pacers, Rockets"
 "Courtney LeeTroy Murphy","2010-08-11","Troy Murphy","Courtney Lee","Nets","4-team trade with Hornets, Pacers, Rockets","On 2010-08-11: 
 Rockets acquire Courtney Lee 
 Nets acquire Troy Murphy
@@ -944,15 +944,15 @@ Other Team(s) Involved in Trade: Hornets, Pacers",FALSE,FALSE,"Nets, Hornets, Pa
 "Darren CollisonTroy Murphy","2010-08-11","Darren Collison","Troy Murphy","Pacers","4-team trade with Hornets, Nets, Rockets","On 2010-08-11: 
 Nets acquire Troy Murphy 
 Pacers acquire Darren Collison
-Other Team(s) Involved in Trade: Hornets, , Rockets",FALSE,FALSE,"Pacers, Hornets, Nets, Rockets"
+Other Team(s) Involved in Trade: Hornets,Rockets",FALSE,FALSE,"Pacers, Hornets, Nets, Rockets"
 "James PoseyTroy Murphy","2010-08-11","James Posey","Troy Murphy","Pacers","4-team trade with Hornets, Nets, Rockets","On 2010-08-11: 
 Nets acquire Troy Murphy 
 Pacers acquire James Posey
-Other Team(s) Involved in Trade: Hornets, , Rockets",FALSE,FALSE,"Pacers, Hornets, Nets, Rockets"
+Other Team(s) Involved in Trade: Hornets,Rockets",FALSE,FALSE,"Pacers, Hornets, Nets, Rockets"
 "Courtney LeeTrevor Ariza","2010-08-11","Courtney Lee","Trevor Ariza","Rockets","4-team trade with Hornets, Nets, Pacers","On 2010-08-11: 
 Hornets acquire Trevor Ariza 
 Rockets acquire Courtney Lee
-Other Team(s) Involved in Trade: , Nets, Pacers",FALSE,FALSE,"Rockets, Hornets, Nets, Pacers"
+Other Team(s) Involved in Trade:Nets, Pacers",FALSE,FALSE,"Rockets, Hornets, Nets, Pacers"
 "Dwayne Jonesfree agencywaived2010-08-13","2010-08-13","free agency","Dwayne Jones","Raptors","waived","On 2010-08-13, Dwayne Jones is waived by Raptors",FALSE,FALSE,"Raptors"
 "Brian Butchfree agencywaived2010-08-14","2010-08-14","free agency","Brian Butch","Nuggets","waived","On 2010-08-14, Brian Butch is waived by Nuggets",FALSE,FALSE,"Nuggets"
 "Coby Karlfree agencywaived2010-08-14","2010-08-14","free agency","Coby Karl","Nuggets","waived","On 2010-08-14, Coby Karl is waived by Nuggets",FALSE,FALSE,"Nuggets"
@@ -1282,35 +1282,35 @@ Hornets acquire Jarrett Jack",FALSE,FALSE,"Hornets, Raptors"
 "Joe SmithSasha Vujacic","2010-12-15","Joe Smith","Sasha Vujacic","Lakers","3-team trade with Nets, Rockets","On 2010-12-15: 
 Nets acquire Sasha Vujacic 
 Lakers acquire Joe Smith
-Other Team(s) Involved in Trade: , Rockets",FALSE,FALSE,"Lakers, Nets, Rockets"
+Other Team(s) Involved in Trade:Rockets",FALSE,FALSE,"Lakers, Nets, Rockets"
 "JaJuan JohnsonJoe Smith","2010-12-15","Joe Smith","JaJuan Johnson","Lakers","3-team trade with Nets, Rockets","On 2010-12-15: 
 Nets acquire first round pick (protected top 18 in 2011-16, unprotected in 2017) (2011 #27-JaJuan Johnson) 
 Lakers acquire Joe Smith
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Lakers, Nets, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Lakers, Nets, Rockets"
 "Sasha VujacicSergei Lishouk / Sergei Lishchuk","2010-12-15","Sergei Lishouk / Sergei Lishchuk","Sasha Vujacic","Lakers","3-team trade with Nets, Rockets","On 2010-12-15: 
 Nets acquire Sasha Vujacic 
 Lakers acquire rights to Sergei Lishouk / Sergei Lishchuk
-Other Team(s) Involved in Trade: , Rockets",FALSE,TRUE,"Lakers, Nets, Rockets"
+Other Team(s) Involved in Trade:Rockets",FALSE,TRUE,"Lakers, Nets, Rockets"
 "JaJuan JohnsonSergei Lishouk / Sergei Lishchuk","2010-12-15","Sergei Lishouk / Sergei Lishchuk","JaJuan Johnson","Lakers","3-team trade with Nets, Rockets","On 2010-12-15: 
 Nets acquire first round pick (protected top 18 in 2011-16, unprotected in 2017) (2011 #27-JaJuan Johnson) 
 Lakers acquire rights to Sergei Lishouk / Sergei Lishchuk
-Other Team(s) Involved in Trade: , Rockets",TRUE,TRUE,"Lakers, Nets, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,TRUE,"Lakers, Nets, Rockets"
 "Darius MorrisSasha Vujacic","2010-12-15","Darius Morris","Sasha Vujacic","Lakers","3-team trade with Nets, Rockets","On 2010-12-15: 
 Nets acquire Sasha Vujacic 
 Lakers acquire 2011 second round pick (from Nets) (#41-Darius Morris)
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Lakers, Nets, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Lakers, Nets, Rockets"
 "Darius MorrisJaJuan Johnson","2010-12-15","Darius Morris","JaJuan Johnson","Lakers","3-team trade with Nets, Rockets","On 2010-12-15: 
 Nets acquire first round pick (protected top 18 in 2011-16, unprotected in 2017) (2011 #27-JaJuan Johnson) 
 Lakers acquire 2011 second round pick (from Nets) (#41-Darius Morris)
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Lakers, Nets, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Lakers, Nets, Rockets"
 "Robert SacreSasha Vujacic","2010-12-15","Robert Sacre","Sasha Vujacic","Lakers","3-team trade with Nets, Rockets","On 2010-12-15: 
 Nets acquire Sasha Vujacic 
 Lakers acquire 2012 second round pick or cash (from Nets) (Lakers option) (#60-Robert Sacre)
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Lakers, Nets, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Lakers, Nets, Rockets"
 "JaJuan JohnsonRobert Sacre","2010-12-15","Robert Sacre","JaJuan Johnson","Lakers","3-team trade with Nets, Rockets","On 2010-12-15: 
 Nets acquire first round pick (protected top 18 in 2011-16, unprotected in 2017) (2011 #27-JaJuan Johnson) 
 Lakers acquire 2012 second round pick or cash (from Nets) (Lakers option) (#60-Robert Sacre)
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Lakers, Nets, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Lakers, Nets, Rockets"
 "Sasha VujacicTerrence Williams","2010-12-15","Sasha Vujacic","Terrence Williams","Nets","3-team trade with Lakers, Rockets","On 2010-12-15: 
 Rockets acquire Terrence Williams 
 Nets acquire Sasha Vujacic
@@ -1322,7 +1322,7 @@ Other Team(s) Involved in Trade: Lakers",TRUE,FALSE,"Nets, Lakers, Rockets"
 "Joe SmithShane Larkin","2010-12-15","Shane Larkin","Joe Smith","Nets","3-team trade with Lakers, Rockets","On 2010-12-15: 
 Lakers acquire Joe Smith 
 Nets acquire first round pick (from Rockets, protected top 14 in 2012-16, else 2017 second round pick, cash) (2013 #18-Shane Larkin)
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Nets, Lakers, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Nets, Lakers, Rockets"
 "Shane LarkinTerrence Williams","2010-12-15","Shane Larkin","Terrence Williams","Nets","3-team trade with Lakers, Rockets","On 2010-12-15: 
 Rockets acquire Terrence Williams 
 Nets acquire first round pick (from Rockets, protected top 14 in 2012-16, else 2017 second round pick, cash) (2013 #18-Shane Larkin)
@@ -1330,15 +1330,15 @@ Other Team(s) Involved in Trade: Lakers",TRUE,FALSE,"Nets, Lakers, Rockets"
 "Darius MorrisShane Larkin","2010-12-15","Shane Larkin","Darius Morris","Nets","3-team trade with Lakers, Rockets","On 2010-12-15: 
 Lakers acquire 2011 second round pick (#41-Darius Morris) 
 Nets acquire first round pick (from Rockets, protected top 14 in 2012-16, else 2017 second round pick, cash) (2013 #18-Shane Larkin)
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Nets, Lakers, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Nets, Lakers, Rockets"
 "Robert SacreShane Larkin","2010-12-15","Shane Larkin","Robert Sacre","Nets","3-team trade with Lakers, Rockets","On 2010-12-15: 
 Lakers acquire 2012 second round pick or cash (Lakers option) (#60-Robert Sacre) 
 Nets acquire first round pick (from Rockets, protected top 14 in 2012-16, else 2017 second round pick, cash) (2013 #18-Shane Larkin)
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Nets, Lakers, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Nets, Lakers, Rockets"
 "Sergei Lishouk / Sergei LishchukTerrence Williams","2010-12-15","Terrence Williams","Sergei Lishouk / Sergei Lishchuk","Rockets","3-team trade with Lakers, Nets","On 2010-12-15: 
 Lakers acquire rights to Sergei Lishouk / Sergei Lishchuk 
 Rockets acquire Terrence Williams
-Other Team(s) Involved in Trade: , Nets",FALSE,TRUE,"Rockets, Lakers, Nets"
+Other Team(s) Involved in Trade:Nets",FALSE,TRUE,"Rockets, Lakers, Nets"
 "Gilbert ArenasRashard Lewis","2010-12-18","Gilbert Arenas","Rashard Lewis","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Wizards acquire Rashard Lewis 
 Magic acquire Gilbert Arenas
@@ -1346,23 +1346,23 @@ Other Team(s) Involved in Trade: Suns",FALSE,FALSE,"Magic, Suns, Wizards"
 "Gilbert ArenasVince Carter","2010-12-18","Gilbert Arenas","Vince Carter","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Vince Carter 
 Magic acquire Gilbert Arenas
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Gilbert ArenasMickael Pietrus","2010-12-18","Gilbert Arenas","Mickael Pietrus","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Mickael Pietrus 
 Magic acquire Gilbert Arenas
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Gilbert ArenasMarcin Gortat","2010-12-18","Gilbert Arenas","Marcin Gortat","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Marcin Gortat 
 Magic acquire Gilbert Arenas
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Gilbert ArenasNikola Mirotic","2010-12-18","Gilbert Arenas","Nikola Mirotic","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire 2011 first round pick (#23-Nikola Mirotic) 
 Magic acquire Gilbert Arenas
-Other Team(s) Involved in Trade: , Wizards",TRUE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Magic, Suns, Wizards"
 "cashGilbert Arenas","2010-12-18","Gilbert Arenas","cash","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire cash 
 Magic acquire Gilbert Arenas
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Jason RichardsonRashard Lewis","2010-12-18","Jason Richardson","Rashard Lewis","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Wizards acquire Rashard Lewis 
 Magic acquire Jason Richardson
@@ -1370,23 +1370,23 @@ Other Team(s) Involved in Trade: Suns",FALSE,FALSE,"Magic, Suns, Wizards"
 "Jason RichardsonVince Carter","2010-12-18","Jason Richardson","Vince Carter","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Vince Carter 
 Magic acquire Jason Richardson
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Jason RichardsonMickael Pietrus","2010-12-18","Jason Richardson","Mickael Pietrus","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Mickael Pietrus 
 Magic acquire Jason Richardson
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Jason RichardsonMarcin Gortat","2010-12-18","Jason Richardson","Marcin Gortat","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Marcin Gortat 
 Magic acquire Jason Richardson
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Jason RichardsonNikola Mirotic","2010-12-18","Jason Richardson","Nikola Mirotic","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire 2011 first round pick (#23-Nikola Mirotic) 
 Magic acquire Jason Richardson
-Other Team(s) Involved in Trade: , Wizards",TRUE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Magic, Suns, Wizards"
 "cashJason Richardson","2010-12-18","Jason Richardson","cash","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire cash 
 Magic acquire Jason Richardson
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Hidayet Turkoglu / Hedo TurkogluRashard Lewis","2010-12-18","Hidayet Turkoglu / Hedo Turkoglu","Rashard Lewis","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Wizards acquire Rashard Lewis 
 Magic acquire Hidayet Turkoglu / Hedo Turkoglu
@@ -1394,23 +1394,23 @@ Other Team(s) Involved in Trade: Suns",FALSE,FALSE,"Magic, Suns, Wizards"
 "Hidayet Turkoglu / Hedo TurkogluVince Carter","2010-12-18","Hidayet Turkoglu / Hedo Turkoglu","Vince Carter","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Vince Carter 
 Magic acquire Hidayet Turkoglu / Hedo Turkoglu
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Hidayet Turkoglu / Hedo TurkogluMickael Pietrus","2010-12-18","Hidayet Turkoglu / Hedo Turkoglu","Mickael Pietrus","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Mickael Pietrus 
 Magic acquire Hidayet Turkoglu / Hedo Turkoglu
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Hidayet Turkoglu / Hedo TurkogluMarcin Gortat","2010-12-18","Hidayet Turkoglu / Hedo Turkoglu","Marcin Gortat","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Marcin Gortat 
 Magic acquire Hidayet Turkoglu / Hedo Turkoglu
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Hidayet Turkoglu / Hedo TurkogluNikola Mirotic","2010-12-18","Hidayet Turkoglu / Hedo Turkoglu","Nikola Mirotic","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire 2011 first round pick (#23-Nikola Mirotic) 
 Magic acquire Hidayet Turkoglu / Hedo Turkoglu
-Other Team(s) Involved in Trade: , Wizards",TRUE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Magic, Suns, Wizards"
 "cashHidayet Turkoglu / Hedo Turkoglu","2010-12-18","Hidayet Turkoglu / Hedo Turkoglu","cash","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire cash 
 Magic acquire Hidayet Turkoglu / Hedo Turkoglu
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Earl ClarkRashard Lewis","2010-12-18","Earl Clark","Rashard Lewis","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Wizards acquire Rashard Lewis 
 Magic acquire Earl Clark
@@ -1418,23 +1418,23 @@ Other Team(s) Involved in Trade: Suns",FALSE,FALSE,"Magic, Suns, Wizards"
 "Earl ClarkVince Carter","2010-12-18","Earl Clark","Vince Carter","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Vince Carter 
 Magic acquire Earl Clark
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Earl ClarkMickael Pietrus","2010-12-18","Earl Clark","Mickael Pietrus","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Mickael Pietrus 
 Magic acquire Earl Clark
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Earl ClarkMarcin Gortat","2010-12-18","Earl Clark","Marcin Gortat","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire Marcin Gortat 
 Magic acquire Earl Clark
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Earl ClarkNikola Mirotic","2010-12-18","Earl Clark","Nikola Mirotic","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire 2011 first round pick (#23-Nikola Mirotic) 
 Magic acquire Earl Clark
-Other Team(s) Involved in Trade: , Wizards",TRUE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Magic, Suns, Wizards"
 "cashEarl Clark","2010-12-18","Earl Clark","cash","Magic","3-team trade with Suns, Wizards","On 2010-12-18: 
 Suns acquire cash 
 Magic acquire Earl Clark
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Magic, Suns, Wizards"
 "Alonzo Geefree agencywaived2010-12-20","2010-12-20","free agency","Alonzo Gee","Wizards","waived","On 2010-12-20, Alonzo Gee is waived by Wizards",FALSE,FALSE,"Wizards"
 "free agencyLester Hudsonsigned free agent2010-12-20","2010-12-20","Lester Hudson","free agency","Wizards","signed free agent","On 2010-12-20, Lester Hudson is signed as free agent by Wizards",FALSE,FALSE,"Wizards"
 "Earl Barronfree agencywaived2010-12-21","2010-12-21","free agency","Earl Barron","Suns","waived","On 2010-12-21, Earl Barron is waived by Suns",FALSE,FALSE,"Suns"
@@ -1501,311 +1501,311 @@ Bulls acquire 2011 first round pick (lottery protected in 2011, else cash) (#28-
 "Carmelo AnthonyWilson Chandler","2011-02-22","Carmelo Anthony","Wilson Chandler","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Wilson Chandler 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Carmelo AnthonyRaymond Felton","2011-02-22","Carmelo Anthony","Raymond Felton","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Raymond Felton 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Carmelo AnthonyDanilo Gallinari","2011-02-22","Carmelo Anthony","Danilo Gallinari","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Danilo Gallinari 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Carmelo AnthonyKosta Koufos","2011-02-22","Carmelo Anthony","Kosta Koufos","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Kosta Koufos 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Carmelo AnthonyTimofey Mozgov","2011-02-22","Carmelo Anthony","Timofey Mozgov","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Timofey Mozgov 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Carmelo AnthonyEddy Curry","2011-02-22","Carmelo Anthony","Eddy Curry","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Timberwolves acquire Eddy Curry 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade:  Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Carmelo AnthonyQuincy Miller","2011-02-22","Carmelo Anthony","Quincy Miller","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2012 second round pick (#38-Quincy Miller) 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Carmelo AnthonyRomero Osby","2011-02-22","Carmelo Anthony","Romero Osby","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2013 second round pick (#51-Romero Osby) 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Carmelo AnthonyDario Saric","2011-02-22","Carmelo Anthony","Dario Saric","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2014 first round pick (#12-Dario Saric) 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Carmelo AnthonyJamal Murray","2011-02-22","Carmelo Anthony","Jamal Murray","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Nuggets option to swap 2016 first round picks with Knicks (#7-Jamal Murray) 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Carmelo Anthonycash","2011-02-22","Carmelo Anthony","cash","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire $3M cash 
 Knicks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Chauncey BillupsWilson Chandler","2011-02-22","Chauncey Billups","Wilson Chandler","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Wilson Chandler 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Chauncey BillupsRaymond Felton","2011-02-22","Chauncey Billups","Raymond Felton","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Raymond Felton 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Chauncey BillupsDanilo Gallinari","2011-02-22","Chauncey Billups","Danilo Gallinari","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Danilo Gallinari 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Chauncey BillupsKosta Koufos","2011-02-22","Chauncey Billups","Kosta Koufos","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Kosta Koufos 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Chauncey BillupsTimofey Mozgov","2011-02-22","Chauncey Billups","Timofey Mozgov","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Timofey Mozgov 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Chauncey BillupsEddy Curry","2011-02-22","Chauncey Billups","Eddy Curry","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Timberwolves acquire Eddy Curry 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade:  Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Chauncey BillupsQuincy Miller","2011-02-22","Chauncey Billups","Quincy Miller","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2012 second round pick (#38-Quincy Miller) 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Chauncey BillupsRomero Osby","2011-02-22","Chauncey Billups","Romero Osby","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2013 second round pick (#51-Romero Osby) 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Chauncey BillupsDario Saric","2011-02-22","Chauncey Billups","Dario Saric","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2014 first round pick (#12-Dario Saric) 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Chauncey BillupsJamal Murray","2011-02-22","Chauncey Billups","Jamal Murray","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Nuggets option to swap 2016 first round picks with Knicks (#7-Jamal Murray) 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "cashChauncey Billups","2011-02-22","Chauncey Billups","cash","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire $3M cash 
 Knicks acquire Chauncey Billups
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Renaldo BalkmanWilson Chandler","2011-02-22","Renaldo Balkman","Wilson Chandler","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Wilson Chandler 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Raymond FeltonRenaldo Balkman","2011-02-22","Renaldo Balkman","Raymond Felton","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Raymond Felton 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Danilo GallinariRenaldo Balkman","2011-02-22","Renaldo Balkman","Danilo Gallinari","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Danilo Gallinari 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Kosta KoufosRenaldo Balkman","2011-02-22","Renaldo Balkman","Kosta Koufos","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Kosta Koufos 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Renaldo BalkmanTimofey Mozgov","2011-02-22","Renaldo Balkman","Timofey Mozgov","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Timofey Mozgov 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Eddy CurryRenaldo Balkman","2011-02-22","Renaldo Balkman","Eddy Curry","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Timberwolves acquire Eddy Curry 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade:  Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Quincy MillerRenaldo Balkman","2011-02-22","Renaldo Balkman","Quincy Miller","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2012 second round pick (#38-Quincy Miller) 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Renaldo BalkmanRomero Osby","2011-02-22","Renaldo Balkman","Romero Osby","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2013 second round pick (#51-Romero Osby) 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Dario SaricRenaldo Balkman","2011-02-22","Renaldo Balkman","Dario Saric","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2014 first round pick (#12-Dario Saric) 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Jamal MurrayRenaldo Balkman","2011-02-22","Renaldo Balkman","Jamal Murray","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Nuggets option to swap 2016 first round picks with Knicks (#7-Jamal Murray) 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "cashRenaldo Balkman","2011-02-22","Renaldo Balkman","cash","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire $3M cash 
 Knicks acquire Renaldo Balkman
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony CarterWilson Chandler","2011-02-22","Anthony Carter","Wilson Chandler","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Wilson Chandler 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony CarterRaymond Felton","2011-02-22","Anthony Carter","Raymond Felton","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Raymond Felton 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony CarterDanilo Gallinari","2011-02-22","Anthony Carter","Danilo Gallinari","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Danilo Gallinari 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony CarterKosta Koufos","2011-02-22","Anthony Carter","Kosta Koufos","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Kosta Koufos 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony CarterTimofey Mozgov","2011-02-22","Anthony Carter","Timofey Mozgov","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Timofey Mozgov 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony CarterEddy Curry","2011-02-22","Anthony Carter","Eddy Curry","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Timberwolves acquire Eddy Curry 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade:  Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony CarterQuincy Miller","2011-02-22","Anthony Carter","Quincy Miller","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2012 second round pick (#38-Quincy Miller) 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony CarterRomero Osby","2011-02-22","Anthony Carter","Romero Osby","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2013 second round pick (#51-Romero Osby) 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony CarterDario Saric","2011-02-22","Anthony Carter","Dario Saric","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2014 first round pick (#12-Dario Saric) 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony CarterJamal Murray","2011-02-22","Anthony Carter","Jamal Murray","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Nuggets option to swap 2016 first round picks with Knicks (#7-Jamal Murray) 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Anthony Cartercash","2011-02-22","Anthony Carter","cash","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire $3M cash 
 Knicks acquire Anthony Carter
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Shelden WilliamsWilson Chandler","2011-02-22","Shelden Williams","Wilson Chandler","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Wilson Chandler 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Raymond FeltonShelden Williams","2011-02-22","Shelden Williams","Raymond Felton","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Raymond Felton 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Danilo GallinariShelden Williams","2011-02-22","Shelden Williams","Danilo Gallinari","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Danilo Gallinari 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Kosta KoufosShelden Williams","2011-02-22","Shelden Williams","Kosta Koufos","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Kosta Koufos 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Shelden WilliamsTimofey Mozgov","2011-02-22","Shelden Williams","Timofey Mozgov","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Timofey Mozgov 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Eddy CurryShelden Williams","2011-02-22","Shelden Williams","Eddy Curry","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Timberwolves acquire Eddy Curry 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade:  Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Quincy MillerShelden Williams","2011-02-22","Shelden Williams","Quincy Miller","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2012 second round pick (#38-Quincy Miller) 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Romero OsbyShelden Williams","2011-02-22","Shelden Williams","Romero Osby","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2013 second round pick (#51-Romero Osby) 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Dario SaricShelden Williams","2011-02-22","Shelden Williams","Dario Saric","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2014 first round pick (#12-Dario Saric) 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Jamal MurrayShelden Williams","2011-02-22","Shelden Williams","Jamal Murray","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Nuggets option to swap 2016 first round picks with Knicks (#7-Jamal Murray) 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "cashShelden Williams","2011-02-22","Shelden Williams","cash","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire $3M cash 
 Knicks acquire Shelden Williams
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Corey BrewerWilson Chandler","2011-02-22","Corey Brewer","Wilson Chandler","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Wilson Chandler 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Corey BrewerRaymond Felton","2011-02-22","Corey Brewer","Raymond Felton","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Raymond Felton 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Corey BrewerDanilo Gallinari","2011-02-22","Corey Brewer","Danilo Gallinari","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Danilo Gallinari 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Corey BrewerKosta Koufos","2011-02-22","Corey Brewer","Kosta Koufos","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Kosta Koufos 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Corey BrewerTimofey Mozgov","2011-02-22","Corey Brewer","Timofey Mozgov","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Timofey Mozgov 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Corey BrewerEddy Curry","2011-02-22","Corey Brewer","Eddy Curry","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Timberwolves acquire Eddy Curry 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade:  Nuggets",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Corey BrewerQuincy Miller","2011-02-22","Corey Brewer","Quincy Miller","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2012 second round pick (#38-Quincy Miller) 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Corey BrewerRomero Osby","2011-02-22","Corey Brewer","Romero Osby","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2013 second round pick (#51-Romero Osby) 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Corey BrewerDario Saric","2011-02-22","Corey Brewer","Dario Saric","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2014 first round pick (#12-Dario Saric) 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Corey BrewerJamal Murray","2011-02-22","Corey Brewer","Jamal Murray","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Nuggets option to swap 2016 first round picks with Knicks (#7-Jamal Murray) 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "cashCorey Brewer","2011-02-22","Corey Brewer","cash","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire $3M cash 
 Knicks acquire Corey Brewer
-Other Team(s) Involved in Trade: trade with , Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",FALSE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Jakob PoeltlWilson Chandler","2011-02-22","Jakob Poeltl","Wilson Chandler","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Wilson Chandler 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Jakob PoeltlRaymond Felton","2011-02-22","Jakob Poeltl","Raymond Felton","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Raymond Felton 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Danilo GallinariJakob Poeltl","2011-02-22","Jakob Poeltl","Danilo Gallinari","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Danilo Gallinari 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Jakob PoeltlKosta Koufos","2011-02-22","Jakob Poeltl","Kosta Koufos","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Kosta Koufos 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Jakob PoeltlTimofey Mozgov","2011-02-22","Jakob Poeltl","Timofey Mozgov","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Timofey Mozgov 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Eddy CurryJakob Poeltl","2011-02-22","Jakob Poeltl","Eddy Curry","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Timberwolves acquire Eddy Curry 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with Nuggets",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade:  Nuggets",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Jakob PoeltlQuincy Miller","2011-02-22","Jakob Poeltl","Quincy Miller","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2012 second round pick (#38-Quincy Miller) 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Jakob PoeltlRomero Osby","2011-02-22","Jakob Poeltl","Romero Osby","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2013 second round pick (#51-Romero Osby) 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Dario SaricJakob Poeltl","2011-02-22","Jakob Poeltl","Dario Saric","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire 2014 first round pick (#12-Dario Saric) 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Jakob PoeltlJamal Murray","2011-02-22","Jakob Poeltl","Jamal Murray","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire Nuggets option to swap 2016 first round picks with Knicks (#7-Jamal Murray) 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "cashJakob Poeltl","2011-02-22","Jakob Poeltl","cash","Knicks","3-team trade with trade with Nuggets, Timberwolves","On 2011-02-22: 
 Nuggets acquire $3M cash 
 Knicks acquire Nuggets option to swap 2016 first round picks with Knicks (#9-Jakob Poeltl)
-Other Team(s) Involved in Trade: trade with , Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
+Other Team(s) Involved in Trade: Timberwolves",TRUE,FALSE,"Knicks, Nuggets, Timberwolves"
 "Richaun HolmesWilson Chandler","2011-02-22","Wilson Chandler","Richaun Holmes","Nuggets","3-team trade with Knicks, Timberwolves","On 2011-02-22: 
 Timberwolves acquire 2015 second round pick (#37-Richaun Holmes) 
 Nuggets acquire Wilson Chandler
@@ -1849,7 +1849,7 @@ Other Team(s) Involved in Trade: Knicks",TRUE,FALSE,"Nuggets, Knicks, Timberwolv
 "Anthony RandolphCorey Brewer","2011-02-22","Anthony Randolph","Corey Brewer","Timberwolves","3-team trade with Knicks, Nuggets","On 2011-02-22: 
 Knicks acquire Corey Brewer 
 Timberwolves acquire Anthony Randolph
-Other Team(s) Involved in Trade: , Nuggets",FALSE,FALSE,"Timberwolves, Knicks, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,FALSE,"Timberwolves, Knicks, Nuggets"
 "Anthony RandolphKosta Koufos","2011-02-22","Anthony Randolph","Kosta Koufos","Timberwolves","3-team trade with Knicks, Nuggets","On 2011-02-22: 
 Nuggets acquire Kosta Koufos 
 Timberwolves acquire Anthony Randolph
@@ -1861,7 +1861,7 @@ Other Team(s) Involved in Trade: Knicks",FALSE,FALSE,"Timberwolves, Knicks, Nugg
 "Corey BrewerRichaun Holmes","2011-02-22","Richaun Holmes","Corey Brewer","Timberwolves","3-team trade with Knicks, Nuggets","On 2011-02-22: 
 Knicks acquire Corey Brewer 
 Timberwolves acquire 2015 second round pick (from Nuggets) (#37-Richaun Holmes)
-Other Team(s) Involved in Trade: , Nuggets",TRUE,FALSE,"Timberwolves, Knicks, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",TRUE,FALSE,"Timberwolves, Knicks, Nuggets"
 "cashKosta Koufos","2011-02-22","cash","Kosta Koufos","Timberwolves","3-team trade with Knicks, Nuggets","On 2011-02-22: 
 Nuggets acquire Kosta Koufos 
 Timberwolves acquire $3M cash (from Knicks)
@@ -2149,11 +2149,11 @@ Other Team(s) Involved in Trade: Mavericks",FALSE,FALSE,"Blazers, Mavericks, Nug
 "Raymond FeltonRudy Fernandez","2011-06-23","Raymond Felton","Rudy Fernandez","Blazers","3-team trade with Mavericks, Nuggets","On 2011-06-23: 
 Mavericks acquire Rudy Fernandez 
 Blazers acquire Raymond Felton
-Other Team(s) Involved in Trade: , Nuggets",FALSE,FALSE,"Blazers, Mavericks, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,FALSE,"Blazers, Mavericks, Nuggets"
 "Petteri KoponenRaymond Felton","2011-06-23","Raymond Felton","Petteri Koponen","Blazers","3-team trade with Mavericks, Nuggets","On 2011-06-23: 
 Mavericks acquire rights to Petteri Koponen 
 Blazers acquire Raymond Felton
-Other Team(s) Involved in Trade: , Nuggets",FALSE,TRUE,"Blazers, Mavericks, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,TRUE,"Blazers, Mavericks, Nuggets"
 "Raymond FeltonRoy Devyn Marble / Roy Marble (Devyn)","2011-06-23","Raymond Felton","Roy Devyn Marble / Roy Marble (Devyn)","Blazers","3-team trade with Mavericks, Nuggets","On 2011-06-23: 
 Nuggets acquire 2013 second round pick (protected top 40 in 2013, unprotected in 2014) (#56-Roy Devyn Marble / Roy Marble (Devyn)) 
 Blazers acquire Raymond Felton
@@ -2165,11 +2165,11 @@ Other Team(s) Involved in Trade: Mavericks",FALSE,TRUE,"Blazers, Mavericks, Nugg
 "Rudy FernandezTanguy Ngombo","2011-06-23","Tanguy Ngombo","Rudy Fernandez","Blazers","3-team trade with Mavericks, Nuggets","On 2011-06-23: 
 Mavericks acquire Rudy Fernandez 
 Blazers acquire rights to Tanguy Ngombo
-Other Team(s) Involved in Trade: , Nuggets",FALSE,TRUE,"Blazers, Mavericks, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,TRUE,"Blazers, Mavericks, Nuggets"
 "Petteri KoponenTanguy Ngombo","2011-06-23","Tanguy Ngombo","Petteri Koponen","Blazers","3-team trade with Mavericks, Nuggets","On 2011-06-23: 
 Mavericks acquire rights to Petteri Koponen 
 Blazers acquire rights to Tanguy Ngombo
-Other Team(s) Involved in Trade: , Nuggets",FALSE,TRUE,"Blazers, Mavericks, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,TRUE,"Blazers, Mavericks, Nuggets"
 "Roy Devyn Marble / Roy Marble (Devyn)Tanguy Ngombo","2011-06-23","Tanguy Ngombo","Roy Devyn Marble / Roy Marble (Devyn)","Blazers","3-team trade with Mavericks, Nuggets","On 2011-06-23: 
 Nuggets acquire 2013 second round pick (protected top 40 in 2013, unprotected in 2014) (#56-Roy Devyn Marble / Roy Marble (Devyn)) 
 Blazers acquire rights to Tanguy Ngombo
@@ -2180,27 +2180,27 @@ Bobcats acquire cash considerations",FALSE,TRUE,"Bobcats, Warriors"
 "Corey MaggetteStephen Jackson","2011-06-23","Corey Maggette","Stephen Jackson","Bobcats","3-team trade with Bucks, Kings","On 2011-06-23: 
 Bucks acquire Stephen Jackson 
 Bobcats acquire Corey Maggette
-Other Team(s) Involved in Trade: , Kings",FALSE,FALSE,"Bobcats, Bucks, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,FALSE,"Bobcats, Bucks, Kings"
 "Corey MaggetteShaun Livingston","2011-06-23","Corey Maggette","Shaun Livingston","Bobcats","3-team trade with Bucks, Kings","On 2011-06-23: 
 Bucks acquire Shaun Livingston 
 Bobcats acquire Corey Maggette
-Other Team(s) Involved in Trade: , Kings",FALSE,FALSE,"Bobcats, Bucks, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,FALSE,"Bobcats, Bucks, Kings"
 "Corey MaggetteTobias Harris","2011-06-23","Corey Maggette","Tobias Harris","Bobcats","3-team trade with Bucks, Kings","On 2011-06-23: 
 Bucks acquire rights to Tobias Harris 
 Bobcats acquire Corey Maggette
-Other Team(s) Involved in Trade: , Kings",FALSE,TRUE,"Bobcats, Bucks, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,TRUE,"Bobcats, Bucks, Kings"
 "Bismack BiyomboStephen Jackson","2011-06-23","Bismack Biyombo","Stephen Jackson","Bobcats","3-team trade with Bucks, Kings","On 2011-06-23: 
 Bucks acquire Stephen Jackson 
 Bobcats acquire rights to Bismack Biyombo
-Other Team(s) Involved in Trade: , Kings",FALSE,TRUE,"Bobcats, Bucks, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,TRUE,"Bobcats, Bucks, Kings"
 "Bismack BiyomboShaun Livingston","2011-06-23","Bismack Biyombo","Shaun Livingston","Bobcats","3-team trade with Bucks, Kings","On 2011-06-23: 
 Bucks acquire Shaun Livingston 
 Bobcats acquire rights to Bismack Biyombo
-Other Team(s) Involved in Trade: , Kings",FALSE,TRUE,"Bobcats, Bucks, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,TRUE,"Bobcats, Bucks, Kings"
 "Bismack BiyomboTobias Harris","2011-06-23","Bismack Biyombo","Tobias Harris","Bobcats","3-team trade with Bucks, Kings","On 2011-06-23: 
 Bucks acquire rights to Tobias Harris 
 Bobcats acquire rights to Bismack Biyombo
-Other Team(s) Involved in Trade: , Kings",FALSE,TRUE,"Bobcats, Bucks, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,TRUE,"Bobcats, Bucks, Kings"
 "John SalmonsStephen Jackson","2011-06-23","Stephen Jackson","John Salmons","Bucks","3-team trade with Bobcats, Kings","On 2011-06-23: 
 Kings acquire John Salmons 
 Bucks acquire Stephen Jackson
@@ -2212,7 +2212,7 @@ Other Team(s) Involved in Trade: Bobcats",FALSE,TRUE,"Bucks, Bobcats, Kings"
 "Beno UdrihCorey Maggette","2011-06-23","Beno Udrih","Corey Maggette","Bucks","3-team trade with Bobcats, Kings","On 2011-06-23: 
 Bobcats acquire Corey Maggette 
 Bucks acquire Beno Udrih
-Other Team(s) Involved in Trade: , Kings",FALSE,FALSE,"Bucks, Bobcats, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,FALSE,"Bucks, Bobcats, Kings"
 "Beno UdrihJohn Salmons","2011-06-23","Beno Udrih","John Salmons","Bucks","3-team trade with Bobcats, Kings","On 2011-06-23: 
 Kings acquire John Salmons 
 Bucks acquire Beno Udrih
@@ -2255,11 +2255,11 @@ Hornets acquire cash",FALSE,TRUE,"Hornets, Knicks"
 "Bismack BiyomboJohn Salmons","2011-06-23","John Salmons","Bismack Biyombo","Kings","3-team trade with Bobcats, Bucks","On 2011-06-23: 
 Bobcats acquire rights to Bismack Biyombo 
 Kings acquire John Salmons
-Other Team(s) Involved in Trade: , Bucks",FALSE,TRUE,"Kings, Bobcats, Bucks"
+Other Team(s) Involved in Trade:Bucks",FALSE,TRUE,"Kings, Bobcats, Bucks"
 "Bismack BiyomboJimmer Fredette","2011-06-23","Jimmer Fredette","Bismack Biyombo","Kings","3-team trade with Bobcats, Bucks","On 2011-06-23: 
 Bobcats acquire rights to Bismack Biyombo 
 Kings acquire rights to Jimmer Fredette
-Other Team(s) Involved in Trade: , Bucks",FALSE,TRUE,"Kings, Bobcats, Bucks"
+Other Team(s) Involved in Trade:Bucks",FALSE,TRUE,"Kings, Bobcats, Bucks"
 "Jordan HamiltonRudy Fernandez","2011-06-23","Rudy Fernandez","Jordan Hamilton","Mavericks","3-team trade with Blazers, Nuggets","On 2011-06-23: 
 Nuggets acquire rights to Jordan Hamilton 
 Mavericks acquire Rudy Fernandez
@@ -2271,7 +2271,7 @@ Other Team(s) Involved in Trade: Blazers",FALSE,TRUE,"Mavericks, Blazers, Nugget
 "Jordan HamiltonRaymond Felton","2011-06-23","Jordan Hamilton","Raymond Felton","Nuggets","3-team trade with Blazers, Mavericks","On 2011-06-23: 
 Blazers acquire Raymond Felton 
 Nuggets acquire rights to Jordan Hamilton
-Other Team(s) Involved in Trade: , Mavericks",FALSE,TRUE,"Nuggets, Blazers, Mavericks"
+Other Team(s) Involved in Trade:Mavericks",FALSE,TRUE,"Nuggets, Blazers, Mavericks"
 "Erazem LorbekGeorge Hill","2011-06-23","George Hill","Erazem Lorbek","Pacers","trade with Spurs","On 2011-06-23: 
 Spurs acquire rights to Erazem Lorbek 
 Pacers acquire George Hill",FALSE,TRUE,"Pacers, Spurs"
@@ -2568,7 +2568,7 @@ Bucks acquire rights to Albert Miralles",FALSE,TRUE,"Bucks, Celtics"
 "Andy RautinsTyson Chandler","2011-12-10","Tyson Chandler","Andy Rautins","Knicks","3-team trade with Mavericks, Wizards","On 2011-12-10: 
 Mavericks acquire Andy Rautins 
 Knicks acquire Tyson Chandler
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Knicks, Mavericks, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Knicks, Mavericks, Wizards"
 "Ronny TuriafTyson Chandler","2011-12-10","Tyson Chandler","Ronny Turiaf","Knicks","3-team trade with Mavericks, Wizards","On 2011-12-10: 
 Unknown Team acquire Ronny Turiaf 
 Knicks acquire Tyson Chandler
@@ -2580,11 +2580,11 @@ Other Team(s) Involved in Trade: Mavericks, Wizards",TRUE,FALSE,"Knicks, Maveric
 "trade exceptionTyson Chandler","2011-12-10","Tyson Chandler","trade exception","Knicks","3-team trade with Mavericks, Wizards","On 2011-12-10: 
 Mavericks acquire $11M trade exception 
 Knicks acquire Tyson Chandler
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Knicks, Mavericks, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Knicks, Mavericks, Wizards"
 "Ahmad NivinsAndy Rautins","2011-12-10","Ahmad Nivins","Andy Rautins","Knicks","3-team trade with Mavericks, Wizards","On 2011-12-10: 
 Mavericks acquire Andy Rautins 
 Knicks acquire rights to Ahmad Nivins
-Other Team(s) Involved in Trade: , Wizards",FALSE,TRUE,"Knicks, Mavericks, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,TRUE,"Knicks, Mavericks, Wizards"
 "Ahmad NivinsRonny Turiaf","2011-12-10","Ahmad Nivins","Ronny Turiaf","Knicks","3-team trade with Mavericks, Wizards","On 2011-12-10: 
 Unknown Team acquire Ronny Turiaf 
 Knicks acquire rights to Ahmad Nivins
@@ -2596,7 +2596,7 @@ Other Team(s) Involved in Trade: Mavericks, Wizards",TRUE,TRUE,"Knicks, Maverick
 "Ahmad Nivinstrade exception","2011-12-10","Ahmad Nivins","trade exception","Knicks","3-team trade with Mavericks, Wizards","On 2011-12-10: 
 Mavericks acquire $11M trade exception 
 Knicks acquire rights to Ahmad Nivins
-Other Team(s) Involved in Trade: , Wizards",FALSE,TRUE,"Knicks, Mavericks, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,TRUE,"Knicks, Mavericks, Wizards"
 "Ahmad Nivinscash","2011-12-10","Ahmad Nivins","cash","Knicks","3-team trade with Mavericks, Wizards","On 2011-12-10: 
 Unknown Team acquire cash 
 Knicks acquire rights to Ahmad Nivins
@@ -2604,7 +2604,7 @@ Other Team(s) Involved in Trade: Mavericks, Wizards",FALSE,TRUE,"Knicks, Maveric
 "Andy RautinsGiorgos Printezis","2011-12-10","Giorgos Printezis","Andy Rautins","Knicks","3-team trade with Mavericks, Wizards","On 2011-12-10: 
 Mavericks acquire Andy Rautins 
 Knicks acquire rights to Giorgos Printezis
-Other Team(s) Involved in Trade: , Wizards",FALSE,TRUE,"Knicks, Mavericks, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,TRUE,"Knicks, Mavericks, Wizards"
 "Giorgos PrintezisRonny Turiaf","2011-12-10","Giorgos Printezis","Ronny Turiaf","Knicks","3-team trade with Mavericks, Wizards","On 2011-12-10: 
 Unknown Team acquire Ronny Turiaf 
 Knicks acquire rights to Giorgos Printezis
@@ -2616,7 +2616,7 @@ Other Team(s) Involved in Trade: Mavericks, Wizards",TRUE,TRUE,"Knicks, Maverick
 "Giorgos Printezistrade exception","2011-12-10","Giorgos Printezis","trade exception","Knicks","3-team trade with Mavericks, Wizards","On 2011-12-10: 
 Mavericks acquire $11M trade exception 
 Knicks acquire rights to Giorgos Printezis
-Other Team(s) Involved in Trade: , Wizards",FALSE,TRUE,"Knicks, Mavericks, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,TRUE,"Knicks, Mavericks, Wizards"
 "Andy RautinsDarius Miller","2011-12-10","Andy Rautins","Darius Miller","Mavericks","3-team trade with Knicks, Wizards","On 2011-12-10: 
 Unknown Team acquire 2012 second round pick (#46-Darius Miller) 
 Mavericks acquire Andy Rautins
@@ -2685,10 +2685,10 @@ Celtics acquire Brandon Bass",FALSE,FALSE,"Celtics, Magic"
 "free agencyMalcolm Thomas (b)signed free agent2011-12-13","2011-12-13","Malcolm Thomas (b)","free agency","Lakers","signed free agent","On 2011-12-13, Malcolm Thomas (b) is signed as free agent by Lakers",FALSE,FALSE,"Lakers"
 "Demetrius JacksonRudy Fernandez","2011-12-13","Demetrius Jackson","Rudy Fernandez","Mavericks","trade with Nuggets","On 2011-12-13: 
 Nuggets acquire Rudy Fernandez 
-Mavericks acquire 2016 second round pick (originally protected top 55 in 2016, but protection later removed as part of subsequent trade with Mavericks) (#45-Demetrius Jackson)",TRUE,FALSE,"Mavericks, Nuggets"
+Mavericks acquire 2016 second round pick (originally protected top 55 in 2016, but protection later removed as part of subsequent  Mavericks) (#45-Demetrius Jackson)",TRUE,FALSE,"Mavericks, Nuggets"
 "Corey BrewerDemetrius Jackson","2011-12-13","Demetrius Jackson","Corey Brewer","Mavericks","trade with Nuggets","On 2011-12-13: 
 Nuggets acquire Corey Brewer 
-Mavericks acquire 2016 second round pick (originally protected top 55 in 2016, but protection later removed as part of subsequent trade with Mavericks) (#45-Demetrius Jackson)",TRUE,FALSE,"Mavericks, Nuggets"
+Mavericks acquire 2016 second round pick (originally protected top 55 in 2016, but protection later removed as part of subsequent  Mavericks) (#45-Demetrius Jackson)",TRUE,FALSE,"Mavericks, Nuggets"
 "free agencyShelden Williamssigned free agent to a 1-year contract2011-12-13","2011-12-13","Shelden Williams","free agency","Nets","signed free agent to a 1-year contract","On 2011-12-13, Shelden Williams is signed as free agent to a 1-year contract by Nets",FALSE,FALSE,"Nets"
 "free agencyGary Forbessigned restricted free agent to a 3-year offer sheet (Nuggets declined to match offer sheet)2011-12-13","2011-12-13","Gary Forbes","free agency","Raptors","signed restricted free agent to a 3-year offer sheet (Nuggets declined to match offer sheet)","On 2011-12-13, Gary Forbes is signed as restricted free agent to a 3-year offer sheet (Nuggets declined to match offer sheet) by Raptors",FALSE,FALSE,"Raptors"
 "Casey Mitchellfree agencywaived2011-12-13","2011-12-13","free agency","Casey Mitchell","Rockets","waived","On 2011-12-13, Casey Mitchell is waived by Rockets",FALSE,FALSE,"Rockets"
@@ -2955,7 +2955,7 @@ Other Team(s) Involved in Trade: 76ers",FALSE,FALSE,"Grizzlies, 76ers, Hornets"
 "Glen Rice Jr.Xavier Henry","2012-01-04","Xavier Henry","Glen Rice Jr.","Hornets","3-team trade with 76ers, Grizzlies","On 2012-01-04: 
 76ers acquire 2013 second round pick (#35-Glen Rice Jr.) 
 Hornets acquire Xavier Henry
-Other Team(s) Involved in Trade: , Grizzlies",TRUE,FALSE,"Hornets, 76ers, Grizzlies"
+Other Team(s) Involved in Trade:Grizzlies",TRUE,FALSE,"Hornets, 76ers, Grizzlies"
 "free agencyNate Robinsonsigned free agent2012-01-04","2012-01-04","Nate Robinson","free agency","Warriors","signed free agent","On 2012-01-04, Nate Robinson is signed as free agent by Warriors",FALSE,FALSE,"Warriors"
 "free agencyYi Jianlian / Jianlian Yisigned unrestricted free agent to a 1-year contract2012-01-05","2012-01-05","Yi Jianlian / Jianlian Yi","free agency","Mavericks","signed unrestricted free agent to a 1-year contract","On 2012-01-05, Yi Jianlian / Jianlian Yi is signed as unrestricted free agent to a 1-year contract by Mavericks",FALSE,FALSE,"Mavericks"
 "free agencyMike James (Lamont)signed free agent2012-01-11","2012-01-11","Mike James (Lamont)","free agency","Bulls","signed free agent","On 2012-01-11, Mike James (Lamont) is signed as free agent by Bulls",FALSE,FALSE,"Bulls"
@@ -3101,7 +3101,7 @@ Other Team(s) Involved in Trade: Nuggets",TRUE,FALSE,"Clippers, Nuggets, Wizards
 "cashNick Young","2012-03-15","Nick Young","cash","Clippers","3-team trade with Nuggets, Wizards","On 2012-03-15: 
 Nuggets acquire 2015 second round pick or $350K cash (Grizzlies option from earlier trade) ($350K cash) 
 Clippers acquire Nick Young
-Other Team(s) Involved in Trade: , Wizards",TRUE,FALSE,"Clippers, Nuggets, Wizards"
+Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Clippers, Nuggets, Wizards"
 "JaVale McGeeNene / Nene Hilario / Maybyner Hilario","2012-03-15","JaVale McGee","Nene / Nene Hilario / Maybyner Hilario","Nuggets","3-team trade with Clippers, Wizards","On 2012-03-15: 
 Wizards acquire Nene / Nene Hilario / Maybyner Hilario 
 Nuggets acquire JaVale McGee
@@ -3117,7 +3117,7 @@ Other Team(s) Involved in Trade: Clippers",TRUE,FALSE,"Nuggets, Clippers, Wizard
 "Nene / Nene Hilario / Maybyner HilarioNick Young","2012-03-15","Nene / Nene Hilario / Maybyner Hilario","Nick Young","Wizards","3-team trade with Clippers, Nuggets","On 2012-03-15: 
 Clippers acquire Nick Young 
 Wizards acquire Nene / Nene Hilario / Maybyner Hilario
-Other Team(s) Involved in Trade: , Nuggets",FALSE,FALSE,"Wizards, Clippers, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,FALSE,"Wizards, Clippers, Nuggets"
 "Brian CookJaVale McGee","2012-03-15","Brian Cook","JaVale McGee","Wizards","3-team trade with Clippers, Nuggets","On 2012-03-15: 
 Nuggets acquire JaVale McGee 
 Wizards acquire Brian Cook
@@ -3427,7 +3427,7 @@ Lakers acquire rights to Darius Johnson-Odom",FALSE,TRUE,"Lakers, Mavericks"
 "Lamar OdomMaurice Williams / Mo Williams","2012-06-29","Lamar Odom","Maurice Williams / Mo Williams","Clippers","4-team trade with Jazz, Mavericks, Rockets","On 2012-06-29: 
 Jazz acquire Maurice Williams / Mo Williams 
 Clippers acquire Lamar Odom
-Other Team(s) Involved in Trade: , Mavericks, Rockets",FALSE,FALSE,"Clippers, Jazz, Mavericks, Rockets"
+Other Team(s) Involved in Trade:Mavericks, Rockets",FALSE,FALSE,"Clippers, Jazz, Mavericks, Rockets"
 "Furkan AldemirLamar Odom","2012-06-29","Lamar Odom","Furkan Aldemir","Clippers","4-team trade with Jazz, Mavericks, Rockets","On 2012-06-29: 
 Unknown Team acquire rights to Furkan Aldemir 
 Clippers acquire Lamar Odom
@@ -3435,11 +3435,11 @@ Other Team(s) Involved in Trade: Jazz, Mavericks, Rockets",FALSE,TRUE,"Clippers,
 "Maurice Williams / Mo WilliamsTadija Dragicevic","2012-06-29","Maurice Williams / Mo Williams","Tadija Dragicevic","Jazz","4-team trade with Clippers, Mavericks, Rockets","On 2012-06-29: 
 Mavericks acquire rights to Tadija Dragicevic 
 Jazz acquire Maurice Williams / Mo Williams
-Other Team(s) Involved in Trade: Clippers, , Rockets",FALSE,TRUE,"Jazz, Clippers, Mavericks, Rockets"
+Other Team(s) Involved in Trade: Clippers,Rockets",FALSE,TRUE,"Jazz, Clippers, Mavericks, Rockets"
 "Shan FosterTadija Dragicevic","2012-06-29","Shan Foster","Tadija Dragicevic","Jazz","4-team trade with Clippers, Mavericks, Rockets","On 2012-06-29: 
 Mavericks acquire rights to Tadija Dragicevic 
 Jazz acquire rights to Shan Foster
-Other Team(s) Involved in Trade: Clippers, , Rockets",FALSE,TRUE,"Jazz, Clippers, Mavericks, Rockets"
+Other Team(s) Involved in Trade: Clippers,Rockets",FALSE,TRUE,"Jazz, Clippers, Mavericks, Rockets"
 "Lamar OdomTadija Dragicevic","2012-06-29","Tadija Dragicevic","Lamar Odom","Mavericks","4-team trade with Clippers, Jazz, Rockets","On 2012-06-29: 
 Clippers acquire Lamar Odom 
 Mavericks acquire rights to Tadija Dragicevic",FALSE,TRUE,"Mavericks, Clippers, Jazz, Rockets"
@@ -3580,11 +3580,11 @@ Other Team(s) Involved in Trade: Clippers, Jazz",FALSE,TRUE,"Rockets, Clippers, 
 "Dorell WrightEdin Bavcic","2012-07-11","Dorell Wright","Edin Bavcic","76ers","3-team trade with Hornets, Warriors","On 2012-07-11: 
 Hornets acquire rights to Edin Bavcic 
 76ers acquire Dorell Wright
-Other Team(s) Involved in Trade: , Warriors",FALSE,TRUE,"76ers, Hornets, Warriors"
+Other Team(s) Involved in Trade:Warriors",FALSE,TRUE,"76ers, Hornets, Warriors"
 "Darryl WatkinsEdin Bavcic","2012-07-11","Darryl Watkins","Edin Bavcic","76ers","3-team trade with Hornets, Warriors","On 2012-07-11: 
 Hornets acquire rights to Edin Bavcic 
 76ers acquire Darryl Watkins
-Other Team(s) Involved in Trade: , Warriors",FALSE,TRUE,"76ers, Hornets, Warriors"
+Other Team(s) Involved in Trade:Warriors",FALSE,TRUE,"76ers, Hornets, Warriors"
 "free agencyJamal Crawfordsigned unrestricted free agent to a 3-year, $15.7-26M contract2012-07-11","2012-07-11","Jamal Crawford","free agency","Clippers","signed unrestricted free agent to a 3-year, $15.7-26M contract","On 2012-07-11, Jamal Crawford is signed as unrestricted free agent to a 3-year, $15.7-26M contract by Clippers",FALSE,FALSE,"Clippers"
 "free agencyJerryd Baylesssigned unrestricted free agent to a 1-year contract with a 1-year player option for 2013-142012-07-11","2012-07-11","Jerryd Bayless","free agency","Grizzlies","signed unrestricted free agent to a 1-year contract with a 1-year player option for 2013-14","On 2012-07-11, Jerryd Bayless is signed as unrestricted free agent to a 1-year contract with a 1-year player option for 2013-14 by Grizzlies",FALSE,FALSE,"Grizzlies"
 "Devin HarrisMarvin Williams","2012-07-11","Devin Harris","Marvin Williams","Hawks","trade with Jazz","On 2012-07-11: 
@@ -3612,7 +3612,7 @@ Raptors acquire Kyle Lowry",TRUE,FALSE,"Raptors, Rockets"
 "Dorell WrightJarrett Jack","2012-07-11","Jarrett Jack","Dorell Wright","Warriors","3-team trade with 76ers, Hornets","On 2012-07-11: 
 76ers acquire Dorell Wright 
 Warriors acquire Jarrett Jack
-Other Team(s) Involved in Trade: , Hornets",FALSE,FALSE,"Warriors, 76ers, Hornets"
+Other Team(s) Involved in Trade:Hornets",FALSE,FALSE,"Warriors, 76ers, Hornets"
 "Cheick DialloReggie Evans","2012-07-11","Cheick Diallo","Reggie Evans","Clippers","trade with Nets","On 2012-07-11: 
 Nets acquire Reggie Evans 
 Clippers acquire Clippers option to swap 2016 second round picks (if Clippers pick is #31-55) (#33-Cheick Diallo)",TRUE,FALSE,"Clippers, Nets"
@@ -3822,7 +3822,7 @@ Other Team(s) Involved in Trade: Blazers",FALSE,FALSE,"Celtics, Blazers, Rockets
 "Aleksandar Pavlovic / Sasha PavlovicCourtney Lee","2012-07-20","Courtney Lee","Aleksandar Pavlovic / Sasha Pavlovic","Celtics","3-team trade with Blazers, Rockets","On 2012-07-20: 
 Blazers acquire Aleksandar Pavlovic / Sasha Pavlovic 
 Celtics acquire Courtney Lee
-Other Team(s) Involved in Trade: , Rockets",FALSE,FALSE,"Celtics, Blazers, Rockets"
+Other Team(s) Involved in Trade:Rockets",FALSE,FALSE,"Celtics, Blazers, Rockets"
 "Alex AbrinesCourtney Lee","2012-07-20","Courtney Lee","Alex Abrines","Celtics","3-team trade with Blazers, Rockets","On 2012-07-20: 
 Rockets acquire 2013 second round pick (#32-Alex Abrines) 
 Celtics acquire Courtney Lee
@@ -3830,15 +3830,15 @@ Other Team(s) Involved in Trade: Blazers",TRUE,FALSE,"Celtics, Blazers, Rockets"
 "Courtney LeeJeff Withey","2012-07-20","Courtney Lee","Jeff Withey","Celtics","3-team trade with Blazers, Rockets","On 2012-07-20: 
 Blazers acquire 2013 second round pick (#39-Jeff Withey) 
 Celtics acquire Courtney Lee
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Celtics, Blazers, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Celtics, Blazers, Rockets"
 "Courtney LeeMarko Todorovic","2012-07-20","Courtney Lee","Marko Todorovic","Celtics","3-team trade with Blazers, Rockets","On 2012-07-20: 
 Blazers acquire 2013 second round pick (#45-Marko Todorovic) 
 Celtics acquire Courtney Lee
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Celtics, Blazers, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Celtics, Blazers, Rockets"
 "cashCourtney Lee","2012-07-20","Courtney Lee","cash","Celtics","3-team trade with Blazers, Rockets","On 2012-07-20: 
 Blazers acquire cash 
 Celtics acquire Courtney Lee
-Other Team(s) Involved in Trade: , Rockets",FALSE,FALSE,"Celtics, Blazers, Rockets"
+Other Team(s) Involved in Trade:Rockets",FALSE,FALSE,"Celtics, Blazers, Rockets"
 "Courtney LeeJon Diebler","2012-07-20","Jon Diebler","Courtney Lee","Rockets","3-team trade with Blazers, Celtics","On 2012-07-20: 
 Celtics acquire Courtney Lee 
 Rockets acquire rights to Jon Diebler
@@ -3873,11 +3873,11 @@ Cavaliers acquire cash considerations",FALSE,FALSE,"Cavaliers, Grizzlies"
 "Brad MillerRobin Lopez","2012-07-27","Robin Lopez","Brad Miller","Hornets","3-team trade with Suns, Timberwolves","On 2012-07-27: 
 Suns acquire Brad Miller 
 Hornets acquire Robin Lopez
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
 "Jerome DysonRobin Lopez","2012-07-27","Robin Lopez","Jerome Dyson","Hornets","3-team trade with Suns, Timberwolves","On 2012-07-27: 
 Suns acquire Jerome Dyson 
 Hornets acquire Robin Lopez
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
 "Lorenzo BrownRobin Lopez","2012-07-27","Robin Lopez","Lorenzo Brown","Hornets","3-team trade with Suns, Timberwolves","On 2012-07-27: 
 Timberwolves acquire 2013 second round pick (#52-Lorenzo Brown) 
 Hornets acquire Robin Lopez
@@ -3889,11 +3889,11 @@ Other Team(s) Involved in Trade: Suns",TRUE,FALSE,"Hornets, Suns, Timberwolves"
 "Brad MillerHakim Warrick","2012-07-27","Hakim Warrick","Brad Miller","Hornets","3-team trade with Suns, Timberwolves","On 2012-07-27: 
 Suns acquire Brad Miller 
 Hornets acquire Hakim Warrick
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
 "Hakim WarrickJerome Dyson","2012-07-27","Hakim Warrick","Jerome Dyson","Hornets","3-team trade with Suns, Timberwolves","On 2012-07-27: 
 Suns acquire Jerome Dyson 
 Hornets acquire Hakim Warrick
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
 "Hakim WarrickLorenzo Brown","2012-07-27","Hakim Warrick","Lorenzo Brown","Hornets","3-team trade with Suns, Timberwolves","On 2012-07-27: 
 Timberwolves acquire 2013 second round pick (#52-Lorenzo Brown) 
 Hornets acquire Hakim Warrick
@@ -3905,11 +3905,11 @@ Other Team(s) Involved in Trade: Suns",TRUE,FALSE,"Hornets, Suns, Timberwolves"
 "Brad Millercash","2012-07-27","cash","Brad Miller","Hornets","3-team trade with Suns, Timberwolves","On 2012-07-27: 
 Suns acquire Brad Miller 
 Hornets acquire $1.15M cash (from Suns)
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
 "cashJerome Dyson","2012-07-27","cash","Jerome Dyson","Hornets","3-team trade with Suns, Timberwolves","On 2012-07-27: 
 Suns acquire Jerome Dyson 
 Hornets acquire $1.15M cash (from Suns)
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,FALSE,"Hornets, Suns, Timberwolves"
 "cashLorenzo Brown","2012-07-27","cash","Lorenzo Brown","Hornets","3-team trade with Suns, Timberwolves","On 2012-07-27: 
 Timberwolves acquire 2013 second round pick (#52-Lorenzo Brown) 
 Hornets acquire $1.15M cash (from Suns)
@@ -3921,11 +3921,11 @@ Other Team(s) Involved in Trade: Suns",TRUE,FALSE,"Hornets, Suns, Timberwolves"
 "Robin LopezWesley Johnson / Wes Johnson","2012-07-27","Wesley Johnson / Wes Johnson","Robin Lopez","Suns","3-team trade with Hornets, Timberwolves","On 2012-07-27: 
 Hornets acquire Robin Lopez 
 Suns acquire Wesley Johnson / Wes Johnson
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,FALSE,"Suns, Hornets, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,FALSE,"Suns, Hornets, Timberwolves"
 "Hakim WarrickWesley Johnson / Wes Johnson","2012-07-27","Wesley Johnson / Wes Johnson","Hakim Warrick","Suns","3-team trade with Hornets, Timberwolves","On 2012-07-27: 
 Hornets acquire Hakim Warrick 
 Suns acquire Wesley Johnson / Wes Johnson
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,FALSE,"Suns, Hornets, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,FALSE,"Suns, Hornets, Timberwolves"
 "Johnny O'Bryant IIIWesley Johnson / Wes Johnson","2012-07-27","Wesley Johnson / Wes Johnson","Johnny O'Bryant III","Suns","3-team trade with Hornets, Timberwolves","On 2012-07-27: 
 Timberwolves acquire 2014 second round pick (#36-Johnny O'Bryant III) 
 Suns acquire Wesley Johnson / Wes Johnson
@@ -3933,7 +3933,7 @@ Other Team(s) Involved in Trade: Hornets",TRUE,FALSE,"Suns, Hornets, Timberwolve
 "cashWesley Johnson / Wes Johnson","2012-07-27","Wesley Johnson / Wes Johnson","cash","Suns","3-team trade with Hornets, Timberwolves","On 2012-07-27: 
 Hornets acquire $1.15M cash 
 Suns acquire Wesley Johnson / Wes Johnson
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,FALSE,"Suns, Hornets, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,FALSE,"Suns, Hornets, Timberwolves"
 "Brad MillerJohnny O'Bryant III","2012-07-27","Brad Miller","Johnny O'Bryant III","Suns","3-team trade with Hornets, Timberwolves","On 2012-07-27: 
 Timberwolves acquire 2014 second round pick (#36-Johnny O'Bryant III) 
 Suns acquire Brad Miller
@@ -3945,11 +3945,11 @@ Other Team(s) Involved in Trade: Hornets",TRUE,FALSE,"Suns, Hornets, Timberwolve
 "Robin LopezSemi Ojeleye","2012-07-27","Semi Ojeleye","Robin Lopez","Suns","3-team trade with Hornets, Timberwolves","On 2012-07-27: 
 Hornets acquire Robin Lopez 
 Suns acquire draft pick(s) (first round pick (from Timberwolves) (protected top 13 in 2014, top 12 in 2015-16, else 2016 and 2017 second round picks)) (2016 #35-Rade Zagorac) (2017 #37-Semi Ojeleye)
-Other Team(s) Involved in Trade: , Timberwolves",TRUE,FALSE,"Suns, Hornets, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",TRUE,FALSE,"Suns, Hornets, Timberwolves"
 "Hakim WarrickSemi Ojeleye","2012-07-27","Semi Ojeleye","Hakim Warrick","Suns","3-team trade with Hornets, Timberwolves","On 2012-07-27: 
 Hornets acquire Hakim Warrick 
 Suns acquire draft pick(s) (first round pick (from Timberwolves) (protected top 13 in 2014, top 12 in 2015-16, else 2016 and 2017 second round picks)) (2016 #35-Rade Zagorac) (2017 #37-Semi Ojeleye)
-Other Team(s) Involved in Trade: , Timberwolves",TRUE,FALSE,"Suns, Hornets, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",TRUE,FALSE,"Suns, Hornets, Timberwolves"
 "Johnny O'Bryant IIISemi Ojeleye","2012-07-27","Semi Ojeleye","Johnny O'Bryant III","Suns","3-team trade with Hornets, Timberwolves","On 2012-07-27: 
 Timberwolves acquire 2014 second round pick (#36-Johnny O'Bryant III) 
 Suns acquire draft pick(s) (first round pick (from Timberwolves) (protected top 13 in 2014, top 12 in 2015-16, else 2016 and 2017 second round picks)) (2016 #35-Rade Zagorac) (2017 #37-Semi Ojeleye)
@@ -3957,7 +3957,7 @@ Other Team(s) Involved in Trade: Hornets",TRUE,FALSE,"Suns, Hornets, Timberwolve
 "cashSemi Ojeleye","2012-07-27","Semi Ojeleye","cash","Suns","3-team trade with Hornets, Timberwolves","On 2012-07-27: 
 Hornets acquire $1.15M cash 
 Suns acquire draft pick(s) (first round pick (from Timberwolves) (protected top 13 in 2014, top 12 in 2015-16, else 2016 and 2017 second round picks)) (2016 #35-Rade Zagorac) (2017 #37-Semi Ojeleye)
-Other Team(s) Involved in Trade: , Timberwolves",TRUE,FALSE,"Suns, Hornets, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",TRUE,FALSE,"Suns, Hornets, Timberwolves"
 "Lorenzo BrownWesley Johnson / Wes Johnson","2012-07-27","Lorenzo Brown","Wesley Johnson / Wes Johnson","Timberwolves","3-team trade with Hornets, Suns","On 2012-07-27: 
 Suns acquire Wesley Johnson / Wes Johnson 
 Timberwolves acquire 2013 second round pick (from Hornets) (#52-Lorenzo Brown)
@@ -3969,7 +3969,7 @@ Other Team(s) Involved in Trade: Hornets",TRUE,FALSE,"Timberwolves, Hornets, Sun
 "cashJohnny O'Bryant III","2012-07-27","Johnny O'Bryant III","cash","Timberwolves","3-team trade with Hornets, Suns","On 2012-07-27: 
 Hornets acquire cash 
 Timberwolves acquire 2014 second round pick (from Suns) (#36-Johnny O'Bryant III)
-Other Team(s) Involved in Trade: , Suns",TRUE,FALSE,"Timberwolves, Hornets, Suns"
+Other Team(s) Involved in Trade:Suns",TRUE,FALSE,"Timberwolves, Hornets, Suns"
 "Rade ZagoracWesley Johnson / Wes Johnson","2012-07-27","Rade Zagorac","Wesley Johnson / Wes Johnson","Timberwolves","3-team trade with Hornets, Suns","On 2012-07-27: 
 Suns acquire Wesley Johnson / Wes Johnson 
 Timberwolves acquire 2016 second round pick (from Hornets) (#35-Rade Zagorac)
@@ -4005,15 +4005,15 @@ Other Team(s) Involved in Trade: Lakers, Magic",FALSE,FALSE,"76ers, Lakers, Magi
 "Andrew BynumMaurice Harkless / Moe Harkless","2012-08-10","Andrew Bynum","Maurice Harkless / Moe Harkless","76ers","4-team trade with Lakers, Magic, Nuggets","On 2012-08-10: 
 Magic acquire Maurice Harkless / Moe Harkless 
 76ers acquire Andrew Bynum
-Other Team(s) Involved in Trade: Lakers, , Nuggets",FALSE,FALSE,"76ers, Lakers, Magic, Nuggets"
+Other Team(s) Involved in Trade: Lakers,Nuggets",FALSE,FALSE,"76ers, Lakers, Magic, Nuggets"
 "Andrew BynumNikola Vucevic","2012-08-10","Andrew Bynum","Nikola Vucevic","76ers","4-team trade with Lakers, Magic, Nuggets","On 2012-08-10: 
 Magic acquire Nikola Vucevic 
 76ers acquire Andrew Bynum
-Other Team(s) Involved in Trade: Lakers, , Nuggets",FALSE,FALSE,"76ers, Lakers, Magic, Nuggets"
+Other Team(s) Involved in Trade: Lakers,Nuggets",FALSE,FALSE,"76ers, Lakers, Magic, Nuggets"
 "Andrew BynumDe'Aaron Fox","2012-08-10","Andrew Bynum","De'Aaron Fox","76ers","4-team trade with Lakers, Magic, Nuggets","On 2012-08-10: 
 Magic acquire first round pick (from 76ers, two years after 76ers convey first round pick to Heat from earlier trade, protected top 14 in 2015-16, top 11 in 2017, top 8 in 2018, thereafter 2018 and 2019 second round picks) (#5-De'Aaron Fox) 
 76ers acquire Andrew Bynum
-Other Team(s) Involved in Trade: Lakers, , Nuggets",TRUE,FALSE,"76ers, Lakers, Magic, Nuggets"
+Other Team(s) Involved in Trade: Lakers,Nuggets",TRUE,FALSE,"76ers, Lakers, Magic, Nuggets"
 "Andre IguodalaJason Richardson","2012-08-10","Jason Richardson","Andre Iguodala","76ers","4-team trade with Lakers, Magic, Nuggets","On 2012-08-10: 
 Nuggets acquire Andre Iguodala 
 76ers acquire Jason Richardson
@@ -4021,177 +4021,177 @@ Other Team(s) Involved in Trade: Lakers, Magic",FALSE,FALSE,"76ers, Lakers, Magi
 "Jason RichardsonMaurice Harkless / Moe Harkless","2012-08-10","Jason Richardson","Maurice Harkless / Moe Harkless","76ers","4-team trade with Lakers, Magic, Nuggets","On 2012-08-10: 
 Magic acquire Maurice Harkless / Moe Harkless 
 76ers acquire Jason Richardson
-Other Team(s) Involved in Trade: Lakers, , Nuggets",FALSE,FALSE,"76ers, Lakers, Magic, Nuggets"
+Other Team(s) Involved in Trade: Lakers,Nuggets",FALSE,FALSE,"76ers, Lakers, Magic, Nuggets"
 "Jason RichardsonNikola Vucevic","2012-08-10","Jason Richardson","Nikola Vucevic","76ers","4-team trade with Lakers, Magic, Nuggets","On 2012-08-10: 
 Magic acquire Nikola Vucevic 
 76ers acquire Jason Richardson
-Other Team(s) Involved in Trade: Lakers, , Nuggets",FALSE,FALSE,"76ers, Lakers, Magic, Nuggets"
+Other Team(s) Involved in Trade: Lakers,Nuggets",FALSE,FALSE,"76ers, Lakers, Magic, Nuggets"
 "De'Aaron FoxJason Richardson","2012-08-10","Jason Richardson","De'Aaron Fox","76ers","4-team trade with Lakers, Magic, Nuggets","On 2012-08-10: 
 Magic acquire first round pick (from 76ers, two years after 76ers convey first round pick to Heat from earlier trade, protected top 14 in 2015-16, top 11 in 2017, top 8 in 2018, thereafter 2018 and 2019 second round picks) (#5-De'Aaron Fox) 
 76ers acquire Jason Richardson
-Other Team(s) Involved in Trade: Lakers, , Nuggets",TRUE,FALSE,"76ers, Lakers, Magic, Nuggets"
+Other Team(s) Involved in Trade: Lakers,Nuggets",TRUE,FALSE,"76ers, Lakers, Magic, Nuggets"
 "free agencyMichael Eric / Micheal Ericsigned undrafted free agent2012-08-10","2012-08-10","Michael Eric / Micheal Eric","free agency","Cavaliers","signed undrafted free agent","On 2012-08-10, Michael Eric / Micheal Eric is signed as undrafted free agent by Cavaliers",FALSE,FALSE,"Cavaliers"
 "Andrew BynumDwight Howard","2012-08-10","Dwight Howard","Andrew Bynum","Lakers","4-team trade with 76ers, Magic, Nuggets","On 2012-08-10: 
 76ers acquire Andrew Bynum 
 Lakers acquire Dwight Howard
-Other Team(s) Involved in Trade: , Magic, Nuggets",FALSE,FALSE,"Lakers, 76ers, Magic, Nuggets"
+Other Team(s) Involved in Trade:Magic, Nuggets",FALSE,FALSE,"Lakers, 76ers, Magic, Nuggets"
 "Dwight HowardRodions Kurucs","2012-08-10","Dwight Howard","Rodions Kurucs","Lakers","4-team trade with 76ers, Magic, Nuggets","On 2012-08-10: 
 Magic acquire draft pick(s) (first round pick at least 2 years after Lakers send first round pick to Suns from earlier trade, protected top 5 in 2017-18; if first round pick is not sent to Suns by 2017, then 2017 and 2018 second round picks) (2017 #33-Wesley Iwundu / Wes Iwundu) (2018 #40-Rodions Kurucs) 
 Lakers acquire Dwight Howard
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Lakers, 76ers, Magic, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Lakers, 76ers, Magic, Nuggets"
 "Andrew BynumChris Duhon","2012-08-10","Chris Duhon","Andrew Bynum","Lakers","4-team trade with 76ers, Magic, Nuggets","On 2012-08-10: 
 76ers acquire Andrew Bynum 
 Lakers acquire Chris Duhon
-Other Team(s) Involved in Trade: , Magic, Nuggets",FALSE,FALSE,"Lakers, 76ers, Magic, Nuggets"
+Other Team(s) Involved in Trade:Magic, Nuggets",FALSE,FALSE,"Lakers, 76ers, Magic, Nuggets"
 "Chris DuhonRodions Kurucs","2012-08-10","Chris Duhon","Rodions Kurucs","Lakers","4-team trade with 76ers, Magic, Nuggets","On 2012-08-10: 
 Magic acquire draft pick(s) (first round pick at least 2 years after Lakers send first round pick to Suns from earlier trade, protected top 5 in 2017-18; if first round pick is not sent to Suns by 2017, then 2017 and 2018 second round picks) (2017 #33-Wesley Iwundu / Wes Iwundu) (2018 #40-Rodions Kurucs) 
 Lakers acquire Chris Duhon
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Lakers, 76ers, Magic, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Lakers, 76ers, Magic, Nuggets"
 "Andrew BynumEarl Clark","2012-08-10","Earl Clark","Andrew Bynum","Lakers","4-team trade with 76ers, Magic, Nuggets","On 2012-08-10: 
 76ers acquire Andrew Bynum 
 Lakers acquire Earl Clark
-Other Team(s) Involved in Trade: , Magic, Nuggets",FALSE,FALSE,"Lakers, 76ers, Magic, Nuggets"
+Other Team(s) Involved in Trade:Magic, Nuggets",FALSE,FALSE,"Lakers, 76ers, Magic, Nuggets"
 "Earl ClarkRodions Kurucs","2012-08-10","Earl Clark","Rodions Kurucs","Lakers","4-team trade with 76ers, Magic, Nuggets","On 2012-08-10: 
 Magic acquire draft pick(s) (first round pick at least 2 years after Lakers send first round pick to Suns from earlier trade, protected top 5 in 2017-18; if first round pick is not sent to Suns by 2017, then 2017 and 2018 second round picks) (2017 #33-Wesley Iwundu / Wes Iwundu) (2018 #40-Rodions Kurucs) 
 Lakers acquire Earl Clark
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Lakers, 76ers, Magic, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Lakers, 76ers, Magic, Nuggets"
 "free agencyJodie Meekssigned unrestricted free agent to a 2-year, $2.4M contract (second year is team option)2012-08-10","2012-08-10","Jodie Meeks","free agency","Lakers","signed unrestricted free agent to a 2-year, $2.4M contract (second year is team option)","On 2012-08-10, Jodie Meeks is signed as unrestricted free agent to a 2-year, $2.4M contract (second year is team option) by Lakers",FALSE,FALSE,"Lakers"
 "Arron AfflaloDwight Howard","2012-08-10","Arron Afflalo","Dwight Howard","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Dwight Howard 
 Magic acquire Arron Afflalo
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Arron AfflaloJason Richardson","2012-08-10","Arron Afflalo","Jason Richardson","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 76ers acquire Jason Richardson 
 Magic acquire Arron Afflalo
-Other Team(s) Involved in Trade: , Lakers, Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade:Lakers, Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Arron AfflaloChris Duhon","2012-08-10","Arron Afflalo","Chris Duhon","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Chris Duhon 
 Magic acquire Arron Afflalo
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Arron AfflaloEarl Clark","2012-08-10","Arron Afflalo","Earl Clark","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Earl Clark 
 Magic acquire Arron Afflalo
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Al HarringtonDwight Howard","2012-08-10","Al Harrington","Dwight Howard","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Dwight Howard 
 Magic acquire Al Harrington
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Al HarringtonJason Richardson","2012-08-10","Al Harrington","Jason Richardson","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 76ers acquire Jason Richardson 
 Magic acquire Al Harrington
-Other Team(s) Involved in Trade: , Lakers, Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade:Lakers, Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Al HarringtonChris Duhon","2012-08-10","Al Harrington","Chris Duhon","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Chris Duhon 
 Magic acquire Al Harrington
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Al HarringtonEarl Clark","2012-08-10","Al Harrington","Earl Clark","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Earl Clark 
 Magic acquire Al Harrington
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Dwight HowardMaurice Harkless / Moe Harkless","2012-08-10","Maurice Harkless / Moe Harkless","Dwight Howard","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Dwight Howard 
 Magic acquire Maurice Harkless / Moe Harkless
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Chris DuhonMaurice Harkless / Moe Harkless","2012-08-10","Maurice Harkless / Moe Harkless","Chris Duhon","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Chris Duhon 
 Magic acquire Maurice Harkless / Moe Harkless
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Earl ClarkMaurice Harkless / Moe Harkless","2012-08-10","Maurice Harkless / Moe Harkless","Earl Clark","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Earl Clark 
 Magic acquire Maurice Harkless / Moe Harkless
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Christian EyengaDwight Howard","2012-08-10","Christian Eyenga","Dwight Howard","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Dwight Howard 
 Magic acquire Christian Eyenga
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Christian EyengaJason Richardson","2012-08-10","Christian Eyenga","Jason Richardson","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 76ers acquire Jason Richardson 
 Magic acquire Christian Eyenga
-Other Team(s) Involved in Trade: , Lakers, Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade:Lakers, Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Chris DuhonChristian Eyenga","2012-08-10","Christian Eyenga","Chris Duhon","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Chris Duhon 
 Magic acquire Christian Eyenga
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Christian EyengaEarl Clark","2012-08-10","Christian Eyenga","Earl Clark","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Earl Clark 
 Magic acquire Christian Eyenga
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Dwight HowardJosh McRoberts","2012-08-10","Josh McRoberts","Dwight Howard","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Dwight Howard 
 Magic acquire Josh McRoberts
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Jason RichardsonJosh McRoberts","2012-08-10","Josh McRoberts","Jason Richardson","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 76ers acquire Jason Richardson 
 Magic acquire Josh McRoberts
-Other Team(s) Involved in Trade: , Lakers, Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade:Lakers, Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Chris DuhonJosh McRoberts","2012-08-10","Josh McRoberts","Chris Duhon","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Chris Duhon 
 Magic acquire Josh McRoberts
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Earl ClarkJosh McRoberts","2012-08-10","Josh McRoberts","Earl Clark","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Earl Clark 
 Magic acquire Josh McRoberts
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Dwight HowardNikola Vucevic","2012-08-10","Nikola Vucevic","Dwight Howard","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Dwight Howard 
 Magic acquire Nikola Vucevic
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Chris DuhonNikola Vucevic","2012-08-10","Nikola Vucevic","Chris Duhon","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Chris Duhon 
 Magic acquire Nikola Vucevic
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Earl ClarkNikola Vucevic","2012-08-10","Nikola Vucevic","Earl Clark","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Earl Clark 
 Magic acquire Nikola Vucevic
-Other Team(s) Involved in Trade: 76ers, , Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",FALSE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Dwight HowardRomero Osby","2012-08-10","Romero Osby","Dwight Howard","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Dwight Howard 
 Magic acquire 2013 second round pick (from Nuggets) (#51-Romero Osby)
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Jason RichardsonRomero Osby","2012-08-10","Romero Osby","Jason Richardson","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 76ers acquire Jason Richardson 
 Magic acquire 2013 second round pick (from Nuggets) (#51-Romero Osby)
-Other Team(s) Involved in Trade: , Lakers, Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade:Lakers, Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Chris DuhonRomero Osby","2012-08-10","Romero Osby","Chris Duhon","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Chris Duhon 
 Magic acquire 2013 second round pick (from Nuggets) (#51-Romero Osby)
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Earl ClarkRomero Osby","2012-08-10","Romero Osby","Earl Clark","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Earl Clark 
 Magic acquire 2013 second round pick (from Nuggets) (#51-Romero Osby)
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Dario SaricDwight Howard","2012-08-10","Dario Saric","Dwight Howard","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Dwight Howard 
 Magic acquire 2014 first round pick (from Nuggets, less favorable of Knicks, Nuggets picks) (#12-Dario Saric)
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Dario SaricJason Richardson","2012-08-10","Dario Saric","Jason Richardson","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 76ers acquire Jason Richardson 
 Magic acquire 2014 first round pick (from Nuggets, less favorable of Knicks, Nuggets picks) (#12-Dario Saric)
-Other Team(s) Involved in Trade: , Lakers, Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade:Lakers, Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Chris DuhonDario Saric","2012-08-10","Dario Saric","Chris Duhon","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Chris Duhon 
 Magic acquire 2014 first round pick (from Nuggets, less favorable of Knicks, Nuggets picks) (#12-Dario Saric)
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Dario SaricEarl Clark","2012-08-10","Dario Saric","Earl Clark","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Earl Clark 
 Magic acquire 2014 first round pick (from Nuggets, less favorable of Knicks, Nuggets picks) (#12-Dario Saric)
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "De'Aaron FoxDwight Howard","2012-08-10","De'Aaron Fox","Dwight Howard","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Dwight Howard 
 Magic acquire first round pick (from 76ers, two years after 76ers convey first round pick to Heat from earlier trade, protected top 14 in 2015-16, top 11 in 2017, top 8 in 2018, else 2018 and 2019 second round picks) (2017 #5-De'Aaron Fox)
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Chris DuhonDe'Aaron Fox","2012-08-10","De'Aaron Fox","Chris Duhon","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Chris Duhon 
 Magic acquire first round pick (from 76ers, two years after 76ers convey first round pick to Heat from earlier trade, protected top 14 in 2015-16, top 11 in 2017, top 8 in 2018, else 2018 and 2019 second round picks) (2017 #5-De'Aaron Fox)
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "De'Aaron FoxEarl Clark","2012-08-10","De'Aaron Fox","Earl Clark","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 Lakers acquire Earl Clark 
 Magic acquire first round pick (from 76ers, two years after 76ers convey first round pick to Heat from earlier trade, protected top 14 in 2015-16, top 11 in 2017, top 8 in 2018, else 2018 and 2019 second round picks) (2017 #5-De'Aaron Fox)
-Other Team(s) Involved in Trade: 76ers, , Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade: 76ers,Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Jason RichardsonRodions Kurucs","2012-08-10","Rodions Kurucs","Jason Richardson","Magic","4-team trade with 76ers, Lakers, Nuggets","On 2012-08-10: 
 76ers acquire Jason Richardson 
 Magic acquire draft pick(s) (from Lakers) (first round pick at least 2 years after Lakers send first round pick to Suns from earlier trade, protected top 5 in 2017-18; if first round pick is not sent to Suns by 2017, then 2017 and 2018 second round picks) (2017 #33-Wesley Iwundu / Wes Iwundu) (2018 #40-Rodions Kurucs)
-Other Team(s) Involved in Trade: , Lakers, Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
+Other Team(s) Involved in Trade:Lakers, Nuggets",TRUE,FALSE,"Magic, 76ers, Lakers, Nuggets"
 "Andre IguodalaArron Afflalo","2012-08-10","Andre Iguodala","Arron Afflalo","Nuggets","4-team trade with 76ers, Lakers, Magic","On 2012-08-10: 
 Magic acquire Arron Afflalo 
 Nuggets acquire Andre Iguodala
@@ -4691,11 +4691,11 @@ Other Team(s) Involved in Trade: Pistons",FALSE,FALSE,"Grizzlies, Pistons, Rapto
 "Jose CalderonTayshaun Prince","2013-01-30","Jose Calderon","Tayshaun Prince","Pistons","3-team trade with Grizzlies, Raptors","On 2013-01-30: 
 Grizzlies acquire Tayshaun Prince 
 Pistons acquire Jose Calderon
-Other Team(s) Involved in Trade: , Raptors",FALSE,FALSE,"Pistons, Grizzlies, Raptors"
+Other Team(s) Involved in Trade:Raptors",FALSE,FALSE,"Pistons, Grizzlies, Raptors"
 "Austin DayeJose Calderon","2013-01-30","Jose Calderon","Austin Daye","Pistons","3-team trade with Grizzlies, Raptors","On 2013-01-30: 
 Grizzlies acquire Austin Daye 
 Pistons acquire Jose Calderon
-Other Team(s) Involved in Trade: , Raptors",FALSE,FALSE,"Pistons, Grizzlies, Raptors"
+Other Team(s) Involved in Trade:Raptors",FALSE,FALSE,"Pistons, Grizzlies, Raptors"
 "Jose CalderonRudy Gay","2013-01-30","Rudy Gay","Jose Calderon","Raptors","3-team trade with Grizzlies, Pistons","On 2013-01-30: 
 Pistons acquire Jose Calderon 
 Raptors acquire Rudy Gay
@@ -5210,7 +5210,7 @@ Other Team(s) Involved in Trade: Kings",FALSE,TRUE,"Blazers, Kings, Pelicans"
 "Chinanu OnuakuRobin Lopez","2013-07-10","Robin Lopez","Chinanu Onuaku","Blazers","3-team trade with Kings, Pelicans","On 2013-07-10: 
 Kings acquire second round pick (originally protected top 37 in 2016, but protection later removed in subsequent trade between Kings, Knicks) (#37-Chinanu Onuaku) 
 Blazers acquire Robin Lopez
-Other Team(s) Involved in Trade: , Pelicans",TRUE,FALSE,"Blazers, Kings, Pelicans"
+Other Team(s) Involved in Trade:Pelicans",TRUE,FALSE,"Blazers, Kings, Pelicans"
 "cashRobin Lopez","2013-07-10","Robin Lopez","cash","Blazers","3-team trade with Kings, Pelicans","On 2013-07-10: 
 Jazz acquire cash considerations 
 Blazers acquire Robin Lopez
@@ -5222,7 +5222,7 @@ Other Team(s) Involved in Trade: Kings",FALSE,TRUE,"Blazers, Kings, Pelicans"
 "Chinanu OnuakuTerrel Harris","2013-07-10","Terrel Harris","Chinanu Onuaku","Blazers","3-team trade with Kings, Pelicans","On 2013-07-10: 
 Kings acquire second round pick (originally protected top 37 in 2016, but protection later removed in subsequent trade between Kings, Knicks) (#37-Chinanu Onuaku) 
 Blazers acquire Terrel Harris
-Other Team(s) Involved in Trade: , Pelicans",TRUE,FALSE,"Blazers, Kings, Pelicans"
+Other Team(s) Involved in Trade:Pelicans",TRUE,FALSE,"Blazers, Kings, Pelicans"
 "cashTerrel Harris","2013-07-10","Terrel Harris","cash","Blazers","3-team trade with Kings, Pelicans","On 2013-07-10: 
 Jazz acquire cash considerations 
 Blazers acquire Terrel Harris
@@ -5230,11 +5230,11 @@ Other Team(s) Involved in Trade: Kings, Pelicans",FALSE,FALSE,"Blazers, Kings, P
 "J.J. RedickLamar Patterson","2013-07-10","Lamar Patterson","J.J. Redick","Bucks","3-team trade with Clippers, Suns","On 2013-07-10: 
 Clippers acquire J.J. Redick 
 Bucks acquire 2014 second round pick (from Suns) (less favorable of Kings pick (protected #56-#60), Raptors pick (protected top 36), else 2015 second round pick (more favorable of Raptors, Suns picks)) (2014 #48-Lamar Patterson)
-Other Team(s) Involved in Trade: , Suns",TRUE,FALSE,"Bucks, Clippers, Suns"
+Other Team(s) Involved in Trade:Suns",TRUE,FALSE,"Bucks, Clippers, Suns"
 "J.J. RedickMarcus Paige","2013-07-10","Marcus Paige","J.J. Redick","Bucks","3-team trade with Clippers, Suns","On 2013-07-10: 
 Clippers acquire J.J. Redick 
 Bucks acquire second round pick (from Clippers, protected #51-60 in 2015, #56-60 in 2016) (2016 #55-Marcus Paige)
-Other Team(s) Involved in Trade: , Suns",TRUE,FALSE,"Bucks, Clippers, Suns"
+Other Team(s) Involved in Trade:Suns",TRUE,FALSE,"Bucks, Clippers, Suns"
 "Eric BledsoeJared Dudley","2013-07-10","Jared Dudley","Eric Bledsoe","Clippers","3-team trade with Bucks, Suns","On 2013-07-10: 
 Suns acquire Eric Bledsoe 
 Clippers acquire Jared Dudley
@@ -5246,7 +5246,7 @@ Other Team(s) Involved in Trade: Bucks",FALSE,FALSE,"Clippers, Bucks, Suns"
 "Jared DudleyMarcus Paige","2013-07-10","Jared Dudley","Marcus Paige","Clippers","3-team trade with Bucks, Suns","On 2013-07-10: 
 Bucks acquire second round pick (protected #51-60 in 2015, #56-60 in 2016) (2016 #55-Marcus Paige) 
 Clippers acquire Jared Dudley
-Other Team(s) Involved in Trade: , Suns",TRUE,FALSE,"Clippers, Bucks, Suns"
+Other Team(s) Involved in Trade:Suns",TRUE,FALSE,"Clippers, Bucks, Suns"
 "Eric BledsoeJ.J. Redick","2013-07-10","J.J. Redick","Eric Bledsoe","Clippers","3-team trade with Bucks, Suns","On 2013-07-10: 
 Suns acquire Eric Bledsoe 
 Clippers acquire J.J. Redick
@@ -5258,7 +5258,7 @@ Other Team(s) Involved in Trade: Bucks",FALSE,FALSE,"Clippers, Bucks, Suns"
 "Randy FoyeRichard Jefferson","2013-07-10","Richard Jefferson","Randy Foye","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Nuggets acquire Randy Foye 
 Jazz acquire Richard Jefferson
-Other Team(s) Involved in Trade: , Warriors",FALSE,FALSE,"Jazz, Nuggets, Warriors"
+Other Team(s) Involved in Trade:Warriors",FALSE,FALSE,"Jazz, Nuggets, Warriors"
 "Kevin MurphyRichard Jefferson","2013-07-10","Richard Jefferson","Kevin Murphy","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Warriors acquire Kevin Murphy 
 Jazz acquire Richard Jefferson
@@ -5266,7 +5266,7 @@ Other Team(s) Involved in Trade: Nuggets",FALSE,FALSE,"Jazz, Nuggets, Warriors"
 "Andris BiedrinsRandy Foye","2013-07-10","Andris Biedrins","Randy Foye","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Nuggets acquire Randy Foye 
 Jazz acquire Andris Biedrins
-Other Team(s) Involved in Trade: , Warriors",FALSE,FALSE,"Jazz, Nuggets, Warriors"
+Other Team(s) Involved in Trade:Warriors",FALSE,FALSE,"Jazz, Nuggets, Warriors"
 "Andris BiedrinsKevin Murphy","2013-07-10","Andris Biedrins","Kevin Murphy","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Warriors acquire Kevin Murphy 
 Jazz acquire Andris Biedrins
@@ -5274,7 +5274,7 @@ Other Team(s) Involved in Trade: Nuggets",FALSE,FALSE,"Jazz, Nuggets, Warriors"
 "Brandon RushRandy Foye","2013-07-10","Brandon Rush","Randy Foye","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Nuggets acquire Randy Foye 
 Jazz acquire Brandon Rush
-Other Team(s) Involved in Trade: , Warriors",FALSE,FALSE,"Jazz, Nuggets, Warriors"
+Other Team(s) Involved in Trade:Warriors",FALSE,FALSE,"Jazz, Nuggets, Warriors"
 "Brandon RushKevin Murphy","2013-07-10","Brandon Rush","Kevin Murphy","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Warriors acquire Kevin Murphy 
 Jazz acquire Brandon Rush
@@ -5282,7 +5282,7 @@ Other Team(s) Involved in Trade: Nuggets",FALSE,FALSE,"Jazz, Nuggets, Warriors"
 "Randy FoyeRodney Hood","2013-07-10","Rodney Hood","Randy Foye","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Nuggets acquire Randy Foye 
 Jazz acquire 2014 first round pick (from Warriors) (#21-Rodney Hood)
-Other Team(s) Involved in Trade: , Warriors",TRUE,FALSE,"Jazz, Nuggets, Warriors"
+Other Team(s) Involved in Trade:Warriors",TRUE,FALSE,"Jazz, Nuggets, Warriors"
 "Kevin MurphyRodney Hood","2013-07-10","Rodney Hood","Kevin Murphy","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Warriors acquire Kevin Murphy 
 Jazz acquire 2014 first round pick (from Warriors) (#21-Rodney Hood)
@@ -5290,7 +5290,7 @@ Other Team(s) Involved in Trade: Nuggets",TRUE,FALSE,"Jazz, Nuggets, Warriors"
 "Randy FoyeTyrone Wallace","2013-07-10","Tyrone Wallace","Randy Foye","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Nuggets acquire Randy Foye 
 Jazz acquire 2016 second round pick (from Warriors) (#60-Tyrone Wallace)
-Other Team(s) Involved in Trade: , Warriors",TRUE,FALSE,"Jazz, Nuggets, Warriors"
+Other Team(s) Involved in Trade:Warriors",TRUE,FALSE,"Jazz, Nuggets, Warriors"
 "Kevin MurphyTyrone Wallace","2013-07-10","Tyrone Wallace","Kevin Murphy","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Warriors acquire Kevin Murphy 
 Jazz acquire 2016 second round pick (from Warriors) (#60-Tyrone Wallace)
@@ -5298,7 +5298,7 @@ Other Team(s) Involved in Trade: Nuggets",TRUE,FALSE,"Jazz, Nuggets, Warriors"
 "Josh HartRandy Foye","2013-07-10","Josh Hart","Randy Foye","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Nuggets acquire Randy Foye 
 Jazz acquire 2017 first round pick (from Warriors) (#30-Josh Hart)
-Other Team(s) Involved in Trade: , Warriors",TRUE,FALSE,"Jazz, Nuggets, Warriors"
+Other Team(s) Involved in Trade:Warriors",TRUE,FALSE,"Jazz, Nuggets, Warriors"
 "Josh HartKevin Murphy","2013-07-10","Josh Hart","Kevin Murphy","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Warriors acquire Kevin Murphy 
 Jazz acquire 2017 first round pick (from Warriors) (#30-Josh Hart)
@@ -5306,7 +5306,7 @@ Other Team(s) Involved in Trade: Nuggets",TRUE,FALSE,"Jazz, Nuggets, Warriors"
 "Alpha KabaRandy Foye","2013-07-10","Alpha Kaba","Randy Foye","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Nuggets acquire Randy Foye 
 Jazz acquire 2017 second round pick (from Warriors) (#60-Alpha Kaba)
-Other Team(s) Involved in Trade: , Warriors",TRUE,FALSE,"Jazz, Nuggets, Warriors"
+Other Team(s) Involved in Trade:Warriors",TRUE,FALSE,"Jazz, Nuggets, Warriors"
 "Alpha KabaKevin Murphy","2013-07-10","Alpha Kaba","Kevin Murphy","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Warriors acquire Kevin Murphy 
 Jazz acquire 2017 second round pick (from Warriors) (#60-Alpha Kaba)
@@ -5314,7 +5314,7 @@ Other Team(s) Involved in Trade: Nuggets",TRUE,FALSE,"Jazz, Nuggets, Warriors"
 "Randy FoyeSviatoslav Mykhailiuk / Svi Mykhailiuk","2013-07-10","Sviatoslav Mykhailiuk / Svi Mykhailiuk","Randy Foye","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Nuggets acquire Randy Foye 
 Jazz acquire 2018 second round pick (from Nuggets) (#47-Sviatoslav Mykhailiuk / Svi Mykhailiuk)
-Other Team(s) Involved in Trade: , Warriors",TRUE,FALSE,"Jazz, Nuggets, Warriors"
+Other Team(s) Involved in Trade:Warriors",TRUE,FALSE,"Jazz, Nuggets, Warriors"
 "Kevin MurphySviatoslav Mykhailiuk / Svi Mykhailiuk","2013-07-10","Sviatoslav Mykhailiuk / Svi Mykhailiuk","Kevin Murphy","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Warriors acquire Kevin Murphy 
 Jazz acquire 2018 second round pick (from Nuggets) (#47-Sviatoslav Mykhailiuk / Svi Mykhailiuk)
@@ -5322,7 +5322,7 @@ Other Team(s) Involved in Trade: Nuggets",TRUE,FALSE,"Jazz, Nuggets, Warriors"
 "cashRandy Foye","2013-07-10","cash","Randy Foye","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Nuggets acquire Randy Foye 
 Jazz acquire cash considerations
-Other Team(s) Involved in Trade: , Warriors",FALSE,FALSE,"Jazz, Nuggets, Warriors"
+Other Team(s) Involved in Trade:Warriors",FALSE,FALSE,"Jazz, Nuggets, Warriors"
 "cashKevin Murphy","2013-07-10","cash","Kevin Murphy","Jazz","3-team trade with Nuggets, Warriors","On 2013-07-10: 
 Warriors acquire Kevin Murphy 
 Jazz acquire cash considerations
@@ -5380,15 +5380,15 @@ Other Team(s) Involved in Trade: Jazz",TRUE,FALSE,"Nuggets, Jazz, Warriors"
 "Sviatoslav Mykhailiuk / Svi MykhailiukThomas Welsh","2013-07-10","Thomas Welsh","Sviatoslav Mykhailiuk / Svi Mykhailiuk","Nuggets","3-team trade with Jazz, Warriors","On 2013-07-10: 
 Jazz acquire 2018 second round pick (#47-Sviatoslav Mykhailiuk / Svi Mykhailiuk) 
 Nuggets acquire 2018 second round pick (from Warriors) (#58-Thomas Welsh)
-Other Team(s) Involved in Trade: , Warriors",TRUE,FALSE,"Nuggets, Jazz, Warriors"
+Other Team(s) Involved in Trade:Warriors",TRUE,FALSE,"Nuggets, Jazz, Warriors"
 "Robin LopezTyreke Evans","2013-07-10","Tyreke Evans","Robin Lopez","Pelicans","3-team trade with Blazers, Kings","On 2013-07-10: 
 Blazers acquire Robin Lopez 
 Pelicans acquire Tyreke Evans
-Other Team(s) Involved in Trade: , Kings",FALSE,FALSE,"Pelicans, Blazers, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,FALSE,"Pelicans, Blazers, Kings"
 "Terrel HarrisTyreke Evans","2013-07-10","Tyreke Evans","Terrel Harris","Pelicans","3-team trade with Blazers, Kings","On 2013-07-10: 
 Blazers acquire Terrel Harris 
 Pelicans acquire Tyreke Evans
-Other Team(s) Involved in Trade: , Kings",FALSE,FALSE,"Pelicans, Blazers, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,FALSE,"Pelicans, Blazers, Kings"
 "Greivis VasquezJeff Withey","2013-07-10","Jeff Withey","Greivis Vasquez","Pelicans","3-team trade with Blazers, Kings","On 2013-07-10: 
 Kings acquire Greivis Vasquez 
 Pelicans acquire rights to Jeff Withey
@@ -5400,47 +5400,47 @@ Other Team(s) Involved in Trade: Blazers",TRUE,TRUE,"Pelicans, Blazers, Kings"
 "Diamond StoneRobin Lopez","2013-07-10","Diamond Stone","Robin Lopez","Pelicans","3-team trade with Blazers, Kings","On 2013-07-10: 
 Blazers acquire Robin Lopez 
 Pelicans acquire Kings option to swap 2016 second round picks with Pelicans (conditional if Kings have not conveyed their second round pick to Pelicans outright from an earlier trade) (#40-Diamond Stone)
-Other Team(s) Involved in Trade: , Kings",TRUE,FALSE,"Pelicans, Blazers, Kings"
+Other Team(s) Involved in Trade:Kings",TRUE,FALSE,"Pelicans, Blazers, Kings"
 "Diamond StoneTerrel Harris","2013-07-10","Diamond Stone","Terrel Harris","Pelicans","3-team trade with Blazers, Kings","On 2013-07-10: 
 Blazers acquire Terrel Harris 
 Pelicans acquire Kings option to swap 2016 second round picks with Pelicans (conditional if Kings have not conveyed their second round pick to Pelicans outright from an earlier trade) (#40-Diamond Stone)
-Other Team(s) Involved in Trade: , Kings",TRUE,FALSE,"Pelicans, Blazers, Kings"
+Other Team(s) Involved in Trade:Kings",TRUE,FALSE,"Pelicans, Blazers, Kings"
 "Eric BledsoeLamar Patterson","2013-07-10","Eric Bledsoe","Lamar Patterson","Suns","3-team trade with Bucks, Clippers","On 2013-07-10: 
 Bucks acquire 2014 second round pick (#48-Lamar Patterson) 
 Suns acquire Eric Bledsoe
-Other Team(s) Involved in Trade: , Clippers",TRUE,FALSE,"Suns, Bucks, Clippers"
+Other Team(s) Involved in Trade:Clippers",TRUE,FALSE,"Suns, Bucks, Clippers"
 "Caron ButlerLamar Patterson","2013-07-10","Caron Butler","Lamar Patterson","Suns","3-team trade with Bucks, Clippers","On 2013-07-10: 
 Bucks acquire 2014 second round pick (#48-Lamar Patterson) 
 Suns acquire Caron Butler
-Other Team(s) Involved in Trade: , Clippers",TRUE,FALSE,"Suns, Bucks, Clippers"
+Other Team(s) Involved in Trade:Clippers",TRUE,FALSE,"Suns, Bucks, Clippers"
 "Andre IguodalaRichard Jefferson","2013-07-10","Andre Iguodala","Richard Jefferson","Warriors","3-team trade with Jazz, Nuggets","On 2013-07-10: 
 Jazz acquire Richard Jefferson 
 Warriors acquire Andre Iguodala
-Other Team(s) Involved in Trade: , Nuggets",FALSE,FALSE,"Warriors, Jazz, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,FALSE,"Warriors, Jazz, Nuggets"
 "Andre IguodalaAndris Biedrins","2013-07-10","Andre Iguodala","Andris Biedrins","Warriors","3-team trade with Jazz, Nuggets","On 2013-07-10: 
 Jazz acquire Andris Biedrins 
 Warriors acquire Andre Iguodala
-Other Team(s) Involved in Trade: , Nuggets",FALSE,FALSE,"Warriors, Jazz, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,FALSE,"Warriors, Jazz, Nuggets"
 "Andre IguodalaBrandon Rush","2013-07-10","Andre Iguodala","Brandon Rush","Warriors","3-team trade with Jazz, Nuggets","On 2013-07-10: 
 Jazz acquire Brandon Rush 
 Warriors acquire Andre Iguodala
-Other Team(s) Involved in Trade: , Nuggets",FALSE,FALSE,"Warriors, Jazz, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,FALSE,"Warriors, Jazz, Nuggets"
 "Andre IguodalaRodney Hood","2013-07-10","Andre Iguodala","Rodney Hood","Warriors","3-team trade with Jazz, Nuggets","On 2013-07-10: 
 Jazz acquire 2014 first round pick (#21-Rodney Hood) 
 Warriors acquire Andre Iguodala
-Other Team(s) Involved in Trade: , Nuggets",TRUE,FALSE,"Warriors, Jazz, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",TRUE,FALSE,"Warriors, Jazz, Nuggets"
 "Andre IguodalaTyrone Wallace","2013-07-10","Andre Iguodala","Tyrone Wallace","Warriors","3-team trade with Jazz, Nuggets","On 2013-07-10: 
 Jazz acquire 2016 second round pick (#60-Tyrone Wallace) 
 Warriors acquire Andre Iguodala
-Other Team(s) Involved in Trade: , Nuggets",TRUE,FALSE,"Warriors, Jazz, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",TRUE,FALSE,"Warriors, Jazz, Nuggets"
 "Alpha KabaAndre Iguodala","2013-07-10","Andre Iguodala","Alpha Kaba","Warriors","3-team trade with Jazz, Nuggets","On 2013-07-10: 
 Jazz acquire 2017 second round pick (#60-Alpha Kaba) 
 Warriors acquire Andre Iguodala
-Other Team(s) Involved in Trade: , Nuggets",TRUE,FALSE,"Warriors, Jazz, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",TRUE,FALSE,"Warriors, Jazz, Nuggets"
 "Andre Iguodalacash","2013-07-10","Andre Iguodala","cash","Warriors","3-team trade with Jazz, Nuggets","On 2013-07-10: 
 Jazz acquire cash considerations 
 Warriors acquire Andre Iguodala
-Other Team(s) Involved in Trade: , Nuggets",FALSE,FALSE,"Warriors, Jazz, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,FALSE,"Warriors, Jazz, Nuggets"
 "Kevin MurphyThomas Welsh","2013-07-10","Kevin Murphy","Thomas Welsh","Warriors","3-team trade with Jazz, Nuggets","On 2013-07-10: 
 Nuggets acquire 2018 second round pick (#58-Thomas Welsh) 
 Warriors acquire Kevin Murphy
@@ -5456,15 +5456,15 @@ Other Team(s) Involved in Trade: Jazz",TRUE,FALSE,"Warriors, Jazz, Nuggets"
 "Luke RidnourSzymon Szewczyk","2013-07-11","Luke Ridnour","Szymon Szewczyk","Bucks","3-team trade with Thunder, Timberwolves","On 2013-07-11: 
 Thunder acquire rights to Szymon Szewczyk 
 Bucks acquire Luke Ridnour
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,TRUE,"Bucks, Thunder, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,TRUE,"Bucks, Thunder, Timberwolves"
 "Johnny O'Bryant IIISzymon Szewczyk","2013-07-11","Johnny O'Bryant III","Szymon Szewczyk","Bucks","3-team trade with Thunder, Timberwolves","On 2013-07-11: 
 Thunder acquire rights to Szymon Szewczyk 
 Bucks acquire 2014 second round pick (from Timberwolves) (#36-Johnny O'Bryant III)
-Other Team(s) Involved in Trade: , Timberwolves",TRUE,TRUE,"Bucks, Thunder, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",TRUE,TRUE,"Bucks, Thunder, Timberwolves"
 "cashSzymon Szewczyk","2013-07-11","cash","Szymon Szewczyk","Bucks","3-team trade with Thunder, Timberwolves","On 2013-07-11: 
 Thunder acquire rights to Szymon Szewczyk 
 Bucks acquire cash (from Thunder)
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,TRUE,"Bucks, Thunder, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,TRUE,"Bucks, Thunder, Timberwolves"
 "Kevin MartinSzymon Szewczyk","2013-07-11","Szymon Szewczyk","Kevin Martin","Thunder","3-team trade with Bucks, Timberwolves","On 2013-07-11: 
 Timberwolves acquire Kevin Martin 
 Thunder acquire rights to Szymon Szewczyk
@@ -5476,15 +5476,15 @@ Other Team(s) Involved in Trade: Bucks",FALSE,FALSE,"Thunder, Bucks, Timberwolve
 "Kevin MartinLuke Ridnour","2013-07-11","Kevin Martin","Luke Ridnour","Timberwolves","3-team trade with Bucks, Thunder","On 2013-07-11: 
 Bucks acquire Luke Ridnour 
 Timberwolves acquire Kevin Martin
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Timberwolves, Bucks, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Timberwolves, Bucks, Thunder"
 "Johnny O'Bryant IIIKevin Martin","2013-07-11","Kevin Martin","Johnny O'Bryant III","Timberwolves","3-team trade with Bucks, Thunder","On 2013-07-11: 
 Bucks acquire 2014 second round pick (#36-Johnny O'Bryant III) 
 Timberwolves acquire Kevin Martin
-Other Team(s) Involved in Trade: , Thunder",TRUE,FALSE,"Timberwolves, Bucks, Thunder"
+Other Team(s) Involved in Trade:Thunder",TRUE,FALSE,"Timberwolves, Bucks, Thunder"
 "cashLuke Ridnour","2013-07-11","cash","Luke Ridnour","Timberwolves","3-team trade with Bucks, Thunder","On 2013-07-11: 
 Bucks acquire Luke Ridnour 
 Timberwolves acquire cash
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Timberwolves, Bucks, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Timberwolves, Bucks, Thunder"
 "Jrue HolidayNerlens Noel","2013-07-12","Nerlens Noel","Jrue Holiday","76ers","trade with Pelicans","On 2013-07-12: 
 Pelicans acquire Jrue Holiday 
 76ers acquire rights to Nerlens Noel",FALSE,TRUE,"76ers, Pelicans"
@@ -6157,19 +6157,19 @@ Bulls acquire 2016 second round pick (#48-Paul Zipser)",TRUE,FALSE,"Bulls, Caval
 "Courtney LeeJerryd Bayless","2014-01-07","Jerryd Bayless","Courtney Lee","Celtics","3-team trade with Grizzlies, Thunder","On 2014-01-07: 
 Grizzlies acquire Courtney Lee 
 Celtics acquire Jerryd Bayless
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Celtics, Grizzlies, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Celtics, Grizzlies, Thunder"
 "Jerryd BaylessJoel Bolomboy","2014-01-07","Jerryd Bayless","Joel Bolomboy","Celtics","3-team trade with Grizzlies, Thunder","On 2014-01-07: 
 Grizzlies acquire 2016 second round pick (#52-Joel Bolomboy) 
 Celtics acquire Jerryd Bayless
-Other Team(s) Involved in Trade: , Thunder",TRUE,FALSE,"Celtics, Grizzlies, Thunder"
+Other Team(s) Involved in Trade:Thunder",TRUE,FALSE,"Celtics, Grizzlies, Thunder"
 "Courtney LeeRyan Gomes","2014-01-07","Ryan Gomes","Courtney Lee","Celtics","3-team trade with Grizzlies, Thunder","On 2014-01-07: 
 Grizzlies acquire Courtney Lee 
 Celtics acquire Ryan Gomes
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Celtics, Grizzlies, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Celtics, Grizzlies, Thunder"
 "Joel BolomboyRyan Gomes","2014-01-07","Ryan Gomes","Joel Bolomboy","Celtics","3-team trade with Grizzlies, Thunder","On 2014-01-07: 
 Grizzlies acquire 2016 second round pick (#52-Joel Bolomboy) 
 Celtics acquire Ryan Gomes
-Other Team(s) Involved in Trade: , Thunder",TRUE,FALSE,"Celtics, Grizzlies, Thunder"
+Other Team(s) Involved in Trade:Thunder",TRUE,FALSE,"Celtics, Grizzlies, Thunder"
 "Courtney LeeVlatko Cancar","2014-01-07","Courtney Lee","Vlatko Cancar","Grizzlies","3-team trade with Celtics, Thunder","On 2014-01-07: 
 Thunder acquire second round pick (protected top 35 in 2017, unprotected in 2018) (2017 #49-Vlatko Cancar) 
 Grizzlies acquire Courtney Lee
@@ -6181,7 +6181,7 @@ Other Team(s) Involved in Trade: Celtics",TRUE,FALSE,"Grizzlies, Celtics, Thunde
 "cashJerryd Bayless","2014-01-07","cash","Jerryd Bayless","Grizzlies","3-team trade with Celtics, Thunder","On 2014-01-07: 
 Celtics acquire Jerryd Bayless 
 Grizzlies acquire cash considerations
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Grizzlies, Celtics, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Grizzlies, Celtics, Thunder"
 "cashVlatko Cancar","2014-01-07","cash","Vlatko Cancar","Grizzlies","3-team trade with Celtics, Thunder","On 2014-01-07: 
 Thunder acquire second round pick (protected top 35 in 2017, unprotected in 2018) (2017 #49-Vlatko Cancar) 
 Grizzlies acquire cash considerations
@@ -6189,7 +6189,7 @@ Other Team(s) Involved in Trade: Celtics",TRUE,FALSE,"Grizzlies, Celtics, Thunde
 "Ryan GomesVlatko Cancar","2014-01-07","Vlatko Cancar","Ryan Gomes","Thunder","3-team trade with Celtics, Grizzlies","On 2014-01-07: 
 Celtics acquire Ryan Gomes 
 Thunder acquire second round pick (from Grizzlies, protected top 35 in 2017, unprotected in 2018) (2017 #49-Vlatko Cancar)
-Other Team(s) Involved in Trade: , Grizzlies",TRUE,FALSE,"Thunder, Celtics, Grizzlies"
+Other Team(s) Involved in Trade:Grizzlies",TRUE,FALSE,"Thunder, Celtics, Grizzlies"
 "Andrew Bynumfree agencywaived2014-01-07","2014-01-07","free agency","Andrew Bynum","Bulls","waived","On 2014-01-07, Andrew Bynum is waived by Bulls",FALSE,FALSE,"Bulls"
 "free agencyRyan Gomeswaived2014-01-07","2014-01-07","free agency","Ryan Gomes","Celtics","waived","On 2014-01-07, Ryan Gomes is waived by Celtics",FALSE,FALSE,"Celtics"
 "free agencyMaalik Waynssigned free agent to a 10-day contract2014-01-08","2014-01-08","Maalik Wayns","free agency","Clippers","signed free agent to a 10-day contract","On 2014-01-08, Maalik Wayns is signed as free agent to a 10-day contract by Clippers",FALSE,FALSE,"Clippers"
@@ -6232,19 +6232,19 @@ Other Team(s) Involved in Trade: Heat",FALSE,FALSE,"Celtics, Heat, Warriors"
 "Joel AnthonyToney Douglas","2014-01-15","Toney Douglas","Joel Anthony","Heat","3-team trade with Celtics, Warriors","On 2014-01-15: 
 Celtics acquire Joel Anthony 
 Heat acquire Toney Douglas
-Other Team(s) Involved in Trade: , Warriors",FALSE,FALSE,"Heat, Celtics, Warriors"
+Other Team(s) Involved in Trade:Warriors",FALSE,FALSE,"Heat, Celtics, Warriors"
 "Deyonta DavisToney Douglas","2014-01-15","Toney Douglas","Deyonta Davis","Heat","3-team trade with Celtics, Warriors","On 2014-01-15: 
 Celtics acquire first round pick (protected top 14 in 2013-15, else 2015 second round pick, 2016 second round pick) (2015 #33-Jordan Mickey) (2016 #31-Deyonta Davis) 
 Heat acquire Toney Douglas
-Other Team(s) Involved in Trade: , Warriors",TRUE,FALSE,"Heat, Celtics, Warriors"
+Other Team(s) Involved in Trade:Warriors",TRUE,FALSE,"Heat, Celtics, Warriors"
 "Ben BentilToney Douglas","2014-01-15","Toney Douglas","Ben Bentil","Heat","3-team trade with Celtics, Warriors","On 2014-01-15: 
 Celtics acquire 2016 second round pick (#51-Ben Bentil) 
 Heat acquire Toney Douglas
-Other Team(s) Involved in Trade: , Warriors",TRUE,FALSE,"Heat, Celtics, Warriors"
+Other Team(s) Involved in Trade:Warriors",TRUE,FALSE,"Heat, Celtics, Warriors"
 "cashToney Douglas","2014-01-15","Toney Douglas","cash","Heat","3-team trade with Celtics, Warriors","On 2014-01-15: 
 Celtics acquire cash 
 Heat acquire Toney Douglas
-Other Team(s) Involved in Trade: , Warriors",FALSE,FALSE,"Heat, Celtics, Warriors"
+Other Team(s) Involved in Trade:Warriors",FALSE,FALSE,"Heat, Celtics, Warriors"
 "Jordan CrawfordToney Douglas","2014-01-15","Jordan Crawford","Toney Douglas","Warriors","3-team trade with Celtics, Heat","On 2014-01-15: 
 Heat acquire Toney Douglas 
 Warriors acquire Jordan Crawford
@@ -6863,47 +6863,47 @@ Bulls acquire rights to Tadija Dragicevic",FALSE,TRUE,"Bulls, Mavericks"
 "Alonzo GeeOmer Asik","2014-07-14","Omer Asik","Alonzo Gee","Pelicans","3-team trade with Rockets, Wizards","On 2014-07-14: 
 Rockets acquire Alonzo Gee 
 Pelicans acquire Omer Asik
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Pelicans, Rockets, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Pelicans, Rockets, Wizards"
 "Omer AsikScotty Hopson","2014-07-14","Omer Asik","Scotty Hopson","Pelicans","3-team trade with Rockets, Wizards","On 2014-07-14: 
 Rockets acquire Scotty Hopson 
 Pelicans acquire Omer Asik
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Pelicans, Rockets, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Pelicans, Rockets, Wizards"
 "Omer AsikSam Dekker","2014-07-14","Omer Asik","Sam Dekker","Pelicans","3-team trade with Rockets, Wizards","On 2014-07-14: 
 Rockets acquire first round pick (protected top 3 and 20-30 in 2015-18, top 3 and 25-30 in 2019-20, else 2020 second round pick and 2021 second round pick) (#18-Sam Dekker) 
 Pelicans acquire Omer Asik
-Other Team(s) Involved in Trade: , Wizards",TRUE,FALSE,"Pelicans, Rockets, Wizards"
+Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Pelicans, Rockets, Wizards"
 "Alonzo GeeOmri Casspi","2014-07-14","Omri Casspi","Alonzo Gee","Pelicans","3-team trade with Rockets, Wizards","On 2014-07-14: 
 Rockets acquire Alonzo Gee 
 Pelicans acquire Omri Casspi
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Pelicans, Rockets, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Pelicans, Rockets, Wizards"
 "Omri CasspiScotty Hopson","2014-07-14","Omri Casspi","Scotty Hopson","Pelicans","3-team trade with Rockets, Wizards","On 2014-07-14: 
 Rockets acquire Scotty Hopson 
 Pelicans acquire Omri Casspi
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Pelicans, Rockets, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Pelicans, Rockets, Wizards"
 "Omri CasspiSam Dekker","2014-07-14","Omri Casspi","Sam Dekker","Pelicans","3-team trade with Rockets, Wizards","On 2014-07-14: 
 Rockets acquire first round pick (protected top 3 and 20-30 in 2015-18, top 3 and 25-30 in 2019-20, else 2020 second round pick and 2021 second round pick) (#18-Sam Dekker) 
 Pelicans acquire Omri Casspi
-Other Team(s) Involved in Trade: , Wizards",TRUE,FALSE,"Pelicans, Rockets, Wizards"
+Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Pelicans, Rockets, Wizards"
 "Alonzo Geecash","2014-07-14","cash","Alonzo Gee","Pelicans","3-team trade with Rockets, Wizards","On 2014-07-14: 
 Rockets acquire Alonzo Gee 
 Pelicans acquire $1.5M cash considerations
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Pelicans, Rockets, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Pelicans, Rockets, Wizards"
 "cashSam Dekker","2014-07-14","cash","Sam Dekker","Pelicans","3-team trade with Rockets, Wizards","On 2014-07-14: 
 Rockets acquire first round pick (protected top 3 and 20-30 in 2015-18, top 3 and 25-30 in 2019-20, else 2020 second round pick and 2021 second round pick) (#18-Sam Dekker) 
 Pelicans acquire $1.5M cash considerations
-Other Team(s) Involved in Trade: , Wizards",TRUE,FALSE,"Pelicans, Rockets, Wizards"
+Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Pelicans, Rockets, Wizards"
 "Omer AsikTrevor Ariza","2014-07-14","Trevor Ariza","Omer Asik","Rockets","3-team trade with Pelicans, Wizards","On 2014-07-14: 
 Pelicans acquire Omer Asik 
 Rockets acquire Trevor Ariza
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Rockets, Pelicans, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Rockets, Pelicans, Wizards"
 "Omri CasspiTrevor Ariza","2014-07-14","Trevor Ariza","Omri Casspi","Rockets","3-team trade with Pelicans, Wizards","On 2014-07-14: 
 Pelicans acquire Omri Casspi 
 Rockets acquire Trevor Ariza
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Rockets, Pelicans, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Rockets, Pelicans, Wizards"
 "cashTrevor Ariza","2014-07-14","Trevor Ariza","cash","Rockets","3-team trade with Pelicans, Wizards","On 2014-07-14: 
 Pelicans acquire $1.5M cash considerations 
 Rockets acquire Trevor Ariza
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Rockets, Pelicans, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Rockets, Pelicans, Wizards"
 "Melvin ElyTrevor Ariza","2014-07-14","Melvin Ely","Trevor Ariza","Wizards","3-team trade with Pelicans, Rockets","On 2014-07-14: 
 Rockets acquire Trevor Ariza 
 Wizards acquire Melvin Ely
@@ -7073,19 +7073,19 @@ Other Team(s) Involved in Trade: 76ers",FALSE,FALSE,"Cavaliers, 76ers, Timberwol
 "Andrew WigginsLuc Richard Mbah a Moute / Luc Mbah a Moute","2014-08-23","Andrew Wiggins","Luc Richard Mbah a Moute / Luc Mbah a Moute","Timberwolves","3-team trade with 76ers, Cavaliers","On 2014-08-23: 
 76ers acquire Luc Richard Mbah a Moute / Luc Mbah a Moute 
 Timberwolves acquire Andrew Wiggins
-Other Team(s) Involved in Trade: , Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
+Other Team(s) Involved in Trade:Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
 "Alexey ShvedAndrew Wiggins","2014-08-23","Andrew Wiggins","Alexey Shved","Timberwolves","3-team trade with 76ers, Cavaliers","On 2014-08-23: 
 76ers acquire Alexey Shved 
 Timberwolves acquire Andrew Wiggins
-Other Team(s) Involved in Trade: , Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
+Other Team(s) Involved in Trade:Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
 "Anthony BennettLuc Richard Mbah a Moute / Luc Mbah a Moute","2014-08-23","Anthony Bennett","Luc Richard Mbah a Moute / Luc Mbah a Moute","Timberwolves","3-team trade with 76ers, Cavaliers","On 2014-08-23: 
 76ers acquire Luc Richard Mbah a Moute / Luc Mbah a Moute 
 Timberwolves acquire Anthony Bennett
-Other Team(s) Involved in Trade: , Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
+Other Team(s) Involved in Trade:Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
 "Alexey ShvedAnthony Bennett","2014-08-23","Anthony Bennett","Alexey Shved","Timberwolves","3-team trade with 76ers, Cavaliers","On 2014-08-23: 
 76ers acquire Alexey Shved 
 Timberwolves acquire Anthony Bennett
-Other Team(s) Involved in Trade: , Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
+Other Team(s) Involved in Trade:Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
 "Kevin LoveThaddeus Young","2014-08-23","Thaddeus Young","Kevin Love","Timberwolves","3-team trade with 76ers, Cavaliers","On 2014-08-23: 
 Cavaliers acquire Kevin Love 
 Timberwolves acquire Thaddeus Young
@@ -7093,11 +7093,11 @@ Other Team(s) Involved in Trade: 76ers",FALSE,FALSE,"Timberwolves, 76ers, Cavali
 "Luc Richard Mbah a Moute / Luc Mbah a Moutetrade exception","2014-08-23","trade exception","Luc Richard Mbah a Moute / Luc Mbah a Moute","Timberwolves","3-team trade with 76ers, Cavaliers","On 2014-08-23: 
 76ers acquire Luc Richard Mbah a Moute / Luc Mbah a Moute 
 Timberwolves acquire trade exception
-Other Team(s) Involved in Trade: , Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
+Other Team(s) Involved in Trade:Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
 "Alexey Shvedtrade exception","2014-08-23","trade exception","Alexey Shved","Timberwolves","3-team trade with 76ers, Cavaliers","On 2014-08-23: 
 76ers acquire Alexey Shved 
 Timberwolves acquire trade exception
-Other Team(s) Involved in Trade: , Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
+Other Team(s) Involved in Trade:Cavaliers",FALSE,FALSE,"Timberwolves, 76ers, Cavaliers"
 "free agencyKevin Murphysigned free agent to a multi-year non-guaranteed contract (date 08-26 per CBC, 08-27 per CBS P SN)2014-08-25","2014-08-25","Kevin Murphy","free agency","Jazz","signed free agent to a multi-year non-guaranteed contract (date 08-26 per CBC, 08-27 per CBS P SN)","On 2014-08-25, Kevin Murphy is signed as free agent to a multi-year non-guaranteed contract (date 08-26 per CBC, 08-27 per CBS P SN) by Jazz",FALSE,FALSE,"Jazz"
 "Brock Motumfree agencysigned free agent to a non-guaranteed contract2014-08-25","2014-08-25","Brock Motum","free agency","Jazz","signed free agent to a non-guaranteed contract","On 2014-08-25, Brock Motum is signed as free agent to a non-guaranteed contract by Jazz",FALSE,FALSE,"Jazz"
 "free agencyJosh Davissigned free agent to a multi-year non-guaranteed contract (date 08-27 per P, 09-17 per SN, 09-26 per CBC CBS)2014-08-25","2014-08-25","Josh Davis","free agency","Spurs","signed free agent to a multi-year non-guaranteed contract (date 08-27 per P, 09-17 per SN, 09-26 per CBC CBS)","On 2014-08-25, Josh Davis is signed as free agent to a multi-year non-guaranteed contract (date 08-27 per P, 09-17 per SN, 09-26 per CBC CBS) by Spurs",FALSE,FALSE,"Spurs"
@@ -7561,15 +7561,15 @@ Celtics acquire $12.9M trade exception",FALSE,FALSE,"Celtics, Mavericks"
 "Alexey ShvedRonny Turiaf","2014-12-19","Ronny Turiaf","Alexey Shved","76ers","3-team trade with Rockets, Timberwolves","On 2014-12-19: 
 Rockets acquire Alexey Shved 
 76ers acquire Ronny Turiaf
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,FALSE,"76ers, Rockets, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,FALSE,"76ers, Rockets, Timberwolves"
 "Alexey ShvedSergei Lishouk / Sergei Lishchuk","2014-12-19","Sergei Lishouk / Sergei Lishchuk","Alexey Shved","76ers","3-team trade with Rockets, Timberwolves","On 2014-12-19: 
 Rockets acquire Alexey Shved 
 76ers acquire rights to Sergei Lishouk / Sergei Lishchuk
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,TRUE,"76ers, Rockets, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,TRUE,"76ers, Rockets, Timberwolves"
 "Alexey ShvedJ.P. Tokoto","2014-12-19","J.P. Tokoto","Alexey Shved","76ers","3-team trade with Rockets, Timberwolves","On 2014-12-19: 
 Rockets acquire Alexey Shved 
 76ers acquire 2015 second round pick (from Rockets) (#58-J.P. Tokoto)
-Other Team(s) Involved in Trade: , Timberwolves",TRUE,FALSE,"76ers, Rockets, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",TRUE,FALSE,"76ers, Rockets, Timberwolves"
 "free agencyGal Mekelwaived2014-12-19","2014-12-19","free agency","Gal Mekel","Pelicans","waived","On 2014-12-19, Gal Mekel is waived by Pelicans",FALSE,FALSE,"Pelicans"
 "Corey BrewerTroy Daniels","2014-12-19","Corey Brewer","Troy Daniels","Rockets","3-team trade with 76ers, Timberwolves","On 2014-12-19: 
 Timberwolves acquire Troy Daniels 
@@ -7578,11 +7578,11 @@ Other Team(s) Involved in Trade: 76ers",FALSE,FALSE,"Rockets, 76ers, Timberwolve
 "Corey BrewerSergei Lishouk / Sergei Lishchuk","2014-12-19","Corey Brewer","Sergei Lishouk / Sergei Lishchuk","Rockets","3-team trade with 76ers, Timberwolves","On 2014-12-19: 
 76ers acquire rights to Sergei Lishouk / Sergei Lishchuk 
 Rockets acquire Corey Brewer
-Other Team(s) Involved in Trade: , Timberwolves",FALSE,TRUE,"Rockets, 76ers, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",FALSE,TRUE,"Rockets, 76ers, Timberwolves"
 "Corey BrewerJ.P. Tokoto","2014-12-19","Corey Brewer","J.P. Tokoto","Rockets","3-team trade with 76ers, Timberwolves","On 2014-12-19: 
 76ers acquire 2015 second round pick (#58-J.P. Tokoto) 
 Rockets acquire Corey Brewer
-Other Team(s) Involved in Trade: , Timberwolves",TRUE,FALSE,"Rockets, 76ers, Timberwolves"
+Other Team(s) Involved in Trade:Timberwolves",TRUE,FALSE,"Rockets, 76ers, Timberwolves"
 "Corey BrewerRakeem Christmas","2014-12-19","Corey Brewer","Rakeem Christmas","Rockets","3-team trade with 76ers, Timberwolves","On 2014-12-19: 
 Timberwolves acquire 2015 second round pick (protected #50-60) (#36-Rakeem Christmas) 
 Rockets acquire Corey Brewer
@@ -7602,15 +7602,15 @@ Other Team(s) Involved in Trade: 76ers",FALSE,FALSE,"Rockets, 76ers, Timberwolve
 "Ronny TuriafTroy Daniels","2014-12-19","Troy Daniels","Ronny Turiaf","Timberwolves","3-team trade with 76ers, Rockets","On 2014-12-19: 
 76ers acquire Ronny Turiaf 
 Timberwolves acquire Troy Daniels
-Other Team(s) Involved in Trade: , Rockets",FALSE,FALSE,"Timberwolves, 76ers, Rockets"
+Other Team(s) Involved in Trade:Rockets",FALSE,FALSE,"Timberwolves, 76ers, Rockets"
 "Rakeem ChristmasRonny Turiaf","2014-12-19","Rakeem Christmas","Ronny Turiaf","Timberwolves","3-team trade with 76ers, Rockets","On 2014-12-19: 
 76ers acquire Ronny Turiaf 
 Timberwolves acquire 2015 second round pick (protected #50-60) (from Rockets) (#36-Rakeem Christmas)
-Other Team(s) Involved in Trade: , Rockets",TRUE,FALSE,"Timberwolves, 76ers, Rockets"
+Other Team(s) Involved in Trade:Rockets",TRUE,FALSE,"Timberwolves, 76ers, Rockets"
 "cashRonny Turiaf","2014-12-19","cash","Ronny Turiaf","Timberwolves","3-team trade with 76ers, Rockets","On 2014-12-19: 
 76ers acquire Ronny Turiaf 
 Timberwolves acquire cash considerations
-Other Team(s) Involved in Trade: , Rockets",FALSE,FALSE,"Timberwolves, 76ers, Rockets"
+Other Team(s) Involved in Trade:Rockets",FALSE,FALSE,"Timberwolves, 76ers, Rockets"
 "Francisco Garciafree agencywaived2014-12-19","2014-12-19","free agency","Francisco Garcia","Rockets","waived","On 2014-12-19, Francisco Garcia is waived by Rockets",FALSE,FALSE,"Rockets"
 "free agencyJosh Smithwaived2014-12-22","2014-12-22","free agency","Josh Smith","Pistons","waived","On 2014-12-22, Josh Smith is waived by Pistons",FALSE,FALSE,"Pistons"
 "free agencyMalcolm Thomas (b)signed free agent2014-12-23","2014-12-23","Malcolm Thomas (b)","free agency","76ers","signed free agent","On 2014-12-23, Malcolm Thomas (b) is signed as free agent by 76ers",FALSE,FALSE,"76ers"
@@ -7630,11 +7630,11 @@ Other Team(s) Involved in Trade: Knicks",FALSE,FALSE,"Cavaliers, Knicks, Thunder
 "J.R. SmithLou Amundson","2015-01-05","J.R. Smith","Lou Amundson","Cavaliers","3-team trade with Knicks, Thunder","On 2015-01-05: 
 Knicks acquire Lou Amundson 
 Cavaliers acquire J.R. Smith
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Cavaliers, Knicks, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Cavaliers, Knicks, Thunder"
 "Alex KirkJ.R. Smith","2015-01-05","J.R. Smith","Alex Kirk","Cavaliers","3-team trade with Knicks, Thunder","On 2015-01-05: 
 Knicks acquire Alex Kirk 
 Cavaliers acquire J.R. Smith
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Cavaliers, Knicks, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Cavaliers, Knicks, Thunder"
 "Dion WaitersIman Shumpert","2015-01-05","Iman Shumpert","Dion Waiters","Cavaliers","3-team trade with Knicks, Thunder","On 2015-01-05: 
 Thunder acquire Dion Waiters 
 Cavaliers acquire Iman Shumpert
@@ -7642,11 +7642,11 @@ Other Team(s) Involved in Trade: Knicks",FALSE,FALSE,"Cavaliers, Knicks, Thunder
 "Iman ShumpertLou Amundson","2015-01-05","Iman Shumpert","Lou Amundson","Cavaliers","3-team trade with Knicks, Thunder","On 2015-01-05: 
 Knicks acquire Lou Amundson 
 Cavaliers acquire Iman Shumpert
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Cavaliers, Knicks, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Cavaliers, Knicks, Thunder"
 "Alex KirkIman Shumpert","2015-01-05","Iman Shumpert","Alex Kirk","Cavaliers","3-team trade with Knicks, Thunder","On 2015-01-05: 
 Knicks acquire Alex Kirk 
 Cavaliers acquire Iman Shumpert
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Cavaliers, Knicks, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Cavaliers, Knicks, Thunder"
 "Dion WaitersFurkan Korkmaz","2015-01-05","Furkan Korkmaz","Dion Waiters","Cavaliers","3-team trade with Knicks, Thunder","On 2015-01-05: 
 Thunder acquire Dion Waiters 
 Cavaliers acquire first round pick (from Thunder) (protected top 18 in 2015, top 15 in 2016-17, else 2018 second round pick and 2019 second round pick) (2016 #26-Furkan Korkmaz)
@@ -7654,21 +7654,21 @@ Other Team(s) Involved in Trade: Knicks",TRUE,FALSE,"Cavaliers, Knicks, Thunder"
 "Furkan KorkmazLou Amundson","2015-01-05","Furkan Korkmaz","Lou Amundson","Cavaliers","3-team trade with Knicks, Thunder","On 2015-01-05: 
 Knicks acquire Lou Amundson 
 Cavaliers acquire first round pick (from Thunder) (protected top 18 in 2015, top 15 in 2016-17, else 2018 second round pick and 2019 second round pick) (2016 #26-Furkan Korkmaz)
-Other Team(s) Involved in Trade: , Thunder",TRUE,FALSE,"Cavaliers, Knicks, Thunder"
+Other Team(s) Involved in Trade:Thunder",TRUE,FALSE,"Cavaliers, Knicks, Thunder"
 "Alex KirkFurkan Korkmaz","2015-01-05","Furkan Korkmaz","Alex Kirk","Cavaliers","3-team trade with Knicks, Thunder","On 2015-01-05: 
 Knicks acquire Alex Kirk 
 Cavaliers acquire first round pick (from Thunder) (protected top 18 in 2015, top 15 in 2016-17, else 2018 second round pick and 2019 second round pick) (2016 #26-Furkan Korkmaz)
-Other Team(s) Involved in Trade: , Thunder",TRUE,FALSE,"Cavaliers, Knicks, Thunder"
+Other Team(s) Involved in Trade:Thunder",TRUE,FALSE,"Cavaliers, Knicks, Thunder"
 "Elijah Millsapfree agencysigned free agent to a 10-day contract2015-01-05","2015-01-05","Elijah Millsap","free agency","Jazz","signed free agent to a 10-day contract","On 2015-01-05, Elijah Millsap is signed as free agent to a 10-day contract by Jazz",FALSE,FALSE,"Jazz"
 "free agencySamuel Dalembertwaived2015-01-05","2015-01-05","free agency","Samuel Dalembert","Knicks","waived","On 2015-01-05, Samuel Dalembert is waived by Knicks",FALSE,FALSE,"Knicks"
 "J.R. SmithLance Thomas","2015-01-05","Lance Thomas","J.R. Smith","Knicks","3-team trade with Cavaliers, Thunder","On 2015-01-05: 
 Cavaliers acquire J.R. Smith 
 Knicks acquire Lance Thomas
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Knicks, Cavaliers, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Knicks, Cavaliers, Thunder"
 "Iman ShumpertLance Thomas","2015-01-05","Lance Thomas","Iman Shumpert","Knicks","3-team trade with Cavaliers, Thunder","On 2015-01-05: 
 Cavaliers acquire Iman Shumpert 
 Knicks acquire Lance Thomas
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Knicks, Cavaliers, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Knicks, Cavaliers, Thunder"
 "Dion WaitersLance Thomas","2015-01-05","Dion Waiters","Lance Thomas","Thunder","3-team trade with Cavaliers, Knicks","On 2015-01-05: 
 Knicks acquire Lance Thomas 
 Thunder acquire Dion Waiters
@@ -7718,11 +7718,11 @@ Celtics acquire draft pick(s) (first round pick (protected top 12 in 2015-16, el
 "Jeff GreenTayshaun Prince","2015-01-12","Tayshaun Prince","Jeff Green","Celtics","3-team trade with Grizzlies, Pelicans","On 2015-01-12: 
 Grizzlies acquire Jeff Green 
 Celtics acquire Tayshaun Prince
-Other Team(s) Involved in Trade: , Pelicans",FALSE,FALSE,"Celtics, Grizzlies, Pelicans"
+Other Team(s) Involved in Trade:Pelicans",FALSE,FALSE,"Celtics, Grizzlies, Pelicans"
 "Austin RiversJeff Green","2015-01-12","Austin Rivers","Jeff Green","Celtics","3-team trade with Grizzlies, Pelicans","On 2015-01-12: 
 Grizzlies acquire Jeff Green 
 Celtics acquire Austin Rivers
-Other Team(s) Involved in Trade: , Pelicans",FALSE,FALSE,"Celtics, Grizzlies, Pelicans"
+Other Team(s) Involved in Trade:Pelicans",FALSE,FALSE,"Celtics, Grizzlies, Pelicans"
 "Jeff GreenQuincy Pondexter","2015-01-12","Jeff Green","Quincy Pondexter","Grizzlies","3-team trade with Celtics, Pelicans","On 2015-01-12: 
 Pelicans acquire Quincy Pondexter 
 Grizzlies acquire Jeff Green
@@ -7734,7 +7734,7 @@ Other Team(s) Involved in Trade: Celtics",TRUE,FALSE,"Grizzlies, Celtics, Pelica
 "Russ SmithTayshaun Prince","2015-01-12","Russ Smith","Tayshaun Prince","Grizzlies","3-team trade with Celtics, Pelicans","On 2015-01-12: 
 Celtics acquire Tayshaun Prince 
 Grizzlies acquire Russ Smith
-Other Team(s) Involved in Trade: , Pelicans",FALSE,FALSE,"Grizzlies, Celtics, Pelicans"
+Other Team(s) Involved in Trade:Pelicans",FALSE,FALSE,"Grizzlies, Celtics, Pelicans"
 "Quincy PondexterRuss Smith","2015-01-12","Russ Smith","Quincy Pondexter","Grizzlies","3-team trade with Celtics, Pelicans","On 2015-01-12: 
 Pelicans acquire Quincy Pondexter 
 Grizzlies acquire Russ Smith
@@ -7746,7 +7746,7 @@ Other Team(s) Involved in Trade: Celtics",TRUE,FALSE,"Grizzlies, Celtics, Pelica
 "Tayshaun Princetrade exception","2015-01-12","trade exception","Tayshaun Prince","Grizzlies","3-team trade with Celtics, Pelicans","On 2015-01-12: 
 Celtics acquire Tayshaun Prince 
 Grizzlies acquire trade exception
-Other Team(s) Involved in Trade: , Pelicans",FALSE,FALSE,"Grizzlies, Celtics, Pelicans"
+Other Team(s) Involved in Trade:Pelicans",FALSE,FALSE,"Grizzlies, Celtics, Pelicans"
 "Quincy Pondextertrade exception","2015-01-12","trade exception","Quincy Pondexter","Grizzlies","3-team trade with Celtics, Pelicans","On 2015-01-12: 
 Pelicans acquire Quincy Pondexter 
 Grizzlies acquire trade exception
@@ -7759,11 +7759,11 @@ Other Team(s) Involved in Trade: Celtics",TRUE,FALSE,"Grizzlies, Celtics, Pelica
 "Austin RiversQuincy Pondexter","2015-01-12","Quincy Pondexter","Austin Rivers","Pelicans","3-team trade with Celtics, Grizzlies","On 2015-01-12: 
 Celtics acquire Austin Rivers 
 Pelicans acquire Quincy Pondexter
-Other Team(s) Involved in Trade: , Grizzlies",FALSE,FALSE,"Pelicans, Celtics, Grizzlies"
+Other Team(s) Involved in Trade:Grizzlies",FALSE,FALSE,"Pelicans, Celtics, Grizzlies"
 "Austin RiversBranden Dawson","2015-01-12","Branden Dawson","Austin Rivers","Pelicans","3-team trade with Celtics, Grizzlies","On 2015-01-12: 
 Celtics acquire Austin Rivers 
 Pelicans acquire 2015 second round pick (from Grizzlies) (#56-Branden Dawson)
-Other Team(s) Involved in Trade: , Grizzlies",TRUE,FALSE,"Pelicans, Celtics, Grizzlies"
+Other Team(s) Involved in Trade:Grizzlies",TRUE,FALSE,"Pelicans, Celtics, Grizzlies"
 "Jameer NelsonNate Robinson","2015-01-13","Nate Robinson","Jameer Nelson","Celtics","trade with Nuggets","On 2015-01-13: 
 Nuggets acquire Jameer Nelson 
 Celtics acquire Nate Robinson",FALSE,FALSE,"Celtics, Nuggets"
@@ -7774,15 +7774,15 @@ Celtics acquire Nate Robinson",FALSE,FALSE,"Celtics, Nuggets"
 "Austin RiversChris Douglas-Roberts","2015-01-15","Chris Douglas-Roberts","Austin Rivers","Celtics","3-team trade with Clippers, Suns","On 2015-01-15: 
 Clippers acquire Austin Rivers 
 Celtics acquire Chris Douglas-Roberts
-Other Team(s) Involved in Trade: , Suns",FALSE,FALSE,"Celtics, Clippers, Suns"
+Other Team(s) Involved in Trade:Suns",FALSE,FALSE,"Celtics, Clippers, Suns"
 "Austin RiversShavlik Randolph","2015-01-15","Shavlik Randolph","Austin Rivers","Celtics","3-team trade with Clippers, Suns","On 2015-01-15: 
 Clippers acquire Austin Rivers 
 Celtics acquire Shavlik Randolph
-Other Team(s) Involved in Trade: , Suns",FALSE,FALSE,"Celtics, Clippers, Suns"
+Other Team(s) Involved in Trade:Suns",FALSE,FALSE,"Celtics, Clippers, Suns"
 "Austin RiversJabari Bird","2015-01-15","Jabari Bird","Austin Rivers","Celtics","3-team trade with Clippers, Suns","On 2015-01-15: 
 Clippers acquire Austin Rivers 
 Celtics acquire 2017 second round pick (from Clippers) (#56-Jabari Bird)
-Other Team(s) Involved in Trade: , Suns",TRUE,FALSE,"Celtics, Clippers, Suns"
+Other Team(s) Involved in Trade:Suns",TRUE,FALSE,"Celtics, Clippers, Suns"
 "Austin RiversReggie Bullock","2015-01-15","Austin Rivers","Reggie Bullock","Clippers","3-team trade with Celtics, Suns","On 2015-01-15: 
 Suns acquire Reggie Bullock 
 Clippers acquire Austin Rivers
@@ -7790,7 +7790,7 @@ Other Team(s) Involved in Trade: Celtics",FALSE,FALSE,"Clippers, Celtics, Suns"
 "Reggie BullockShavlik Randolph","2015-01-15","Reggie Bullock","Shavlik Randolph","Suns","3-team trade with Celtics, Clippers","On 2015-01-15: 
 Celtics acquire Shavlik Randolph 
 Suns acquire Reggie Bullock
-Other Team(s) Involved in Trade: , Clippers",FALSE,FALSE,"Suns, Celtics, Clippers"
+Other Team(s) Involved in Trade:Clippers",FALSE,FALSE,"Suns, Celtics, Clippers"
 "free agencyJordan Farmarwaived2015-01-16","2015-01-16","free agency","Jordan Farmar","Clippers","waived","On 2015-01-16, Jordan Farmar is waived by Clippers",FALSE,FALSE,"Clippers"
 "free agencyQuincy Millersigned free agent to a 10-day contract2015-01-17","2015-01-17","Quincy Miller","free agency","Kings","signed free agent to a 10-day contract","On 2015-01-17, Quincy Miller is signed as free agent to a 10-day contract by Kings",FALSE,FALSE,"Kings"
 "Austin Dayefree agencywaived2015-01-17","2015-01-17","free agency","Austin Daye","Spurs","waived","On 2015-01-17, Austin Daye is waived by Spurs",FALSE,FALSE,"Spurs"
@@ -7912,7 +7912,7 @@ Suns acquire first round pick (protected top 10 in 2016-18, unprotected in 2019)
 "Michael Carter-WilliamsMikal Bridges","2015-02-19","Mikal Bridges","Michael Carter-Williams","76ers","3-team trade with Bucks, Suns","On 2015-02-19: 
 Bucks acquire Michael Carter-Williams 
 76ers acquire first round pick (protected top 5 in 2015, top 3 in 2016-17, unprotected in 2018) (from Suns) (2018 #10-Mikal Bridges)
-Other Team(s) Involved in Trade: , Suns",TRUE,FALSE,"76ers, Bucks, Suns"
+Other Team(s) Involved in Trade:Suns",TRUE,FALSE,"76ers, Bucks, Suns"
 "Brandon KnightMichael Carter-Williams","2015-02-19","Michael Carter-Williams","Brandon Knight","Bucks","3-team trade with 76ers, Suns","On 2015-02-19: 
 Suns acquire Brandon Knight 
 Bucks acquire Michael Carter-Williams
@@ -7940,15 +7940,15 @@ Other Team(s) Involved in Trade: Pelicans",FALSE,FALSE,"Heat, Pelicans, Suns"
 "Goran DragicNorris Cole (a)","2015-02-19","Goran Dragic","Norris Cole (a)","Heat","3-team trade with Pelicans, Suns","On 2015-02-19: 
 Pelicans acquire Norris Cole (a) 
 Heat acquire Goran Dragic
-Other Team(s) Involved in Trade: , Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
+Other Team(s) Involved in Trade:Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
 "Goran DragicJustin Hamilton (b)","2015-02-19","Goran Dragic","Justin Hamilton (b)","Heat","3-team trade with Pelicans, Suns","On 2015-02-19: 
 Pelicans acquire Justin Hamilton (b) 
 Heat acquire Goran Dragic
-Other Team(s) Involved in Trade: , Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
+Other Team(s) Involved in Trade:Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
 "Goran DragicShawne Williams","2015-02-19","Goran Dragic","Shawne Williams","Heat","3-team trade with Pelicans, Suns","On 2015-02-19: 
 Pelicans acquire Shawne Williams 
 Heat acquire Goran Dragic
-Other Team(s) Involved in Trade: , Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
+Other Team(s) Involved in Trade:Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
 "Goran DragicZhaire Smith","2015-02-19","Goran Dragic","Zhaire Smith","Heat","3-team trade with Pelicans, Suns","On 2015-02-19: 
 Suns acquire first round pick (in first draft 2 years after Heat convey first round pick to Cavaliers from ealier trade, protected top 7 in 2017-18, unprotected in 2019) (2018 #16-Zhaire Smith) 
 Heat acquire Goran Dragic
@@ -7960,15 +7960,15 @@ Other Team(s) Involved in Trade: Pelicans",FALSE,FALSE,"Heat, Pelicans, Suns"
 "Norris Cole (a)Zoran Dragic","2015-02-19","Zoran Dragic","Norris Cole (a)","Heat","3-team trade with Pelicans, Suns","On 2015-02-19: 
 Pelicans acquire Norris Cole (a) 
 Heat acquire Zoran Dragic
-Other Team(s) Involved in Trade: , Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
+Other Team(s) Involved in Trade:Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
 "Justin Hamilton (b)Zoran Dragic","2015-02-19","Zoran Dragic","Justin Hamilton (b)","Heat","3-team trade with Pelicans, Suns","On 2015-02-19: 
 Pelicans acquire Justin Hamilton (b) 
 Heat acquire Zoran Dragic
-Other Team(s) Involved in Trade: , Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
+Other Team(s) Involved in Trade:Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
 "Shawne WilliamsZoran Dragic","2015-02-19","Zoran Dragic","Shawne Williams","Heat","3-team trade with Pelicans, Suns","On 2015-02-19: 
 Pelicans acquire Shawne Williams 
 Heat acquire Zoran Dragic
-Other Team(s) Involved in Trade: , Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
+Other Team(s) Involved in Trade:Suns",FALSE,FALSE,"Heat, Pelicans, Suns"
 "Zhaire SmithZoran Dragic","2015-02-19","Zoran Dragic","Zhaire Smith","Heat","3-team trade with Pelicans, Suns","On 2015-02-19: 
 Suns acquire first round pick (in first draft 2 years after Heat convey first round pick to Cavaliers from ealier trade, protected top 7 in 2017-18, unprotected in 2019) (2018 #16-Zhaire Smith) 
 Heat acquire Zoran Dragic
@@ -8036,39 +8036,39 @@ Other Team(s) Involved in Trade: Jazz",FALSE,FALSE,"Pistons, Jazz, Thunder"
 "Reggie Jackson (b)Thomas Bryant","2015-02-19","Reggie Jackson (b)","Thomas Bryant","Pistons","3-team trade with Jazz, Thunder","On 2015-02-19: 
 Jazz acquire 2017 second round pick (#42-Thomas Bryant) 
 Pistons acquire Reggie Jackson (b)
-Other Team(s) Involved in Trade: , Thunder",TRUE,FALSE,"Pistons, Jazz, Thunder"
+Other Team(s) Involved in Trade:Thunder",TRUE,FALSE,"Pistons, Jazz, Thunder"
 "Brandon KnightMikal Bridges","2015-02-19","Brandon Knight","Mikal Bridges","Suns","3-team trade with 76ers, Bucks","On 2015-02-19: 
 76ers acquire first round pick (protected top 5 in 2015, top 3 in 2016-17, unprotected in 2018) (2018 #10-Mikal Bridges) 
 Suns acquire Brandon Knight
-Other Team(s) Involved in Trade: , Bucks",TRUE,FALSE,"Suns, 76ers, Bucks"
+Other Team(s) Involved in Trade:Bucks",TRUE,FALSE,"Suns, 76ers, Bucks"
 "Kendall MarshallMikal Bridges","2015-02-19","Kendall Marshall","Mikal Bridges","Suns","3-team trade with 76ers, Bucks","On 2015-02-19: 
 76ers acquire first round pick (protected top 5 in 2015, top 3 in 2016-17, unprotected in 2018) (2018 #10-Mikal Bridges) 
 Suns acquire Kendall Marshall
-Other Team(s) Involved in Trade: , Bucks",TRUE,FALSE,"Suns, 76ers, Bucks"
+Other Team(s) Involved in Trade:Bucks",TRUE,FALSE,"Suns, 76ers, Bucks"
 "Goran DragicJohn Salmons","2015-02-19","John Salmons","Goran Dragic","Suns","3-team trade with Heat, Pelicans","On 2015-02-19: 
 Heat acquire Goran Dragic 
 Suns acquire John Salmons
-Other Team(s) Involved in Trade: , Pelicans",FALSE,FALSE,"Suns, Heat, Pelicans"
+Other Team(s) Involved in Trade:Pelicans",FALSE,FALSE,"Suns, Heat, Pelicans"
 "John SalmonsZoran Dragic","2015-02-19","John Salmons","Zoran Dragic","Suns","3-team trade with Heat, Pelicans","On 2015-02-19: 
 Heat acquire Zoran Dragic 
 Suns acquire John Salmons
-Other Team(s) Involved in Trade: , Pelicans",FALSE,FALSE,"Suns, Heat, Pelicans"
+Other Team(s) Involved in Trade:Pelicans",FALSE,FALSE,"Suns, Heat, Pelicans"
 "D.J. AugustinKendrick Perkins","2015-02-19","D.J. Augustin","Kendrick Perkins","Thunder","3-team trade with Jazz, Pistons","On 2015-02-19: 
 Jazz acquire Kendrick Perkins 
 Thunder acquire D.J. Augustin
-Other Team(s) Involved in Trade: , Pistons",FALSE,FALSE,"Thunder, Jazz, Pistons"
+Other Team(s) Involved in Trade:Pistons",FALSE,FALSE,"Thunder, Jazz, Pistons"
 "D.J. AugustinGrant Jerrett","2015-02-19","D.J. Augustin","Grant Jerrett","Thunder","3-team trade with Jazz, Pistons","On 2015-02-19: 
 Jazz acquire Grant Jerrett 
 Thunder acquire D.J. Augustin
-Other Team(s) Involved in Trade: , Pistons",FALSE,FALSE,"Thunder, Jazz, Pistons"
+Other Team(s) Involved in Trade:Pistons",FALSE,FALSE,"Thunder, Jazz, Pistons"
 "D.J. AugustinTibor Pleiss","2015-02-19","D.J. Augustin","Tibor Pleiss","Thunder","3-team trade with Jazz, Pistons","On 2015-02-19: 
 Jazz acquire rights to Tibor Pleiss 
 Thunder acquire D.J. Augustin
-Other Team(s) Involved in Trade: , Pistons",FALSE,TRUE,"Thunder, Jazz, Pistons"
+Other Team(s) Involved in Trade:Pistons",FALSE,TRUE,"Thunder, Jazz, Pistons"
 "D.J. AugustinJosh Okogie","2015-02-19","D.J. Augustin","Josh Okogie","Thunder","3-team trade with Jazz, Pistons","On 2015-02-19: 
 Jazz acquire first round pick (pick can be conveyed only 2 years after Thunder convey first round pick to 76ers from earlier trade, protected top 14 in 2017-20, else 2020 second round pick, 2021 second round pick) (#20-Josh Okogie) 
 Thunder acquire D.J. Augustin
-Other Team(s) Involved in Trade: , Pistons",TRUE,FALSE,"Thunder, Jazz, Pistons"
+Other Team(s) Involved in Trade:Pistons",TRUE,FALSE,"Thunder, Jazz, Pistons"
 "Enes KanterReggie Jackson (b)","2015-02-19","Enes Kanter","Reggie Jackson (b)","Thunder","3-team trade with Jazz, Pistons","On 2015-02-19: 
 Pistons acquire Reggie Jackson (b) 
 Thunder acquire Enes Kanter
@@ -8080,19 +8080,19 @@ Other Team(s) Involved in Trade: Jazz",FALSE,FALSE,"Thunder, Jazz, Pistons"
 "Kendrick PerkinsKyle Singler","2015-02-19","Kyle Singler","Kendrick Perkins","Thunder","3-team trade with Jazz, Pistons","On 2015-02-19: 
 Jazz acquire Kendrick Perkins 
 Thunder acquire Kyle Singler
-Other Team(s) Involved in Trade: , Pistons",FALSE,FALSE,"Thunder, Jazz, Pistons"
+Other Team(s) Involved in Trade:Pistons",FALSE,FALSE,"Thunder, Jazz, Pistons"
 "Grant JerrettKyle Singler","2015-02-19","Kyle Singler","Grant Jerrett","Thunder","3-team trade with Jazz, Pistons","On 2015-02-19: 
 Jazz acquire Grant Jerrett 
 Thunder acquire Kyle Singler
-Other Team(s) Involved in Trade: , Pistons",FALSE,FALSE,"Thunder, Jazz, Pistons"
+Other Team(s) Involved in Trade:Pistons",FALSE,FALSE,"Thunder, Jazz, Pistons"
 "Kyle SinglerTibor Pleiss","2015-02-19","Kyle Singler","Tibor Pleiss","Thunder","3-team trade with Jazz, Pistons","On 2015-02-19: 
 Jazz acquire rights to Tibor Pleiss 
 Thunder acquire Kyle Singler
-Other Team(s) Involved in Trade: , Pistons",FALSE,TRUE,"Thunder, Jazz, Pistons"
+Other Team(s) Involved in Trade:Pistons",FALSE,TRUE,"Thunder, Jazz, Pistons"
 "Josh OkogieKyle Singler","2015-02-19","Kyle Singler","Josh Okogie","Thunder","3-team trade with Jazz, Pistons","On 2015-02-19: 
 Jazz acquire first round pick (pick can be conveyed only 2 years after Thunder convey first round pick to 76ers from earlier trade, protected top 14 in 2017-20, else 2020 second round pick, 2021 second round pick) (#20-Josh Okogie) 
 Thunder acquire Kyle Singler
-Other Team(s) Involved in Trade: , Pistons",TRUE,FALSE,"Thunder, Jazz, Pistons"
+Other Team(s) Involved in Trade:Pistons",TRUE,FALSE,"Thunder, Jazz, Pistons"
 "free agencyKendall Marshallwaived2015-02-19","2015-02-19","free agency","Kendall Marshall","Suns","waived","On 2015-02-19, Kendall Marshall is waived by Suns",FALSE,FALSE,"Suns"
 "free agencyKenyon Martinwaived2015-02-19","2015-02-19","free agency","Kenyon Martin","Bucks","waived","On 2015-02-19, Kenyon Martin is waived by Bucks",FALSE,FALSE,"Bucks"
 "free agencyIshmael Smith / Ish Smithwaived2015-02-19","2015-02-19","free agency","Ishmael Smith / Ish Smith","Pelicans","waived","On 2015-02-19, Ishmael Smith / Ish Smith is waived by Pelicans",FALSE,FALSE,"Pelicans"
@@ -8315,7 +8315,7 @@ Hornets acquire cash considerations",FALSE,TRUE,"Hornets, Nets"
 "Jerian GrantTim Hardaway Jr.","2015-06-25","Jerian Grant","Tim Hardaway Jr.","Knicks","3-team trade with Hawks, Wizards","On 2015-06-25: 
 Hawks acquire Tim Hardaway Jr. 
 Knicks acquire rights to Jerian Grant
-Other Team(s) Involved in Trade: , Wizards",FALSE,TRUE,"Knicks, Hawks, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,TRUE,"Knicks, Hawks, Wizards"
 "Jerian GrantKelly Oubre Jr.","2015-06-25","Kelly Oubre Jr.","Jerian Grant","Wizards","3-team trade with Hawks, Knicks","On 2015-06-25: 
 Knicks acquire rights to Jerian Grant 
 Wizards acquire rights to Kelly Oubre Jr.
@@ -9162,11 +9162,11 @@ Other Team(s) Involved in Trade: Heat",TRUE,FALSE,"Grizzlies, Heat, Hornets"
 "Brian RobertsChris Andersen","2016-02-16","Brian Roberts","Chris Andersen","Heat","3-team trade with Grizzlies, Hornets","On 2016-02-16: 
 Grizzlies acquire Chris Andersen 
 Heat acquire Brian Roberts
-Other Team(s) Involved in Trade: , Hornets",FALSE,FALSE,"Heat, Grizzlies, Hornets"
+Other Team(s) Involved in Trade:Hornets",FALSE,FALSE,"Heat, Grizzlies, Hornets"
 "Brian RobertsDe'Anthony Melton","2016-02-16","Brian Roberts","De'Anthony Melton","Heat","3-team trade with Grizzlies, Hornets","On 2016-02-16: 
 Grizzlies acquire second round pick (protected #41-60 in 2017, unprotected in 2018) (2018 #46-De'Anthony Melton) 
 Heat acquire Brian Roberts
-Other Team(s) Involved in Trade: , Hornets",TRUE,FALSE,"Heat, Grizzlies, Hornets"
+Other Team(s) Involved in Trade:Hornets",TRUE,FALSE,"Heat, Grizzlies, Hornets"
 "Brian RobertsCourtney Lee","2016-02-16","Courtney Lee","Brian Roberts","Hornets","3-team trade with Grizzlies, Heat","On 2016-02-16: 
 Heat acquire Brian Roberts 
 Hornets acquire Courtney Lee
@@ -9203,7 +9203,7 @@ Other Team(s) Involved in Trade: Bulls",FALSE,FALSE,"Hawks, Bulls, Jazz"
 "Shelvin MackSviatoslav Mykhailiuk / Svi Mykhailiuk","2016-02-18","Shelvin Mack","Sviatoslav Mykhailiuk / Svi Mykhailiuk","Jazz","3-team trade with Bulls, Hawks","On 2016-02-18: 
 Bulls acquire 2018 second round pick (#47-Sviatoslav Mykhailiuk / Svi Mykhailiuk) 
 Jazz acquire Shelvin Mack
-Other Team(s) Involved in Trade: , Hawks",TRUE,FALSE,"Jazz, Bulls, Hawks"
+Other Team(s) Involved in Trade:Hawks",TRUE,FALSE,"Jazz, Bulls, Hawks"
 "Jarnell StokesTony Carr","2016-02-18","Tony Carr","Jarnell Stokes","Heat","trade with Pelicans","On 2016-02-18: 
 Pelicans acquire Jarnell Stokes 
 Heat acquire 2018 second round pick (protected top 55, subsequent trade of this pick back to Pelicans effectively removed protection) (#51-Tony Carr)",TRUE,FALSE,"Heat, Pelicans"
@@ -9632,7 +9632,7 @@ Jazz acquire cash",FALSE,TRUE,"Jazz, Spurs"
 "George HillTaurean Prince","2016-07-07","George Hill","Taurean Prince","Jazz","3-team trade with Hawks, Pacers","On 2016-07-07: 
 Hawks acquire rights to Taurean Prince 
 Jazz acquire George Hill
-Other Team(s) Involved in Trade: , Pacers",FALSE,TRUE,"Jazz, Hawks, Pacers"
+Other Team(s) Involved in Trade:Pacers",FALSE,TRUE,"Jazz, Hawks, Pacers"
 "free agencyMarshall Plumleesigned free agent to a 1-year contract2016-07-07","2016-07-07","Marshall Plumlee","free agency","Knicks","signed free agent to a 1-year contract","On 2016-07-07, Marshall Plumlee is signed as free agent to a 1-year contract by Knicks",FALSE,FALSE,"Knicks"
 "free agencyLuol Dengsigned unrestricted free agent to a 4-year, $72M contract2016-07-07","2016-07-07","Luol Deng","free agency","Lakers","signed unrestricted free agent to a 4-year, $72M contract","On 2016-07-07, Luol Deng is signed as unrestricted free agent to a 4-year, $72M contract by Lakers",FALSE,FALSE,"Lakers"
 "Bismack Biyombofree agencysigned unrestricted free agent to a 4-year, $70-72M contract2016-07-07","2016-07-07","Bismack Biyombo","free agency","Magic","signed unrestricted free agent to a 4-year, $70-72M contract","On 2016-07-07, Bismack Biyombo is signed as unrestricted free agent to a 4-year, $70-72M contract by Magic",FALSE,FALSE,"Magic"
@@ -10364,19 +10364,19 @@ Kings acquire 2017 second round pick (#34-Frank Mason)",TRUE,FALSE,"Kings, Pelic
 Hawks acquire Ersan Ilyasova 
 76ers acquire Tiago Splitter",FALSE,FALSE,"76ers, Hawks"
 "Alpha KabaTiago Splitter","2017-02-22","Tiago Splitter","Alpha Kaba","76ers","trade with Hawks","On 2017-02-22: 
-Hawks acquire 76ers option to swap 2017 second round picks (least favorable of Jazz, Knicks, Pistons, Warriors picks received in earlier trade with Jazz) with Hawks (Hawks pick protected #56-60) (#60-Alpha Kaba) 
+Hawks acquire 76ers option to swap 2017 second round picks (least favorable of Jazz, Knicks, Pistons, Warriors picks received in earlier  Jazz) with Hawks (Hawks pick protected #56-60) (#60-Alpha Kaba) 
 76ers acquire Tiago Splitter",TRUE,FALSE,"76ers, Hawks"
 "Ersan IlyasovaSterling Brown","2017-02-22","Sterling Brown","Ersan Ilyasova","76ers","trade with Hawks","On 2017-02-22: 
 Hawks acquire Ersan Ilyasova 
 76ers acquire second round pick (protected top 40 in 2017, unprotected in 2018) (2017 #46-Sterling Brown)",TRUE,FALSE,"76ers, Hawks"
 "Alpha KabaSterling Brown","2017-02-22","Sterling Brown","Alpha Kaba","76ers","trade with Hawks","On 2017-02-22: 
-Hawks acquire 76ers option to swap 2017 second round picks (least favorable of Jazz, Knicks, Pistons, Warriors picks received in earlier trade with Jazz) with Hawks (Hawks pick protected #56-60) (#60-Alpha Kaba) 
+Hawks acquire 76ers option to swap 2017 second round picks (least favorable of Jazz, Knicks, Pistons, Warriors picks received in earlier  Jazz) with Hawks (Hawks pick protected #56-60) (#60-Alpha Kaba) 
 76ers acquire second round pick (protected top 40 in 2017, unprotected in 2018) (2017 #46-Sterling Brown)",TRUE,FALSE,"76ers, Hawks"
 "Ersan IlyasovaMathias Lessort","2017-02-22","Mathias Lessort","Ersan Ilyasova","76ers","trade with Hawks","On 2017-02-22: 
 Hawks acquire Ersan Ilyasova 
-76ers acquire 76ers option to swap 2017 second round picks (least favorable of Jazz, Knicks, Pistons, Warriors picks received in earlier trade with Jazz) with Hawks (Hawks pick protected #56-60) (#50-Mathias Lessort)",TRUE,FALSE,"76ers, Hawks"
+76ers acquire 76ers option to swap 2017 second round picks (least favorable of Jazz, Knicks, Pistons, Warriors picks received in earlier  Jazz) with Hawks (Hawks pick protected #56-60) (#50-Mathias Lessort)",TRUE,FALSE,"76ers, Hawks"
 "Alpha KabaMathias Lessort","2017-02-22","Mathias Lessort","Alpha Kaba","76ers","trade with Hawks","On 2017-02-22: 
-Hawks acquire 76ers option to swap 2017 second round picks (least favorable of Jazz, Knicks, Pistons, Warriors picks received in earlier trade with Jazz) with Hawks (Hawks pick protected #56-60) (#60-Alpha Kaba) 
+Hawks acquire 76ers option to swap 2017 second round picks (least favorable of Jazz, Knicks, Pistons, Warriors picks received in earlier  Jazz) with Hawks (Hawks pick protected #56-60) (#60-Alpha Kaba) 
 76ers acquire 76ers option to swap 2017 second round picks (least favorable of Jazz, Knicks, Pistons, Warriors picks received in earlier trade with Jazz) with Hawks (Hawks pick protected #56-60) (#50-Mathias Lessort)",TRUE,FALSE,"76ers, Hawks"
 "Andrew NicholsonBojan Bogdanovic","2017-02-22","Andrew Nicholson","Bojan Bogdanovic","Nets","trade with Wizards","On 2017-02-22: 
 Wizards acquire Bojan Bogdanovic 
@@ -11641,11 +11641,11 @@ Bulls acquire Willie Reed",FALSE,FALSE,"Bulls, Pistons"
 "Derrick RoseGeorge Hill","2018-02-08","George Hill","Derrick Rose","Cavaliers","3-team trade with Jazz, Kings","On 2018-02-08: 
 Jazz acquire Derrick Rose 
 Cavaliers acquire George Hill
-Other Team(s) Involved in Trade: , Kings",FALSE,FALSE,"Cavaliers, Jazz, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,FALSE,"Cavaliers, Jazz, Kings"
 "George HillJae Crowder","2018-02-08","George Hill","Jae Crowder","Cavaliers","3-team trade with Jazz, Kings","On 2018-02-08: 
 Jazz acquire Jae Crowder 
 Cavaliers acquire George Hill
-Other Team(s) Involved in Trade: , Kings",FALSE,FALSE,"Cavaliers, Jazz, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,FALSE,"Cavaliers, Jazz, Kings"
 "George HillIman Shumpert","2018-02-08","George Hill","Iman Shumpert","Cavaliers","3-team trade with Jazz, Kings","On 2018-02-08: 
 Kings acquire Iman Shumpert 
 Cavaliers acquire George Hill
@@ -11661,11 +11661,11 @@ Other Team(s) Involved in Trade: Jazz",FALSE,FALSE,"Cavaliers, Jazz, Kings"
 "Derrick RoseRodney Hood","2018-02-08","Rodney Hood","Derrick Rose","Cavaliers","3-team trade with Jazz, Kings","On 2018-02-08: 
 Jazz acquire Derrick Rose 
 Cavaliers acquire Rodney Hood
-Other Team(s) Involved in Trade: , Kings",FALSE,FALSE,"Cavaliers, Jazz, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,FALSE,"Cavaliers, Jazz, Kings"
 "Jae CrowderRodney Hood","2018-02-08","Rodney Hood","Jae Crowder","Cavaliers","3-team trade with Jazz, Kings","On 2018-02-08: 
 Jazz acquire Jae Crowder 
 Cavaliers acquire Rodney Hood
-Other Team(s) Involved in Trade: , Kings",FALSE,FALSE,"Cavaliers, Jazz, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,FALSE,"Cavaliers, Jazz, Kings"
 "Iman ShumpertRodney Hood","2018-02-08","Rodney Hood","Iman Shumpert","Cavaliers","3-team trade with Jazz, Kings","On 2018-02-08: 
 Kings acquire Iman Shumpert 
 Cavaliers acquire Rodney Hood
@@ -11681,11 +11681,11 @@ Other Team(s) Involved in Trade: Jazz",FALSE,FALSE,"Cavaliers, Jazz, Kings"
 "Arturas GudaitisDerrick Rose","2018-02-08","Arturas Gudaitis","Derrick Rose","Cavaliers","3-team trade with Jazz, Kings","On 2018-02-08: 
 Jazz acquire Derrick Rose 
 Cavaliers acquire rights to Arturas Gudaitis
-Other Team(s) Involved in Trade: , Kings",FALSE,TRUE,"Cavaliers, Jazz, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,TRUE,"Cavaliers, Jazz, Kings"
 "Arturas GudaitisJae Crowder","2018-02-08","Arturas Gudaitis","Jae Crowder","Cavaliers","3-team trade with Jazz, Kings","On 2018-02-08: 
 Jazz acquire Jae Crowder 
 Cavaliers acquire rights to Arturas Gudaitis
-Other Team(s) Involved in Trade: , Kings",FALSE,TRUE,"Cavaliers, Jazz, Kings"
+Other Team(s) Involved in Trade:Kings",FALSE,TRUE,"Cavaliers, Jazz, Kings"
 "Arturas GudaitisIman Shumpert","2018-02-08","Arturas Gudaitis","Iman Shumpert","Cavaliers","3-team trade with Jazz, Kings","On 2018-02-08: 
 Kings acquire Iman Shumpert 
 Cavaliers acquire rights to Arturas Gudaitis
@@ -11726,15 +11726,15 @@ Kings acquire Bruno Caboclo",FALSE,FALSE,"Kings, Raptors"
 "George HillJoe Johnson","2018-02-08","Joe Johnson","George Hill","Kings","3-team trade with Cavaliers, Jazz","On 2018-02-08: 
 Cavaliers acquire George Hill 
 Kings acquire Joe Johnson
-Other Team(s) Involved in Trade: , Jazz",FALSE,FALSE,"Kings, Cavaliers, Jazz"
+Other Team(s) Involved in Trade:Jazz",FALSE,FALSE,"Kings, Cavaliers, Jazz"
 "Arturas GudaitisJoe Johnson","2018-02-08","Joe Johnson","Arturas Gudaitis","Kings","3-team trade with Cavaliers, Jazz","On 2018-02-08: 
 Cavaliers acquire rights to Arturas Gudaitis 
 Kings acquire Joe Johnson
-Other Team(s) Involved in Trade: , Jazz",FALSE,TRUE,"Kings, Cavaliers, Jazz"
+Other Team(s) Involved in Trade:Jazz",FALSE,TRUE,"Kings, Cavaliers, Jazz"
 "Doug McDermottEmmanuel Mudiay","2018-02-08","Emmanuel Mudiay","Doug McDermott","Knicks","3-team trade with Mavericks, Nuggets","On 2018-02-08: 
 Mavericks acquire Doug McDermott 
 Knicks acquire Emmanuel Mudiay
-Other Team(s) Involved in Trade: , Nuggets",FALSE,FALSE,"Knicks, Mavericks, Nuggets"
+Other Team(s) Involved in Trade:Nuggets",FALSE,FALSE,"Knicks, Mavericks, Nuggets"
 "Emmanuel MudiayJustin Jackson","2018-02-08","Emmanuel Mudiay","Justin Jackson","Knicks","3-team trade with Mavericks, Nuggets","On 2018-02-08: 
 Nuggets acquire 2018 second round pick (less favorable of Clippers, Knicks picks) (#43-Justin Jackson) 
 Knicks acquire Emmanuel Mudiay
@@ -11750,7 +11750,7 @@ Other Team(s) Involved in Trade: Knicks",TRUE,FALSE,"Mavericks, Knicks, Nuggets"
 "Devin HarrisEmmanuel Mudiay","2018-02-08","Devin Harris","Emmanuel Mudiay","Nuggets","3-team trade with Knicks, Mavericks","On 2018-02-08: 
 Knicks acquire Emmanuel Mudiay 
 Nuggets acquire Devin Harris
-Other Team(s) Involved in Trade: , Mavericks",FALSE,FALSE,"Nuggets, Knicks, Mavericks"
+Other Team(s) Involved in Trade:Mavericks",FALSE,FALSE,"Nuggets, Knicks, Mavericks"
 "Justin JacksonShake Milton","2018-02-08","Justin Jackson","Shake Milton","Nuggets","3-team trade with Knicks, Mavericks","On 2018-02-08: 
 Mavericks acquire 2018 second round pick (less favorable of Blazers, Kings picks) (#54-Shake Milton) 
 Nuggets acquire 2018 second round pick (from Knicks) (less favorable of Clippers, Knicks picks) (#43-Justin Jackson)
@@ -12095,7 +12095,7 @@ Other Team(s) Involved in Trade: Bulls",FALSE,FALSE,"Hornets, Bulls, Magic"
 "Bismack BiyomboJulyan Stone","2018-07-07","Bismack Biyombo","Julyan Stone","Hornets","3-team trade with Bulls, Magic","On 2018-07-07: 
 Bulls acquire Julyan Stone 
 Hornets acquire Bismack Biyombo
-Other Team(s) Involved in Trade: , Magic",FALSE,FALSE,"Hornets, Bulls, Magic"
+Other Team(s) Involved in Trade:Magic",FALSE,FALSE,"Hornets, Bulls, Magic"
 "free agencyJonas Jerebkowaived2018-07-07","2018-07-07","free agency","Jonas Jerebko","Jazz","waived","On 2018-07-07, Jonas Jerebko is waived by Jazz",FALSE,FALSE,"Jazz"
 "Bismack BiyomboJerian Grant","2018-07-07","Jerian Grant","Bismack Biyombo","Magic","3-team trade with Bulls, Hornets","On 2018-07-07: 
 Hornets acquire Bismack Biyombo 
@@ -12249,7 +12249,7 @@ Grizzlies acquire rights to Tyler Harvey",FALSE,TRUE,"Grizzlies, Magic"
 "Justin AndersonMike Muscala","2018-07-25","Mike Muscala","Justin Anderson","76ers","3-team trade with Hawks, Thunder","On 2018-07-25: 
 Hawks acquire Justin Anderson 
 76ers acquire Mike Muscala
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"76ers, Hawks, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"76ers, Hawks, Thunder"
 "Mike MuscalaTimothe Luwawu / Timothe Luwawu-Cabarrot","2018-07-25","Mike Muscala","Timothe Luwawu / Timothe Luwawu-Cabarrot","76ers","3-team trade with Hawks, Thunder","On 2018-07-25: 
 Thunder acquire Timothe Luwawu / Timothe Luwawu-Cabarrot 
 76ers acquire Mike Muscala
@@ -12261,7 +12261,7 @@ Other Team(s) Involved in Trade: 76ers",FALSE,FALSE,"Hawks, 76ers, Thunder"
 "Carmelo AnthonyMike Muscala","2018-07-25","Carmelo Anthony","Mike Muscala","Hawks","3-team trade with 76ers, Thunder","On 2018-07-25: 
 76ers acquire Mike Muscala 
 Hawks acquire Carmelo Anthony
-Other Team(s) Involved in Trade: , Thunder",FALSE,FALSE,"Hawks, 76ers, Thunder"
+Other Team(s) Involved in Trade:Thunder",FALSE,FALSE,"Hawks, 76ers, Thunder"
 "Dennis SchroderJustin Anderson","2018-07-25","Justin Anderson","Dennis Schroder","Hawks","3-team trade with 76ers, Thunder","On 2018-07-25: 
 Thunder acquire Dennis Schroder 
 Hawks acquire Justin Anderson
@@ -12713,35 +12713,35 @@ Cavaliers acquire Alec Burks",FALSE,FALSE,"Cavaliers, Jazz"
 "George HillMatthew Dellavedova / Matt Dellavedova","2018-12-07","George Hill","Matthew Dellavedova / Matt Dellavedova","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
 Cavaliers acquire Matthew Dellavedova / Matt Dellavedova 
 Bucks acquire George Hill
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
 "George HillJohn Henson","2018-12-07","George Hill","John Henson","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
 Cavaliers acquire John Henson 
 Bucks acquire George Hill
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
 "Jason SmithMatthew Dellavedova / Matt Dellavedova","2018-12-07","Jason Smith","Matthew Dellavedova / Matt Dellavedova","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
 Cavaliers acquire Matthew Dellavedova / Matt Dellavedova 
 Bucks acquire Jason Smith
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
 "Jason SmithJohn Henson","2018-12-07","Jason Smith","John Henson","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
 Cavaliers acquire John Henson 
 Bucks acquire Jason Smith
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
 "Matthew Dellavedova / Matt Dellavedovamodification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)","2018-12-07","modification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)","Matthew Dellavedova / Matt Dellavedova","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
 Cavaliers acquire Matthew Dellavedova / Matt Dellavedova 
 Bucks acquire modification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)
-Other Team(s) Involved in Trade: , Wizards",TRUE,FALSE,"Bucks, Cavaliers, Wizards"
+Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Bucks, Cavaliers, Wizards"
 "John Hensonmodification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)","2018-12-07","modification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)","John Henson","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
 Cavaliers acquire John Henson 
 Bucks acquire modification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)
-Other Team(s) Involved in Trade: , Wizards",TRUE,FALSE,"Bucks, Cavaliers, Wizards"
+Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Bucks, Cavaliers, Wizards"
 "cashMatthew Dellavedova / Matt Dellavedova","2018-12-07","cash","Matthew Dellavedova / Matt Dellavedova","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
 Cavaliers acquire Matthew Dellavedova / Matt Dellavedova 
 Bucks acquire cash (from Wizards)
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
 "cashJohn Henson","2018-12-07","cash","John Henson","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
 Cavaliers acquire John Henson 
 Bucks acquire cash (from Wizards)
-Other Team(s) Involved in Trade: , Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
+Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
 "Matthew Dellavedova / Matt DellavedovaSam Dekker","2018-12-07","Matthew Dellavedova / Matt Dellavedova","Sam Dekker","Cavaliers","3-team trade with Bucks, Wizards","On 2018-12-07: 
 Wizards acquire Sam Dekker 
 Cavaliers acquire Matthew Dellavedova / Matt Dellavedova
@@ -12754,7 +12754,7 @@ Other Team(s) Involved in Trade: Bucks",FALSE,FALSE,"Cavaliers, Bucks, Wizards"
 "Jason SmithSam Dekker","2018-12-07","Sam Dekker","Jason Smith","Wizards","3-team trade with Bucks, Cavaliers","On 2018-12-07: 
 Bucks acquire Jason Smith 
 Wizards acquire Sam Dekker
-Other Team(s) Involved in Trade: , Cavaliers",FALSE,FALSE,"Wizards, Bucks, Cavaliers"
+Other Team(s) Involved in Trade:Cavaliers",FALSE,FALSE,"Wizards, Bucks, Cavaliers"
 "modification of protection on 2020 second round pick previously traded to Bucks (pick now unprotected)Sam Dekker","2018-12-07","Sam Dekker","modification of protection on 2020 second round pick previously traded to Bucks (pick now unprotected)","Wizards","3-team trade with Bucks, Cavaliers","On 2018-12-07: 
 Unknown Team acquire modification of protection on 2020 second round pick previously traded to Bucks (pick now unprotected) 
 Wizards acquire Sam Dekker

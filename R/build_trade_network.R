@@ -217,7 +217,10 @@ clean_transactions <- function(transactions_df,
                                               Team, ""),
                                             relinq_team, "")),
                                    ", $", ""),
-                                 edge_label))
+                                 edge_label),
+             edge_label = str_replace(edge_label, "trade with", ""),
+             edge_label = str_replace_all(edge_label, " , ", ""),
+             edge_label = str_trim(edge_label))
   }
   make_edge_label <- function(df) {
     df %>% 
