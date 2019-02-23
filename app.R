@@ -259,7 +259,6 @@ server <- function(input, output, session) {
         !is.null(input$includeDraft) &
         !is.null(input$player1choice)) {
       
-      message("Player 2 observer triggered")
       full_network <- 
         graph_data() %>% 
         user_filter() %>% 
@@ -485,6 +484,11 @@ server <- function(input, output, session) {
           edge_movie()[[input$edgeMovieSlide]]
         }
       }
+    } else if (is.null(input$player2choice)) {
+      visNetwork(nodes = data.frame(id = 1,
+                                    label = "CHOOSE AN OPTION FOR CONNECTED PLAYER(S)\n(Related To dropdown)"),
+                 edges = data.frame(from = c(1),
+                                    to = c(0)))
     }
   })
   
