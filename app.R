@@ -168,10 +168,10 @@ server <- function(input, output, session) {
         condition = "!input.includeFreeAgency",
         sliderInput("numSteps", "Include other players how many exchanges away", 
                     min = 1, max = 10, value = 2)),
-      checkboxInput("includeFreeAgency", "Include free agency as part of the network"),
       checkboxInput("includeDraft", "Include the draft as part of the network"),
-      checkboxInput("includeCash", "Include cash as a part of the network"),
-      checkboxInput("includeException", "Include trade exceptions as a part of the network"),
+      checkboxInput("includeFreeAgency", "Include free agency as part of the network"),
+      checkboxInput("includeCash", "Include cash as part of the network"),
+      checkboxInput("includeException", "Include trade exceptions as part of the network"),
       shiny::tags$br(),
       downloadButton("downloadTradeData", "Download Trade Data"))
   })
@@ -200,13 +200,28 @@ server <- function(input, output, session) {
       select(from, to, date, edge_label, pick_involved, rights_involved) %>% 
       graph_from_data_frame(directed = TRUE)
   }
-  make_player_network <- function(full_network, playerChoice, numSteps) {
-    ego(full_network,
-        nodes = playerChoice,
-        order = numSteps,
-        mode = "all") %>% 
-      unlist() %>% 
-      induced_subgraph(full_network, .)
+  make_player_network <- function(full_network, playerChoice, numSteps, draftCondition) {
+    if (!draftCondition) {
+      ego(full_network,
+          nodes = playerChoice,
+          order = numSteps,
+          mode = "all") %>% 
+        unlist() %>% 
+        induced_subgraph(full_network, .)  
+    } else {
+      nodraft_network <-
+        ego(full_network,
+            nodes = playerChoice,
+            order = numSteps,
+            mode = "all") %>% 
+        unlist() %>% 
+        induced_subgraph(full_network, .)
+      
+      nodraft_network %>% 
+        as_data_frame("edges") %>% 
+        add_draft_to_edges_df(nodraft_network) %>% 
+        graph_from_data_frame()
+    }
   }
   get_connected_players <- function(player_network) {
     V(player_network)$name
@@ -268,7 +283,8 @@ server <- function(input, output, session) {
         player2options <-
           full_network %>% 
           make_player_network(input$player1choice, 
-                              chooseNumSteps()) %>% 
+                              chooseNumSteps(),
+                              input$includeDraft) %>% 
           get_connected_players() %>% 
           setdiff(input$player1choice) %>% 
           sort() %>% 
@@ -317,18 +333,16 @@ server <- function(input, output, session) {
              title = map(title, function(s) paste(s, collapse = "\n")),
              title = str_replace_all(title, "\n", "<br>"))
   }
-  conditional_add_draft_to_edges_df <- function(edges_df, g, draftCondition) {
-    if (draftCondition) {
-      draft_df <-
-        graph_data() %>% 
-        filter(from == "draft",
-               to %in% as_data_frame(g, "vertices")[["name"]]) %>% 
-        select(from, to, edge_label, pick_involved, rights_involved)
-      
-      edges_df <- bind_rows(edges_df, draft_df)
-    } else {
-      edges_df
-    }
+  add_draft_to_edges_df <- function(edges_df, g) {
+    
+    draft_df <-
+      graph_data() %>% 
+      filter(from == "draft",
+             to %in% as_data_frame(g, "vertices")[["name"]]) %>% 
+      select(from, to, date, edge_label, pick_involved, rights_involved)
+    
+    edges_df <- bind_rows(edges_df, draft_df)
+    
   }
   check_for_multiple_edges <- function(edges_df) {
     multiedges <-
@@ -344,7 +358,6 @@ server <- function(input, output, session) {
   
   make_visEdges <- function(g, draftCondition) {
     as_data_frame(g, "edges") %>% 
-      conditional_add_draft_to_edges_df(g, draftCondition) %>% 
       rename(title = edge_label) %>% 
       add_edge_options() %>% 
       format_edge_labels()
@@ -370,7 +383,8 @@ server <- function(input, output, session) {
         visIgraphLayout(layout = "layout_in_circle", randomSeed = 123)
     }
     viz %>% 
-      adjust_viz_if_multiple_edges(edges_df)
+      adjust_viz_if_multiple_edges(edges_df) %>% 
+      visNodes(color = "#FF6B2B")
   }
   make_edge_movie_networks <- function(player_network, 
                                        player1choice, player2choices, 
@@ -400,19 +414,21 @@ server <- function(input, output, session) {
         
         edges_df <- make_visEdges(edge_subgraph, draftCondition)
         nodes_df <-
-          data.frame(id = unique(c(edges_df[["from"]], edges_df[["to"]])),
+          data.frame(id = unique(c(edges_df[["from"]], 
+                                   edges_df[["to"]])),
                      stringsAsFactors = FALSE) %>% 
           mutate(label = id,
-                 label = str_wrap(label, width = 40),
-                 label = str_replace_all(label, "\n", "<br>"))
+                 label = str_wrap(label, width = 40))
         
-        layout_viz(nodes_df, edges_df, paste0("Trades up to: ", all_dates[dt_index],
-                                              "<br>For the network between ", player1choice, " and ",
-                                              str_replace_all(str_wrap(paste(player2choices, 
-                                                                             collapse = ", "),
-                                                                       width = 40),
-                                                              "\n",
-                                                              "<br>")))
+        layout_viz(nodes_df, 
+                   edges_df, 
+                   paste0("Trades up to: ", all_dates[dt_index],
+                          "<br>For the network between ", player1choice, " and ",
+                          str_replace_all(str_wrap(paste(player2choices, 
+                                                         collapse = ", "),
+                                                   width = 40),
+                                          "\n",
+                                          "<br>")))
       })
     
     names(date_networks) <- all_dates
@@ -431,12 +447,15 @@ server <- function(input, output, session) {
       if ((input$player1choice %in% V(full_network)$name &
           anyoneCondition) |
           (input$player1choice %in% V(full_network)$name &
+           input$includeDraft) |
+          (input$player1choice %in% V(full_network)$name &
           input$player2choice %in% V(full_network)$name)) {
         
         player_network <-
           make_player_network(full_network,
                               input$player1choice,
-                              chooseNumSteps()) 
+                              chooseNumSteps(),
+                              input$includeDraft)
         
         make_edge_movie_networks(player_network,
                                  input$player1choice,
@@ -452,6 +471,13 @@ server <- function(input, output, session) {
   observe({
     if (!is.null(input$player1choice) & !is.null(input$player2choice) &
         input$tabs == "Network Visualization") {
+      
+      input$includeDraft
+      input$numSteps
+      input$includeFreeAgency
+      input$includeCash
+      input$includeException
+      
       full_network <-
         graph_data() %>%
         user_filter() %>%
@@ -461,19 +487,36 @@ server <- function(input, output, session) {
       if ((input$player1choice %in% V(full_network)$name &
            anyoneCondition) |
           (input$player1choice %in% V(full_network)$name &
+           input$includeDraft) |
+          (input$player1choice %in% V(full_network)$name &
            input$player2choice %in% V(full_network)$name)) {
-        
-        player_network <-
-          make_player_network(full_network,
-                              input$player1choice,
-                              chooseNumSteps()) 
-        
-        updateSliderTextInput(session,
-                              "edgeMovieSlide",
-                              choices = names(edge_movie()))
+       
+          updateSliderTextInput(session,
+                                "edgeMovieSlide",
+                                choices = names(edge_movie()))  
       }
     }
   })
+  
+  # TODO: Fix this observer so slide only shows when there is more than one network to show
+  # observe({
+  #   if (input$tabs == "Network Visualization") {
+  #     input$includeDraft
+  #     input$numSteps
+  #     input$includeFreeAgency
+  #     input$includeCash
+  #     input$includeException
+  #     input$player1choice
+  #     input$player2choice
+  #     message("Toggler triggered")
+  #     message("Length is ", length(edge_movie()))
+  #     if (length(edge_movie) <= 1) {
+  #       shinyjs::hide("edgeMovieSlide")
+  #     } else {
+  #       shinyjs::show("edgeMovieSlide")
+  #     }  
+  #   }
+  # })
   
   output$tradeNetwork <- renderVisNetwork({
     if (!is.null(input$player1choice) & !is.null(input$player2choice)) {
@@ -486,7 +529,7 @@ server <- function(input, output, session) {
       }
     } else if (is.null(input$player2choice)) {
       visNetwork(nodes = data.frame(id = 1,
-                                    label = "CHOOSE AN OPTION FOR CONNECTED PLAYER(S)\n(Related To dropdown)"),
+                                    label = "CHOOSE AN OPTION FOR CONNECTED PLAYER(S)\n(in the Related to dropdown)"),
                  edges = data.frame(from = c(1),
                                     to = c(0)))
     }
@@ -503,10 +546,10 @@ server <- function(input, output, session) {
       player_network <-
         make_player_network(full_network,
                             player1,
-                            numSteps) 
+                            numSteps,
+                            draftCondition) 
       
       as_data_frame(player_network, "edges") %>% 
-        conditional_add_draft_to_edges_df(player_network, draftCondition) %>% 
         mutate(Description = str_replace(edge_label, "On.*\n", ""),
                Description = str_replace_all(Description, "[ ]*\n", "; ")) %>% 
         select(Date = date,
@@ -519,8 +562,9 @@ server <- function(input, output, session) {
     create_trade_table(input$player1choice,
                        chooseNumSteps(),
                        input$includeDraft) %>% 
-      datatable(rownames = FALSE, filter = "top", caption = paste0("All Trade Data for ",
-                                                                   input$player1choice))
+      datatable(rownames = FALSE, 
+                filter = "top", 
+                caption = paste0("All Trade Data for ", input$player1choice))
   })
   output$downloadTradeData <- downloadHandler(
     filename = function() {

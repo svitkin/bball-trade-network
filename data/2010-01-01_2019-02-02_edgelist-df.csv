@@ -4791,12 +4791,6 @@ Grizzlies acquire cash",FALSE,TRUE,"Grizzlies, Heat"
 "Anthony MorrowDahntay Jones","2013-02-21","Dahntay Jones","Anthony Morrow","Hawks","trade with Mavericks","On 2013-02-21: 
 Mavericks acquire Anthony Morrow 
 Hawks acquire Dahntay Jones",FALSE,FALSE,"Hawks, Mavericks"
-"future draft considerations (?)Jeremy Tyler","2013-02-21","Jeremy Tyler","future draft considerations (?)","Hawks","trade with Warriors","On 2013-02-21: 
-Warriors acquire future draft considerations (?) 
-Hawks acquire Jeremy Tyler",FALSE,FALSE,"Hawks, Warriors"
-"cashfuture draft considerations (?)","2013-02-21","cash","future draft considerations (?)","Hawks","trade with Warriors","On 2013-02-21: 
-Warriors acquire future draft considerations (?) 
-Hawks acquire cash",FALSE,FALSE,"Hawks, Warriors"
 "cashcash","2013-02-21","cash","cash","Hawks","trade with Warriors","On 2013-02-21: 
 Warriors acquire cash 
 Hawks acquire cash",FALSE,FALSE,"Hawks, Warriors"
@@ -7019,12 +7013,6 @@ Kings acquire Jeremy Tyler",FALSE,FALSE,"Kings, Knicks"
 "Jeremy TylerTravis Outlaw","2014-08-06","Jeremy Tyler","Travis Outlaw","Kings","trade with Knicks","On 2014-08-06: 
 Knicks acquire Travis Outlaw 
 Kings acquire Jeremy Tyler",FALSE,FALSE,"Kings, Knicks"
-"Quincy Acyremoval of protection on Knicks 2016 second round pick","2014-08-06","removal of protection on Knicks 2016 second round pick","Quincy Acy","Kings","trade with Knicks","On 2014-08-06: 
-Knicks acquire Quincy Acy 
-Kings acquire removal of protection on Knicks 2016 second round pick",TRUE,FALSE,"Kings, Knicks"
-"removal of protection on Knicks 2016 second round pickTravis Outlaw","2014-08-06","removal of protection on Knicks 2016 second round pick","Travis Outlaw","Kings","trade with Knicks","On 2014-08-06: 
-Knicks acquire Travis Outlaw 
-Kings acquire removal of protection on Knicks 2016 second round pick",TRUE,FALSE,"Kings, Knicks"
 "Aaron Craftfree agencysigned free agent to a 1-year minimum contract (date 09-02 per CBC CBS P, 09-04 per NBA)2014-08-06","2014-08-06","Aaron Craft","free agency","Warriors","signed free agent to a 1-year minimum contract (date 09-02 per CBC CBS P, 09-04 per NBA)","On 2014-08-06, Aaron Craft is signed as free agent to a 1-year minimum contract (date 09-02 per CBC CBS P, 09-04 per NBA) by Warriors",FALSE,FALSE,"Warriors"
 "free agencyJames Southerlandsigned restricted (CBC) / unrestricted free agent to a 1-year non-guaranteed contract (date 08-08 per P, 09-24 per CBC CBS SN)2014-08-07","2014-08-07","James Southerland","free agency","Blazers","signed restricted (CBC) / unrestricted free agent to a 1-year non-guaranteed contract (date 08-08 per P, 09-24 per CBC CBS SN)","On 2014-08-07, James Southerland is signed as restricted (CBC) / unrestricted free agent to a 1-year non-guaranteed contract (date 08-08 per P, 09-24 per CBC CBS SN) by Blazers",FALSE,FALSE,"Blazers"
 "Diante Garrettfree agencysigned free agent to a 2-year minimum non-guaranteed contract (date 08-12 per P, 09-24 per CBC CBS SN)2014-08-11","2014-08-11","Diante Garrett","free agency","Blazers","signed free agent to a 2-year minimum non-guaranteed contract (date 08-12 per P, 09-24 per CBC CBS SN)","On 2014-08-11, Diante Garrett is signed as free agent to a 2-year minimum non-guaranteed contract (date 08-12 per P, 09-24 per CBC CBS SN) by Blazers",FALSE,FALSE,"Blazers"
@@ -7851,7 +7839,7 @@ Rockets acquire K.J. McDaniels
 "Cenk AkyolJaVale McGee","2015-02-19","JaVale McGee","Cenk Akyol","76ers","trade with Nuggets","On 2015-02-19: 
 Nuggets acquire rights to Cenk Akyol 
 76ers acquire JaVale McGee",FALSE,TRUE,"76ers, Nuggets"
-"Cenk Akyolrights to Chukwudiebere Maduabum / Chu Chu Maduabum","2015-02-19","rights to Chukwudiebere Maduabum / Chu Chu Maduabum","Cenk Akyol","76ers","trade with Nuggets","On 2015-02-19: 
+"Cenk AkyolChukwudiebere Maduabum / Chu Chu Maduabum","2015-02-19","Chukwudiebere Maduabum / Chu Chu Maduabum","Cenk Akyol","76ers","trade with Nuggets","On 2015-02-19: 
 Nuggets acquire rights to Cenk Akyol 
 76ers acquire rights to rights to Chukwudiebere Maduabum / Chu Chu Maduabum",FALSE,TRUE,"76ers, Nuggets"
 "Cenk AkyolFurkan Korkmaz","2015-02-19","Furkan Korkmaz","Cenk Akyol","76ers","trade with Nuggets","On 2015-02-19: 
@@ -12726,14 +12714,6 @@ Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
 Cavaliers acquire John Henson 
 Bucks acquire Jason Smith
 Other Team(s) Involved in Trade:Wizards",FALSE,FALSE,"Bucks, Cavaliers, Wizards"
-"Matthew Dellavedova / Matt Dellavedovamodification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)","2018-12-07","modification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)","Matthew Dellavedova / Matt Dellavedova","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
-Cavaliers acquire Matthew Dellavedova / Matt Dellavedova 
-Bucks acquire modification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)
-Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Bucks, Cavaliers, Wizards"
-"John Hensonmodification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)","2018-12-07","modification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)","John Henson","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
-Cavaliers acquire John Henson 
-Bucks acquire modification of protection on 2020 second round pick previously acquired from Wizards (pick now unprotected)
-Other Team(s) Involved in Trade:Wizards",TRUE,FALSE,"Bucks, Cavaliers, Wizards"
 "cashMatthew Dellavedova / Matt Dellavedova","2018-12-07","cash","Matthew Dellavedova / Matt Dellavedova","Bucks","3-team trade with Cavaliers, Wizards","On 2018-12-07: 
 Cavaliers acquire Matthew Dellavedova / Matt Dellavedova 
 Bucks acquire cash (from Wizards)
@@ -12755,10 +12735,6 @@ Other Team(s) Involved in Trade: Bucks",FALSE,FALSE,"Cavaliers, Bucks, Wizards"
 Bucks acquire Jason Smith 
 Wizards acquire Sam Dekker
 Other Team(s) Involved in Trade:Cavaliers",FALSE,FALSE,"Wizards, Bucks, Cavaliers"
-"modification of protection on 2020 second round pick previously traded to Bucks (pick now unprotected)Sam Dekker","2018-12-07","Sam Dekker","modification of protection on 2020 second round pick previously traded to Bucks (pick now unprotected)","Wizards","3-team trade with Bucks, Cavaliers","On 2018-12-07: 
-Unknown Team acquire modification of protection on 2020 second round pick previously traded to Bucks (pick now unprotected) 
-Wizards acquire Sam Dekker
-Other Team(s) Involved in Trade: Bucks, Cavaliers",TRUE,FALSE,"Wizards, Bucks, Cavaliers"
 "Brandon Goodwinfree agencywaived2018-12-10","2018-12-10","free agency","Brandon Goodwin","Nuggets","waived","On 2018-12-10, Brandon Goodwin is waived by Nuggets",FALSE,FALSE,"Nuggets"
 "free agencyNick Youngsigned unrestricted free agent2018-12-10","2018-12-10","Nick Young","free agency","Nuggets","signed unrestricted free agent","On 2018-12-10, Nick Young is signed as unrestricted free agent by Nuggets",FALSE,FALSE,"Nuggets"
 "Eric Morelandfree agencysigned free agent to a 1-year, $1.1M contract2018-12-10","2018-12-10","Eric Moreland","free agency","Suns","signed free agent to a 1-year, $1.1M contract","On 2018-12-10, Eric Moreland is signed as free agent to a 1-year, $1.1M contract by Suns",FALSE,FALSE,"Suns"

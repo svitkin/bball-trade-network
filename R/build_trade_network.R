@@ -70,7 +70,8 @@ load_or_cache_date_files <- function(start, end) {
 
 clean_transactions <- function(transactions_df, 
                                .remove_future_picks = TRUE, 
-                               .remove_not_exercised_picks = TRUE) {
+                               .remove_not_exercised_picks = TRUE,
+                               .remove_modification_picks = TRUE) {
   
   filter_for_relevant_rows <- function(df) {
     df %>% 
@@ -111,7 +112,9 @@ clean_transactions <- function(transactions_df,
   remove_future_picks <- function(df) {
     df %>% 
       filter(!(str_detect(Acquired, "pick") & str_detect(Acquired, "\\?")), 
-             !(str_detect(Relinquished, "pick") & str_detect(Relinquished, "\\?")))
+             !(str_detect(Relinquished, "pick") & str_detect(Relinquished, "\\?")),
+             !str_detect(Acquired, "future draft considerations"),
+             !str_detect(Relinquished, "future draft considerations"))
   }
   remove_not_exercised_picks <- function(df) {
     df %>% 
@@ -119,6 +122,14 @@ clean_transactions <- function(transactions_df,
              !str_detect(Acquired, "voided"),
              !str_detect(Relinquished, "not exercised"),
              !str_detect(Relinquished, "voided"))
+  }
+  remove_modification_of_picks <- function(df) {
+    df %>% 
+      filter(!str_detect(Acquired, "removal of protection"),
+             !str_detect(Acquired, "modification of protection"),
+             !str_detect(Relinquished, "removal of protection"),
+             !str_detect(Relinquished, "modification of protection"))
+    
   }
   clean_pick_text <- function(df) {
     df %>% 
@@ -167,11 +178,11 @@ clean_transactions <- function(transactions_df,
       
       mutate(rights_involved = str_detect(Acquired, "rights to") | str_detect(Relinquished, "rights to"),
              Acquired = ifelse(str_detect(Acquired, "rights to"),
-                               str_replace(Acquired, "rights to", ""),
+                               str_replace_all(Acquired, "rights to", ""),
                                Acquired),
              Acquired = str_trim(Acquired),
              Relinquished = ifelse(str_detect(Relinquished, "rights to"),
-                                   str_replace(Relinquished, "rights to", ""),
+                                   str_replace_all(Relinquished, "rights to", ""),
                                    Relinquished),
              Relinquished = str_trim(Relinquished))
   }
@@ -279,6 +290,8 @@ clean_transactions <- function(transactions_df,
     when(.remove_future_picks ~ remove_future_picks(.),
          ~ .) %>% 
     when(.remove_not_exercised_picks ~ remove_not_exercised_picks(.),
+         ~ .) %>% 
+    when(.remove_modification_picks ~ remove_modification_of_picks(.),
          ~ .) %>% 
     distinct() %>% 
     mutate(Acquired = str_trim(Acquired),
