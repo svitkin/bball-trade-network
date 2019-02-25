@@ -43,8 +43,8 @@ library(shinyjs)
 library(shinyWidgets)
 
 
-start <- "2010-01-01"
-end <- "2019-02-02"
+start <- "1976-11-16"
+end <- "2019-02-24"
 
 graph_df <- NULL
 
@@ -291,8 +291,22 @@ server <- function(input, output, session) {
           c("Anyone", .)
         
         player2choice <- isolate(input$player2choice)
+        if (input$includeDraft & !"draft" %in% player2choice & !"Anyone" %in% player2choice) {
+          player2choice <- c(player2choice, "draft")
+        }
+        if (input$includeFreeAgency & !"free agency" %in% player2choice & !"Anyone" %in% player2choice) {
+          player2choice <- c(player2choice, "free agency")
+        }
+        if (input$includeCash & !"cash" %in% player2choice & !"Anyone" %in% player2choice) {
+          player2choice <- c(player2choice, "cash")
+        }
+        if (input$includeException & "trade exception" %in% player2choice & !"Anyone" %in% player2choice) {
+          player2choice <- c(player2choice, "trade exception")
+        }
+        
+        
         if (!is.null(player2choice)) {
-          if (player2choice %in% player2options) {
+          if (all(player2choice %in% player2options)) {
             updateSelectizeInput(session, 
                                  inputId = "player2choice",
                                  choices = player2options,
@@ -449,7 +463,7 @@ server <- function(input, output, session) {
           (input$player1choice %in% V(full_network)$name &
            input$includeDraft) |
           (input$player1choice %in% V(full_network)$name &
-          input$player2choice %in% V(full_network)$name)) {
+          all(input$player2choice %in% V(full_network)$name))) {
         
         player_network <-
           make_player_network(full_network,
@@ -489,7 +503,7 @@ server <- function(input, output, session) {
           (input$player1choice %in% V(full_network)$name &
            input$includeDraft) |
           (input$player1choice %in% V(full_network)$name &
-           input$player2choice %in% V(full_network)$name)) {
+           all(input$player2choice %in% V(full_network)$name))) {
        
           updateSliderTextInput(session,
                                 "edgeMovieSlide",
@@ -527,9 +541,9 @@ server <- function(input, output, session) {
           edge_movie()[[input$edgeMovieSlide]]
         }
       }
-    } else if (is.null(input$player2choice)) {
+    } else {
       visNetwork(nodes = data.frame(id = 1,
-                                    label = "CHOOSE AN OPTION FOR CONNECTED PLAYER(S)\n(in the Related to dropdown)"),
+                                    label = "CHOOSE AN OPTION FOR CONNECTED PLAYER(S)\n(in both player dropdowns)"),
                  edges = data.frame(from = c(1),
                                     to = c(0)))
     }
