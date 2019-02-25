@@ -60,11 +60,30 @@ ui <- fluidPage(
                        fluidRow(uiOutput("optionsUI")),
                        fluidRow(column(width = 10, htmlOutput("about")))),
               tabPanel("Network Visualization", 
+                       useShinyjs(),
+                       tags$head(tags$style(type="text/css", "
+                                            #loadmessage {
+                                            padding: 5px 0px 5px 0px;
+                                            text-align: center;
+                                            font-weight: bold;
+                                            font-size: 100%;
+                                            color: #fff;
+                                            background-color: #007BA7;
+                                            z-index: 105;
+                                            }
+                                            .no-display {
+                                            display: none;
+                                            }
+                                            ")),
                        shiny::tags$br(),
-                       fluidRow(column(6, offset = 1, uiOutput("networkUI"))),
-                       shinycssloaders::withSpinner(visNetworkOutput("tradeNetwork"))),
+                       conditionalPanel(condition="$('html').hasClass('shiny-busy') && !$('#loadmessage').hasClass('no-display')",
+                                        tags$div(shiny::HTML("Network is being calculated...<br>
+                                                 Try changing the <em>number of exchanges away</em> slider for smaller visualizations."),id="loadmessage")),
+                       conditionalPanel(condition="!$('html').hasClass('shiny-busy')",
+                                        fluidRow(column(6, offset = 1, uiOutput("networkUI"))),
+                                        shinycssloaders::withSpinner(visNetworkOutput("tradeNetwork")))),
               tabPanel("Raw Data",
-                       shinycssloaders::withSpinner(DTOutput("tradeData")))) 
+                       shinycssloaders::withSpinner(DT::DTOutput("tradeData")))) 
 )
 
 # Define the server code
@@ -168,7 +187,7 @@ server <- function(input, output, session) {
            conditionalPanel(
              condition = "!input.includeFreeAgency",
              sliderInput("numSteps", "Include other players how many exchanges away", 
-                         min = 1, max = 10, value = 2)),
+                         min = 1, max = 10, value = 1)),
            checkboxInput("includeDraft", "Include the draft as part of the network"),
            checkboxInput("includeFreeAgency", "Include free agency as part of the network"),
            checkboxInput("includeCash", "Include cash as part of the network"),
@@ -182,7 +201,7 @@ server <- function(input, output, session) {
                      sliderTextInput("edgeMovieSlide", 
                                      label = "Stepping through time",
                                      choices = "None",
-                                     animate = animationOptions(interval = 3000,
+                                     animate = animationOptions(interval = 1000,
                                                                 loop = FALSE, 
                                                                 playButton = "Play All",
                                                                 pauseButton = "Pause")))
@@ -291,6 +310,11 @@ server <- function(input, output, session) {
           sort() %>% 
           c("Anyone", .)
         
+        # Get rid of Anyone option if potential network is too large to display
+        if (length(player2options) > 250) {
+          player2options <- setdiff(player2options, "Anyone")
+        }
+        
         player2choice <- isolate(input$player2choice)
         if (input$includeDraft & !"draft" %in% player2choice & !"Anyone" %in% player2choice) {
           player2choice <- c(player2choice, "draft")
@@ -397,9 +421,19 @@ server <- function(input, output, session) {
         visNetwork(nodes_df, edges_df, main = title) %>% 
         visIgraphLayout(layout = "layout_in_circle", randomSeed = 123)
     }
+    edge_legend_df <-
+      data.frame(color = c("#6BFFC1", "#997E57", "#0ECC47", "#CC7E0E"),
+                 label = c('Player Exchange', "Rights Involved", "Pick Involved", "Rights & Pick Involved"),
+                 width = 6,
+                 font.align = "top",
+                 stringsAsFactors = FALSE)
+    
     viz %>% 
       adjust_viz_if_multiple_edges(edges_df) %>% 
-      visNodes(color = "#FF6B2B")
+      visNodes(color = "#FF6B2B") %>% 
+      visLegend(addEdges = edge_legend_df,
+                width = 0.15,
+                position = "right")
   }
   make_edge_movie_networks <- function(player_network, 
                                        player1choice, player2choices, 
@@ -407,13 +441,24 @@ server <- function(input, output, session) {
                                        anyoneCondition) {
     
     if (!anyoneCondition) {
-      path_players <-
-        unlist(shortest_paths(player_network, 
-                              player1choice, 
-                              player2choices,
-                              mode = "all")$vpath)
+      if (draftCondition) {
+        # If the draft is in there, make sure it's not being used in path calculations
+        draft_node <- which(V(player_network)$name == "draft")
+        path_players <-
+          unlist(shortest_paths(player_network %>% delete_vertices(draft_node), 
+                                player1choice, 
+                                setdiff(player2choices, "draft"),
+                                mode = "all")$vpath)
+        subgraph_paths <- induced_subgraph(player_network, c(path_players, draft_node))  
+      } else {
+        path_players <-
+          unlist(shortest_paths(player_network, 
+                                player1choice, 
+                                player2choices,
+                                mode = "all")$vpath)
+        subgraph_paths <- induced_subgraph(player_network, path_players)  
+      }
       
-      subgraph_paths <- induced_subgraph(player_network, path_players)  
     } else {
       subgraph_paths <- player_network
     }
@@ -450,6 +495,7 @@ server <- function(input, output, session) {
     date_networks
   }
   
+  
   edge_movie <- reactive({
     if (!is.null(input$player1choice) & !is.null(input$player2choice)) {
       
@@ -477,7 +523,6 @@ server <- function(input, output, session) {
                                  input$player2choice,
                                  input$includeDraft,
                                  anyoneCondition)
-        
       }
     }
   })
@@ -513,6 +558,25 @@ server <- function(input, output, session) {
     }
   })
   
+  # If slider moved then do not show loading message
+  observe({
+    input$edgeMovieSlide
+    shinyjs::addClass("loadmessage", "no-display")
+  })
+  
+  # If any options change then allow loading message to show
+  observe({
+    input$player1choice
+    input$player2choice
+    input$numSteps
+    input$includeDraft
+    input$includeFreeAgency
+    input$includeCash
+    input$includeExceptions
+    
+    shinyjs::removeClass("loadmessage", "no-display")
+  })
+  
   # TODO: Fix this observer so slide only shows when there is more than one network to show
   # observe({
   #   if (input$tabs == "Network Visualization") {
@@ -532,6 +596,7 @@ server <- function(input, output, session) {
   #     }  
   #   }
   # })
+  
   
   output$tradeNetwork <- renderVisNetwork({
     if (!is.null(input$player1choice) & !is.null(input$player2choice)) {
