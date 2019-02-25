@@ -56,7 +56,8 @@ ui <- fluidPage(
               tabPanel("Setup",
                        shiny::tags$br(),
                        fluidRow(uiOutput("playerUI")), 
-                       fluidRow(column(width = 11, uiOutput("optionsUI"))),
+                       shiny::tags$br(),
+                       fluidRow(uiOutput("optionsUI")),
                        fluidRow(column(width = 10, htmlOutput("about")))),
               tabPanel("Network Visualization", 
                        shiny::tags$br(),
@@ -163,17 +164,17 @@ server <- function(input, output, session) {
   })
   
   output$optionsUI <- renderUI({
-    sidebarPanel(
-      conditionalPanel(
-        condition = "!input.includeFreeAgency",
-        sliderInput("numSteps", "Include other players how many exchanges away", 
-                    min = 1, max = 10, value = 2)),
-      checkboxInput("includeDraft", "Include the draft as part of the network"),
-      checkboxInput("includeFreeAgency", "Include free agency as part of the network"),
-      checkboxInput("includeCash", "Include cash as part of the network"),
-      checkboxInput("includeException", "Include trade exceptions as part of the network"),
-      shiny::tags$br(),
-      downloadButton("downloadTradeData", "Download Trade Data"))
+    column(width = 6,
+           conditionalPanel(
+             condition = "!input.includeFreeAgency",
+             sliderInput("numSteps", "Include other players how many exchanges away", 
+                         min = 1, max = 10, value = 2)),
+           checkboxInput("includeDraft", "Include the draft as part of the network"),
+           checkboxInput("includeFreeAgency", "Include free agency as part of the network"),
+           checkboxInput("includeCash", "Include cash as part of the network"),
+           checkboxInput("includeException", "Include trade exceptions as part of the network"),
+           shiny::tags$br(),
+           downloadButton("downloadTradeData", "Download Trade Data"))
   })
   
   output$networkUI <- renderUI({
@@ -542,6 +543,7 @@ server <- function(input, output, session) {
         }
       }
     } else {
+      # TODO: make sure this is being run when either player choice is null
       visNetwork(nodes = data.frame(id = 1,
                                     label = "CHOOSE AN OPTION FOR CONNECTED PLAYER(S)\n(in both player dropdowns)"),
                  edges = data.frame(from = c(1),
