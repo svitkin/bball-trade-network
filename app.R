@@ -52,6 +52,7 @@ ui <- fluidPage(
   titlePanel("How does a trade ripple through the NBA?"),
   helpText(paste0("Data going from ", start, " to ", end)),
   tags$hr(style="border-color: black;"),
+  useShinyjs(),
   tabsetPanel(id = "tabs",
               tabPanel("Setup",
                        shiny::tags$br(),
@@ -60,7 +61,6 @@ ui <- fluidPage(
                        fluidRow(uiOutput("optionsUI")),
                        fluidRow(column(width = 10, htmlOutput("about")))),
               tabPanel("Network Visualization", 
-                       useShinyjs(),
                        tags$head(tags$style(type="text/css", "
                                             #loadmessage {
                                             padding: 5px 0px 5px 0px;
@@ -300,6 +300,7 @@ server <- function(input, output, session) {
         make_full_network()
       
       if (input$player1choice %in% V(full_network)$name) {
+        
         player2options <-
           full_network %>% 
           make_player_network(input$player1choice, 
@@ -405,7 +406,8 @@ server <- function(input, output, session) {
     if (check_for_multiple_edges(edges_df)) {
       visNetworkObj %>% 
         visEdges(smooth = list(enabled = TRUE)) %>% 
-        visPhysics(solver = "barnesHut", barnesHut = list(springConstant = 0.002))
+        visPhysics(solver = "barnesHut", barnesHut = list(springConstant = 0.002)) %>% 
+        visLayout(randomSeed = 123)
     } else {
       visNetworkObj
     }
@@ -429,11 +431,28 @@ server <- function(input, output, session) {
                  stringsAsFactors = FALSE)
     
     viz %>% 
+      visOptions(highlightNearest = TRUE, 
+                 nodesIdSelection = list(values = sort(unique(nodes_df[["label"]])),
+                                         main = "Select by player")) %>% 
       adjust_viz_if_multiple_edges(edges_df) %>% 
-      visNodes(color = "#FF6B2B") %>% 
       visLegend(addEdges = edge_legend_df,
                 width = 0.15,
                 position = "right")
+      
+  }
+  change_nodes_base_on_type <- function(nodes_df) {
+    nodes_df %>% 
+      mutate(size = ifelse(label %in% c("draft", "free agency", "cash", "trade exception"),
+                           30,
+                           25),
+             color = case_when(label == "draft" ~ "lightblue",
+                               label == "free agency" ~ "darkred",
+                               label == "cash" ~ "green",
+                               label == "trade exception" ~ "purple",
+                               TRUE ~ "#FF6B2B")) %>% 
+      mutate(label = ifelse(label %in% c("draft", "free agency", "cash", "trade exception"),
+                            str_to_upper(label),
+                            label))
   }
   make_edge_movie_networks <- function(player_network, 
                                        player1choice, player2choices, 
@@ -441,14 +460,16 @@ server <- function(input, output, session) {
                                        anyoneCondition) {
     
     if (!anyoneCondition) {
-      if (draftCondition) {
+      if (draftCondition & !(all(player2choices == "draft"))) {
         # If the draft is in there, make sure it's not being used in path calculations
         draft_node <- which(V(player_network)$name == "draft")
         path_players <-
-          unlist(shortest_paths(player_network %>% delete_vertices(draft_node), 
-                                player1choice, 
-                                setdiff(player2choices, "draft"),
-                                mode = "all")$vpath)
+          names(unlist(shortest_paths(player_network %>% delete_vertices(draft_node), 
+                                      player1choice, 
+                                      setdiff(player2choices, "draft"),
+                                      mode = "all")$vpath))
+        path_players <- c(draft_node, 
+                          which(V(player_network)$name %in% path_players))
         subgraph_paths <- induced_subgraph(player_network, c(path_players, draft_node))  
       } else {
         path_players <-
@@ -478,7 +499,8 @@ server <- function(input, output, session) {
                                    edges_df[["to"]])),
                      stringsAsFactors = FALSE) %>% 
           mutate(label = id,
-                 label = str_wrap(label, width = 40))
+                 label = str_wrap(label, width = 40)) %>% 
+          change_nodes_base_on_type()
         
         layout_viz(nodes_df, 
                    edges_df, 
@@ -561,7 +583,9 @@ server <- function(input, output, session) {
   # If slider moved then do not show loading message
   observe({
     input$edgeMovieSlide
-    shinyjs::addClass("loadmessage", "no-display")
+    if (!is.null(input$edgeMovieSlide)) {
+      shinyjs::addClass("loadmessage", "no-display")
+    }
   })
   
   # If any options change then allow loading message to show
@@ -578,24 +602,15 @@ server <- function(input, output, session) {
   })
   
   # TODO: Fix this observer so slide only shows when there is more than one network to show
-  # observe({
-  #   if (input$tabs == "Network Visualization") {
-  #     input$includeDraft
-  #     input$numSteps
-  #     input$includeFreeAgency
-  #     input$includeCash
-  #     input$includeException
-  #     input$player1choice
-  #     input$player2choice
-  #     message("Toggler triggered")
-  #     message("Length is ", length(edge_movie()))
-  #     if (length(edge_movie) <= 1) {
-  #       shinyjs::hide("edgeMovieSlide")
-  #     } else {
-  #       shinyjs::show("edgeMovieSlide")
-  #     }  
-  #   }
-  # })
+  observe({
+    if (!is.null(input$edgeMovieSlide)) {
+      if (input$edgeMovieSlide == "None") {
+        shinyjs::hide("networkUI")
+      } else {
+        shinyjs::show("networkUI")
+      }
+    }
+  })
   
   
   output$tradeNetwork <- renderVisNetwork({
