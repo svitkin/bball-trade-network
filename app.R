@@ -432,7 +432,7 @@ server <- function(input, output, session) {
     
     viz %>% 
       visOptions(highlightNearest = TRUE, 
-                 nodesIdSelection = list(values = sort(unique(nodes_df[["label"]])),
+                 nodesIdSelection = list(values = sort(unique(nodes_df[["id"]])),
                                          main = "Select by player")) %>% 
       adjust_viz_if_multiple_edges(edges_df) %>% 
       visLegend(addEdges = edge_legend_df,
