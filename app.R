@@ -57,12 +57,6 @@ ui <- fluidPage(
   useShinyjs(),
   tabsetPanel(id = "tabs",
               tabPanel("Setup",
-                       shiny::tags$br(),
-                       fluidRow(uiOutput("playerUI")), 
-                       shiny::tags$br(),
-                       fluidRow(uiOutput("optionsUI")),
-                       fluidRow(column(width = 10, htmlOutput("about")))),
-              tabPanel("Network Visualization", 
                        tags$head(tags$style(type="text/css", "
                                             #loadmessage {
                                             padding: 5px 0px 5px 0px;
@@ -80,7 +74,16 @@ ui <- fluidPage(
                        shiny::tags$br(),
                        conditionalPanel(condition="$('html').hasClass('shiny-busy') && !$('#loadmessage').hasClass('no-display')",
                                         tags$div(shiny::HTML("Network is being calculated...<br>
-                                                 Try changing the <em>number of exchanges away</em> slider for smaller visualizations."),id="loadmessage")),
+                                                 Try changing the <em>number of exchanges away</em> slider for smaller visualizations."),id="loadmessage", class = "no-display")),
+                       
+                       
+                       fluidRow(uiOutput("playerUI")), 
+                       shiny::tags$br(),
+                       fluidRow(uiOutput("optionsUI")),
+                       fluidRow(column(width = 10, htmlOutput("about")))),
+              tabPanel("Network Visualization", 
+                       
+                       shiny::tags$br(),
                        conditionalPanel(condition="!$('html').hasClass('shiny-busy')",
                                         fluidRow(column(6, offset = 1, uiOutput("networkUI"))),
                                         shinycssloaders::withSpinner(visNetworkOutput("tradeNetwork")))),
@@ -232,22 +235,41 @@ server <- function(input, output, session) {
       for (path in all_p1_paths()[[input$player2choice]]) {
         g <- g + path(path)
       }
-      # browser()
+      
       gdf <-
         g %>% 
         as_data_frame("edges")
-      
-      bind_rows(
+      first_pass_df <-
         gdf %>% 
-          left_join(graph_data(),
-                    by = c("from", "to")) %>% 
-          filter(!is.na(date)),
+        left_join(graph_data(),
+                  by = c("from", "to")) %>% 
+        filter(!is.na(date))
+      if (nrow(first_pass_df) > 0) {
+        bind_rows(first_pass_df,
+                  gdf %>% 
+                    filter(from != first_pass_df$from,
+                           to != first_pass_df$to) %>% 
+                    left_join(graph_data() %>% rename(to = from, from = to),
+                              by = c("from", "to")) %>%
+                    filter(!is.na(date))
+        ) %>%  
+          mutate(key = paste0(pmin(from, to),
+                              pmax(from, to),
+                              date)) %>% 
+          distinct(key, .keep_all = TRUE) %>% 
+          graph_from_data_frame()
+      } else {
         gdf %>% 
           left_join(graph_data() %>% rename(to = from, from = to),
                     by = c("from", "to")) %>%
-          filter(!is.na(date))
-      ) %>% 
-        graph_from_data_frame()
+          filter(!is.na(date)) %>% 
+          mutate(key = paste0(pmin(from, to),
+                              pmax(from, to),
+                              date)) %>% 
+          distinct(key, .keep_all = TRUE) %>% 
+          graph_from_data_frame()
+      }
+      
     }
   })
   
@@ -466,6 +488,7 @@ server <- function(input, output, session) {
                             label))
   }
   edge_movie_network <- reactive({
+    
     player_network <- 
       p1p2_network() %>% 
       igraph::as_data_frame("edges") %>% 
@@ -527,9 +550,8 @@ server <- function(input, output, session) {
   
   # If slider moved then do not show loading message
   observe({
-    input$edgeMovieSlide
-    if (!is.null(input$edgeMovieSlide)) {
-      shinyjs::addClass("loadmessage", "no-display")
+    if (!is.null(input$numSteps)) {
+      shinyjs::toggleClass("loadmessage", "no-display", chooseNumSteps() <= 3)
     }
   })
   
@@ -537,19 +559,18 @@ server <- function(input, output, session) {
   observe({
     input$player1choice
     input$player2choice
-    input$numSteps
     input$includeDraft
     input$includeFreeAgency
     input$includeCash
     input$includeExceptions
-    
-    shinyjs::removeClass("loadmessage", "no-display")
+
+    shinyjs::addClass("loadmessage", "no-display")
   })
   
   # TODO: Fix this observer so slide only shows when there is more than one network to show
   observe({
     if (!is.null(input$edgeMovieSlide)) {
-      if (input$edgeMovieSlide == "None") {
+      if (input$edgeMovieSlide == "None" | length(input$edgeMovieSlide) == 0) {
         shinyjs::hide("networkUI")
       } else {
         shinyjs::show("networkUI")

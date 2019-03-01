@@ -515,9 +515,9 @@ clean_transactions <- function(transactions_df,
     remove_unknown_picks() %>%
     remove_cycles() %>% 
     misc_cleanup() %>% 
-    make_transaction_key() %>% 
     filter(Acquired != "",
-           Relinquished != "")
+           Relinquished != "") %>% 
+    make_transaction_key() 
 }
 
 write_out_edgelist_df <- function(start, end) {
