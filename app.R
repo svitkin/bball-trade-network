@@ -56,6 +56,9 @@ ui <- fluidPage(
   tags$hr(style="border-color: black;"),
   useShinyjs(),
   tabsetPanel(id = "tabs",
+              tabPanel("Introduction",
+                       shiny::tags$br(),
+                       fluidRow(column(width = 10, htmlOutput("intro")))),
               tabPanel("Setup",
                        tags$head(tags$style(type="text/css", "
                                             #loadmessage {
@@ -79,15 +82,17 @@ ui <- fluidPage(
                        
                        fluidRow(uiOutput("playerUI")), 
                        shiny::tags$br(),
-                       fluidRow(uiOutput("optionsUI")),
-                       fluidRow(column(width = 10, htmlOutput("about")))),
+                       fluidRow(uiOutput("optionsUI"))),
               tabPanel("Network Visualization", 
-                       
                        shiny::tags$br(),
                        conditionalPanel(condition="!$('html').hasClass('shiny-busy')",
                                         fluidRow(column(6, offset = 1, uiOutput("networkUI"))),
                                         shinycssloaders::withSpinner(visNetworkOutput("tradeNetwork")))),
               tabPanel("Raw Data",
+                       shiny::tags$br(),
+                       downloadButton("downloadTradeData", "Download Trade Data"),
+                       shiny::tags$br(),
+                       shiny::tags$br(),
                        shinycssloaders::withSpinner(DT::DTOutput("tradeData")))) 
 )
 
@@ -179,9 +184,7 @@ server <- function(input, output, session) {
            checkboxInput("includeDraft", "Include the draft as part of the network"),
            checkboxInput("includeFreeAgency", "Include free agency as part of the network"),
            checkboxInput("includeCash", "Include cash as part of the network"),
-           checkboxInput("includeException", "Include trade exceptions as part of the network"),
-           shiny::tags$br(),
-           downloadButton("downloadTradeData", "Download Trade Data"))
+           checkboxInput("includeException", "Include trade exceptions as part of the network"))
   })
   
   output$networkUI <- renderUI({
@@ -641,14 +644,13 @@ server <- function(input, output, session) {
   
   
   # About Section ---------------------------------------------------------------------------
-  output$about <-
-    shiny::renderText(paste0('<br>
-                              <h4>About</h4>
-                             Code: <a href="https://github.com/svitkin/bball-trade-network" target=_blank>https://github.com/svitkin/bball-trade-network</a>',
+  output$intro <-
+    shiny::renderText(paste0('<h4>Welcome!</h4>',
+                             "<p>Over time, a Vince Carter trade away from the Raptors turns into Luke Ridnour. A Lebron James trade to the Heat brings Luke Walton to the Cavaliers a few years later. NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href='https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees' target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. In the <strong>Setup</strong> tab, choose a player who's trades you are interested in, and see how their trades turn into any other player they are connected to. Go over to the <strong>Network Visualization</strong> tab to see the result of your search and step through the relevant trades over time. See and download the raw data from the visualization in the <strong>Raw Data</strong> tab.</p>", 
+                             '<p>Players can also be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. To simplify things slightly, <em>free agency</em> is a bit of a catch-all, including claims off of waivers as well. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, including it sets the <em>number of exchanges away</em> slider automatically to 1.</p>',
+                             'Code: <a href="https://github.com/svitkin/bball-trade-network" target=_blank>https://github.com/svitkin/bball-trade-network</a>',
                              "<br>",
-                             'Data comes from <a href="http://prosportstransactions.com/" target=_blank>Pro Sports Transactions</a>',
-                             "<br><br>",
-                             '<p>NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href="https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees" target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. Additionally, players can be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. To simplify things slightly, <em>free agency</em> is a bit of a catch-all, including claims off of waivers as well. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, including it sets the <em>number of exchanges away</em> slider automatically to 1.</p>'))
+                             'Data comes from <a href="http://prosportstransactions.com/" target=_blank>Pro Sports Transactions</a>'))
 
 }
 
