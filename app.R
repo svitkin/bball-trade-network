@@ -140,7 +140,6 @@ server <- function(input, output, session) {
     }
   }
   user_filter_data <- reactive({
-    message("Data being user filtered again")
     graph_data() %>% 
       free_agency_filter() %>% 
       draft_filter() %>% 
@@ -149,13 +148,11 @@ server <- function(input, output, session) {
   })
   
   full_network <- reactive({
-    graph_data() %>% 
-      graph_from_data_frame(directed = TRUE)
+    graph_from_data_frame(graph_data(), directed = TRUE)
   })
   
   # UI related functions
   output$playerUI <- renderUI({
-    message("Player UI triggered")
     column(width = 6,
            div(style="display:inline-block",
                selectizeInput(
@@ -647,7 +644,8 @@ server <- function(input, output, session) {
   output$intro <-
     shiny::renderText(paste0('<h4>Welcome!</h4>',
                              "<p>Over time, a Vince Carter trade away from the Raptors turns into Luke Ridnour. A Lebron James trade to the Heat brings Luke Walton to the Cavaliers a few years later. NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href='https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees' target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. In the <strong>Setup</strong> tab, choose a player who's trades you are interested in, and see how their trades turn into any other player they are connected to. Go over to the <strong>Network Visualization</strong> tab to see the result of your search and step through the relevant trades over time. See and download the raw data from the visualization in the <strong>Raw Data</strong> tab.</p>", 
-                             '<p>Players can also be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. To simplify things slightly, <em>free agency</em> is a bit of a catch-all, including claims off of waivers as well. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, including it sets the <em>number of exchanges away</em> slider automatically to 1.</p>',
+                             '<p>Players can also be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. To simplify things slightly, <em>free agency</em> is a bit of a catch-all, including claims off of waivers as well. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, including it sets the <em>number of exchanges away</em> slider automatically to 1. Additionally, players being picked from the draft can be visualized. The draft is treated as its own node, with connections to players arising when they get picked. Options to include free agency, cash, trade exceptions and/or the draft are below the player choices in the <strong>Setup</strong> tab.</p>',
+                             '<p>Have fun finding weird stuff!</p>',
                              'Code: <a href="https://github.com/svitkin/bball-trade-network" target=_blank>https://github.com/svitkin/bball-trade-network</a>',
                              "<br>",
                              'Data comes from <a href="http://prosportstransactions.com/" target=_blank>Pro Sports Transactions</a>'))
