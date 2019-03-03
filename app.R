@@ -259,8 +259,13 @@ server <- function(input, output, session) {
         filter(!is.na(date))
     }
     
-    # Return graph with all edge and node information
-    graph_from_data_frame(full_df)
+    # Return distinct graph with all edge and node information
+    full_df %>% 
+      mutate(key = paste0(pmin(from, to),
+                          pmax(from, to),
+                          date)) %>% 
+      distinct(key, .keep_all = TRUE) %>% 
+      graph_from_data_frame()
   })
   
   p1p2_network <- reactive({
