@@ -215,10 +215,12 @@ server <- function(input, output, session) {
     unique(unlist(all_p1_paths()))
   })
   p1_network <- reactive({
+    # Set up empty network
     g <-
       make_empty_graph(length(nodes_from_paths())) %>% 
       set_vertex_attr("name", value = nodes_from_paths()) 
     
+    # Add each path that was found using date_ego()
     for (path in all_p1_paths()) {
       if (class(path) == "list") {
         for (p in path) {
@@ -230,6 +232,7 @@ server <- function(input, output, session) {
       
     }
     
+    # Add other information from original data to graph
     gdf <-
       g %>% 
       as_data_frame("edges")
@@ -255,24 +258,22 @@ server <- function(input, output, session) {
                   by = c("from", "to")) %>%
         filter(!is.na(date))
     }
-   
-    full_df %>% 
-      mutate(key = paste0(pmin(from, to),
-                          pmax(from, to),
-                          date)) %>% 
-      distinct(key, .keep_all = TRUE) %>% 
-      graph_from_data_frame()
+    
+    # Return graph with all edge and node information
+    graph_from_data_frame(full_df)
   })
   
   p1p2_network <- reactive({
     if (any(input$player2choice == "Anyone")) {
       p1_network()
     } else {
+      # Find nodes associated with paths to player 2
       all_nodes <-
         all_p1_paths()[input$player2choice] %>% 
         unlist() %>% 
         unique()
       
+      # Subset player 1's full graph to just those nodes associated with player 2
       induced_subgraph(p1_network(), all_nodes)
     }
   })
@@ -285,7 +286,6 @@ server <- function(input, output, session) {
         !is.null(input$numSteps) &
         !is.null(input$includeDraft)) {
 
-      message("Player 1 observer triggered")
       user_filtered_data <- user_filter_data()
 
       player1options <-
@@ -323,7 +323,6 @@ server <- function(input, output, session) {
         !is.null(input$numSteps) &
         !is.null(input$includeDraft) &
         !is.null(input$player1choice)) {
-      message("Player 2 observer triggered")
       
       if (input$player1choice != "") {
         shinyjs::disable("player2choice")
@@ -493,6 +492,7 @@ server <- function(input, output, session) {
   }
   edge_movie_network <- reactive({
     
+    # Add draft or free agency nodes and edges based on user's choices
     player_network <- 
       p1p2_network() %>% 
       igraph::as_data_frame("edges") %>% 
@@ -503,7 +503,8 @@ server <- function(input, output, session) {
       
     all_dates <- sort(unique(E(player_network)$date))
     
-    # browser()
+    # For each distinct date found in the player 1 - player 2 network
+    # Subset the graph to that date and store visualization of that graph as value to date key
     date_networks <-
       lapply(1:length(all_dates), function(dt_index) {
         edge_subgraph <-
@@ -537,6 +538,7 @@ server <- function(input, output, session) {
     date_networks
   })
   
+  # Update date slider text 
   observe({
     if (!is.null(input$player1choice) & !is.null(input$player2choice) &
         input$tabs == "Network Visualization") {
@@ -552,7 +554,8 @@ server <- function(input, output, session) {
     }
   })
   
-  # If slider moved then do not show loading message
+  # If the number of steps chosen exceeds 3 then display loading message to user
+  # TODO: Currently hacky solution
   observe({
     if (!is.null(input$numSteps)) {
       shinyjs::toggleClass("loadmessage", "no-display", chooseNumSteps() <= 3)
@@ -570,7 +573,7 @@ server <- function(input, output, session) {
     shinyjs::addClass("loadmessage", "no-display")
   })
   
-  # TODO: Fix this observer so slide only shows when there is more than one network to show
+  # Show date slider only when there is more than one network to show
   observe({
     if (!is.null(input$edgeMovieSlide)) {
       if (input$edgeMovieSlide == "None" | length(input$edgeMovieSlide) == 0) {
@@ -640,7 +643,7 @@ server <- function(input, output, session) {
                              "<br>",
                              'Data comes from <a href="http://prosportstransactions.com/" target=_blank>Pro Sports Transactions</a>',
                              "<br><br>",
-                             '<p>NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href="https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees" target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. Additionally, players can be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. To simplify things slightly, <em>free agency</em> is a bit of a catch-all, including claims off of waivers as well. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, it is only available as an option under certain conditions (player searches going a single transaction step).</p>'))
+                             '<p>NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href="https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees" target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. Additionally, players can be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. To simplify things slightly, <em>free agency</em> is a bit of a catch-all, including claims off of waivers as well. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, including it sets the <em>number of exchanges away</em> slider automatically to 1.</p>'))
 
 }
 
