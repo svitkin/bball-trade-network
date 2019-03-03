@@ -205,7 +205,6 @@ server <- function(input, output, session) {
   })
   
   all_p1_paths <- reactive({
-    # browser()
     date_ego(g = full_network(), 
              gdf = user_filter_data(),
              player1 = input$player1choice,
@@ -216,7 +215,53 @@ server <- function(input, output, session) {
     unique(unlist(all_p1_paths()))
   })
   p1_network <- reactive({
-    induced_subgraph(full_network(), nodes_from_paths())
+    g <-
+      make_empty_graph(length(nodes_from_paths())) %>% 
+      set_vertex_attr("name", value = nodes_from_paths()) 
+    
+    for (path in all_p1_paths()) {
+      if (class(path) == "list") {
+        for (p in path) {
+          g <- g + path(p)
+        }
+      } else {
+        g <- g + path(path)
+      }
+      
+    }
+    
+    gdf <-
+      g %>% 
+      as_data_frame("edges")
+    
+    first_pass_df <-
+      gdf %>% 
+      left_join(graph_data(),
+                by = c("from", "to")) %>% 
+      filter(!is.na(date))
+    
+    if (nrow(first_pass_df) > 0) {
+      full_df <-
+        bind_rows(first_pass_df,
+                  gdf %>% 
+                    left_join(graph_data() %>% rename(to = from, from = to),
+                              by = c("from", "to")) %>%
+                    filter(!is.na(date))
+        )
+    } else {
+      full_df <-
+        gdf %>% 
+        left_join(graph_data() %>% rename(to = from, from = to),
+                  by = c("from", "to")) %>%
+        filter(!is.na(date))
+    }
+   
+    full_df %>% 
+      mutate(key = paste0(pmin(from, to),
+                          pmax(from, to),
+                          date)) %>% 
+      distinct(key, .keep_all = TRUE) %>% 
+      graph_from_data_frame()
   })
   
   p1p2_network <- reactive({
@@ -228,48 +273,7 @@ server <- function(input, output, session) {
         unlist() %>% 
         unique()
       
-      g <-
-        make_empty_graph(length(all_nodes)) %>% 
-        set_vertex_attr("name", value = all_nodes) 
-      
-      for (path in all_p1_paths()[[input$player2choice]]) {
-        g <- g + path(path)
-      }
-      
-      gdf <-
-        g %>% 
-        as_data_frame("edges")
-      first_pass_df <-
-        gdf %>% 
-        left_join(graph_data(),
-                  by = c("from", "to")) %>% 
-        filter(!is.na(date))
-      if (nrow(first_pass_df) > 0) {
-        bind_rows(first_pass_df,
-                  gdf %>% 
-                    filter(from != first_pass_df$from,
-                           to != first_pass_df$to) %>% 
-                    left_join(graph_data() %>% rename(to = from, from = to),
-                              by = c("from", "to")) %>%
-                    filter(!is.na(date))
-        ) %>%  
-          mutate(key = paste0(pmin(from, to),
-                              pmax(from, to),
-                              date)) %>% 
-          distinct(key, .keep_all = TRUE) %>% 
-          graph_from_data_frame()
-      } else {
-        gdf %>% 
-          left_join(graph_data() %>% rename(to = from, from = to),
-                    by = c("from", "to")) %>%
-          filter(!is.na(date)) %>% 
-          mutate(key = paste0(pmin(from, to),
-                              pmax(from, to),
-                              date)) %>% 
-          distinct(key, .keep_all = TRUE) %>% 
-          graph_from_data_frame()
-      }
-      
+      induced_subgraph(p1_network(), all_nodes)
     }
   })
   
@@ -557,7 +561,6 @@ server <- function(input, output, session) {
   
   # If any options change then allow loading message to show
   observe({
-    input$player1choice
     input$player2choice
     input$includeDraft
     input$includeFreeAgency
