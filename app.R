@@ -58,7 +58,7 @@ ui <- fluidPage(
   tabsetPanel(id = "tabs",
               tabPanel("Introduction",
                        shiny::tags$br(),
-                       fluidRow(column(width = 10, htmlOutput("intro")))),
+                       fluidRow(column(width = 8, htmlOutput("intro")))),
               tabPanel("Setup",
                        tags$head(tags$style(type="text/css", "
                                             #loadmessage {
@@ -86,7 +86,7 @@ ui <- fluidPage(
               tabPanel("Network Visualization", 
                        shiny::tags$br(),
                        conditionalPanel(condition="!$('html').hasClass('shiny-busy')",
-                                        fluidRow(column(6, offset = 1, uiOutput("networkUI"))),
+                                        fluidRow(column(6, uiOutput("networkUI"))),
                                         shinycssloaders::withSpinner(visNetworkOutput("tradeNetwork")))),
               tabPanel("Raw Data",
                        shiny::tags$br(),
@@ -187,12 +187,13 @@ server <- function(input, output, session) {
   output$networkUI <- renderUI({
     conditionalPanel("input.player2choice != null",
                      sliderTextInput("edgeMovieSlide", 
-                                     label = "Stepping through time",
-                                     choices = "None",
-                                     animate = animationOptions(interval = 1000,
-                                                                loop = FALSE, 
-                                                                playButton = "Play All",
-                                                                pauseButton = "Pause")))
+                                         label = "Stepping through time",
+                                         choices = "None",
+                                         animate = animationOptions(interval = 1000,
+                                                                    loop = FALSE, 
+                                                                    playButton = "Play All",
+                                                                    pauseButton = "Pause")),
+                     downloadButton("dlNetwork", "Download Current Network"))
   })
   
   # Graph related functions
@@ -589,8 +590,7 @@ server <- function(input, output, session) {
     }
   })
   
-  
-  output$tradeNetwork <- renderVisNetwork({
+  current_edge_movie <- reactive({
     if (!is.null(input$player1choice) & !is.null(input$player2choice)) {
       if (length(edge_movie_network()) == 1) {
         edge_movie_network()[[1]] 
@@ -607,6 +607,20 @@ server <- function(input, output, session) {
                                     to = c(0)))
     }
   })
+  
+  output$tradeNetwork <- renderVisNetwork({ current_edge_movie() })
+  
+  output$dlNetwork <- downloadHandler(
+    filename = function() {
+      paste0(input$player1choice, "_", 
+             paste(input$player2choice, collapse = "-"), 
+             "_network-viz.html")
+    },
+    content = function(file) {
+      visNetwork::visSave(current_edge_movie(),
+                          file)
+    }
+  )
   
   # Table section ---------------------------------------------------------------------------
   trade_table <- reactive({
@@ -643,8 +657,8 @@ server <- function(input, output, session) {
   # About Section ---------------------------------------------------------------------------
   output$intro <-
     shiny::renderText(paste0('<h4>Welcome!</h4>',
-                             "<p>Over time, a Vince Carter trade away from the Raptors turns into Luke Ridnour. A Lebron James trade to the Heat brings Luke Walton to the Cavaliers a few years later. NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href='https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees' target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. In the <strong>Setup</strong> tab, choose a player who's trades you are interested in, and see how their trades turn into any other player they are connected to. Go over to the <strong>Network Visualization</strong> tab to see the result of your search and step through the relevant trades over time. See and download the raw data from the visualization in the <strong>Raw Data</strong> tab.</p>", 
-                             '<p>Players can also be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. To simplify things slightly, <em>free agency</em> is a bit of a catch-all, including claims off of waivers as well. <strong>However!</strong> Due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, including it sets the <em>number of exchanges away</em> slider automatically to 1. Additionally, players being picked from the draft can be visualized. The draft is treated as its own node, with connections to players arising when they get picked. Options to include free agency, cash, trade exceptions and/or the draft are below the player choices in the <strong>Setup</strong> tab.</p>',
+                             "<p>A Vince Carter trade away from the Raptors turns into Luke Ridnour. A Lebron James trade to the Heat brings Luke Walton to the Cavaliers a few years later. NBA trades are a weird, byzantine mix of cash, trade exceptions, draft picks and sometimes even players. Inspired by <a href='https://www.theringer.com/nba/2019/1/30/18202947/nba-transaction-trees' target=_blank>this article</a>, this application strives to visualize the complexity, focusing on the relationships between players arising from the trades they were exchanged in. In the <strong>Setup</strong> tab, choose a player who's trades you are interested in, and see how their trades turn into any other player they are connected to. Go over to the <strong>Network Visualization</strong> tab to see the result of your search and step through the relevant trades over time. See and download the raw data from the visualization in the <strong>Raw Data</strong> tab.</p>", 
+                             '<p>Players can also be exchanged for cash, signed from free agency, waived, etc. and these relationships are also visualized. To simplify things slightly, <em>free agency</em> is a bit of a catch-all, including claims off of waivers as well. However, due to the increase in connections caused by including <em>free agency</em> as a node with relationships to players as they go in and out of it, including it sets the <em>number of exchanges away</em> slider automatically to 1. Additionally, players being picked from the draft can be visualized. The draft is treated as its own node, with connections to players arising when they get picked. Options to include free agency, cash, trade exceptions and/or the draft are below the player choices in the <strong>Setup</strong> tab.</p>',
                              '<p>Have fun finding weird stuff!</p>',
                              'Code: <a href="https://github.com/svitkin/bball-trade-network" target=_blank>https://github.com/svitkin/bball-trade-network</a>',
                              "<br>",
