@@ -29,7 +29,7 @@
   # Datatable output based on graph generated from visualization
 
 # TODO:
-# Make edges/draft part of the network when it is chosen, not part of the edges dataframe after processing
+# Color the start and end player (if end player is not anyone, draft, free agency, cash or trade exception) diffrently then rest of players
 
 library(dplyr)
 library(igraph)

@@ -7,7 +7,6 @@ library(stringr)
 library(purrr)
 library(assertr)
 
-
 create_base_url <- function(start, end) {
   sprintf("http://prosportstransactions.com/basketball/Search/SearchResults.php?Player=&Team=&BeginDate=%s&EndDate=%s&PlayerMovementChkBx=yes&Submit=Search", start, end)
 }
@@ -477,7 +476,30 @@ clean_transactions <- function(transactions_df,
              Relinquished != "1999 (protected top 3)") %>% 
       # Mistaken GM Chris Wallace row
       filter(!str_detect(Acquired, "GM Chris Wallace"),
-             !str_detect(Relinquished, "GM Chris Wallace"))
+             !str_detect(Relinquished, "GM Chris Wallace")) %>% 
+      
+      # Suspended text
+      mutate(Acquired = ifelse(Acquired == "Arvid Kramer (who was on Mavericks suspended list)",
+                               "Arvid Kramer",
+                               Acquired),
+             Relinquished = ifelse(Relinquished == "Arvid Kramer (who was on Mavericks suspended list)",
+                                   "Arvid Kramer",
+                                   Relinquished)) %>% 
+      
+      # Mistaken parantheses text
+      mutate(Acquired = ifelse(Acquired == "James Ennis)", 
+                               "James Ennis",
+                               Acquired),
+             Relinquished = ifelse(Relinquished == "James Ennis)", 
+                                   "James Ennis",
+                                   Relinquished)) %>% 
+      
+      mutate(Acquired = ifelse(Acquired == "Charles Davis / Charlie Davis) (E.)",
+                               "Charles Davis / Charlie Davis (E.)",
+                               Acquired),
+             Relinquished = ifelse(Relinquished == "Charles Davis / Charlie Davis) (E.)",
+                                   "Charles Davis / Charlie Davis (E.)",
+                                   Relinquished))
   }
   message("Cleaning transactions")
   # browser()
